@@ -96,8 +96,9 @@ body{
 .hero-overlay{
   position:absolute;
   inset:0;
-  background: radial-gradient(circle, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.9) 70%);
+  background: none;   /* niente sfumatura */
 }
+
 .hero-content{
   position:relative;
   padding: 0 18px;
