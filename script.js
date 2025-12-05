@@ -160,7 +160,7 @@ const menuData = {
       { name: "Tiramisù", desc: "", price: "4,50 €" },
       { name: "Ricotta-Birnen-Käsekuchen", desc: "", price: "4,50 €" },
     ]},
-  ],
+  ]
 };
 
 // ===== DRINKS MENU DATA =====
@@ -547,8 +547,8 @@ function rotateHeroBackground(){
   currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
 }
 
-// --- AUTO-SCROLL GALLERIA "Galería del Local" ---
-document.addEventListener("DOMContentLoaded", () => {
+// ===== AUTO-SCROLL GALLERIA "Galería del Local" =====
+function initGalleryAutoScroll() {
   const slider = document.querySelector(".gallery-slider");
   if (!slider) return;
 
@@ -560,7 +560,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (interactionTimeout) clearTimeout(interactionTimeout);
     interactionTimeout = setTimeout(() => {
       isUserInteracting = false;
-    }, 3000); // 3 secondi dopo l'ultimo tocco/movimento riparte
+    }, 3000); // dopo 3 secondi senza tocco riparte
   }
 
   // Pausa quando l’utente interagisce
@@ -569,26 +569,22 @@ document.addEventListener("DOMContentLoaded", () => {
   slider.addEventListener("mousedown",  pauseAutoScroll);
   slider.addEventListener("wheel",      pauseAutoScroll, { passive: true });
 
-  function startAutoScroll() {
+  const speed = 1.8;   // <<< VELOCITÀ: più alto = più veloce (es. 2, 2.5)
+  const intervalMs = 20;
+
+  setInterval(() => {
     const maxScroll = slider.scrollWidth - slider.clientWidth;
-    if (maxScroll <= 0) return; // nulla da scrollare
+    if (maxScroll <= 0) return;
 
-    const speed = 1.5;   // <<< VELOCITÀ: aumenta questo valore per farla andare più veloce (es. 2, 2.5)
-    const intervalMs = 20;
+    if (isUserInteracting) return;
 
-    setInterval(() => {
-      if (isUserInteracting) return;
-
-      if (slider.scrollLeft >= maxScroll) {
-        slider.scrollLeft = 0;   // ricomincia da capo
-      } else {
-        slider.scrollLeft += speed;
-      }
-    }, intervalMs);
-  }
-
-  startAutoScroll();
-});
+    if (slider.scrollLeft >= maxScroll) {
+      slider.scrollLeft = 0;   // ricomincia da capo
+    } else {
+      slider.scrollLeft += speed;
+    }
+  }, intervalMs);
+}
 
 // ===== INIT PAGINA =====
 function initPage(){
