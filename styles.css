@@ -177,9 +177,12 @@ body{
 
 .gallery-track img{
   flex: 0 0 auto;
-  width: 360px;
-  height: 240px;
-  object-fit: cover;
+  /* l'immagine mantiene SEMPRE le sue proporzioni, niente deformazioni */
+  width: auto;
+  height: auto;
+  max-width: 360px;   /* limite orizzontale su desktop */
+  max-height: 240px;  /* altezza massima del riquadro */
+  object-fit: contain; /* mostra SEMPRE tutta la foto, senza tagliarla */
   border-radius: 14px;
   border: 1px solid #222;
 }
@@ -199,6 +202,8 @@ body{
 
   .gallery-track img{
     scroll-snap-align: center;
+    max-width: 80vw;   /* su mobile, massimo 80% della larghezza schermo */
+    max-height: 220px; /* leggermente più basso per stare comodo */
   }
 }
 
