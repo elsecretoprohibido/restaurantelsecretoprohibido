@@ -223,11 +223,37 @@ function renderAllergens(lang = "es") {
 }
 
 function renderAbout(lang = "es") {
-  const titleEl = document.getElementById("about-title");
-  const textEl  = document.getElementById("about-text");
-  if (!titleEl || !textEl) return;
-  titleEl.textContent = aboutData[lang].title;
-  textEl.textContent  = aboutData[lang].text;
+  // Sezione ABOUT (è quella vuota in HTML)
+  const aboutSection = document.querySelector(".about");
+  if (!aboutSection) return;
+
+  // Creiamo il contenitore se non esiste
+  let card = aboutSection.querySelector(".about-card");
+  if (!card) {
+    card = document.createElement("div");
+    card.className = "about-card";
+    aboutSection.appendChild(card);
+  }
+
+  // Titolo
+  let aboutTitle = card.querySelector("#about-title");
+  if (!aboutTitle) {
+    aboutTitle = document.createElement("h2");
+    aboutTitle.id = "about-title";
+    card.appendChild(aboutTitle);
+  }
+
+  // Testo
+  let aboutText = card.querySelector("#about-text");
+  if (!aboutText) {
+    aboutText = document.createElement("p");
+    aboutText.id = "about-text";
+    card.appendChild(aboutText);
+  }
+
+  // Contenuto multilingua
+  aboutTitle.textContent = aboutData[lang].title;
+  aboutText.textContent  = aboutData[lang].text;
 }
 
 function renderHero(lang = "es") {
@@ -262,7 +288,7 @@ function rotateHeroBackground(){
   currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
 }
 
-// ===== GALLERIA AUTO-SCROLL (desktop + mobile) =====
+// ===== GALLERY AUTO-SCROLL (desktop + mobile, a scatti) =====
 function initGalleryAutoScroll() {
   const slider = document.querySelector(".gallery-slider");
   if (!slider) return;
@@ -275,30 +301,34 @@ function initGalleryAutoScroll() {
     if (interactionTimeout) clearTimeout(interactionTimeout);
     interactionTimeout = setTimeout(() => {
       isUserInteracting = false;
-    }, 3000);
+    }, 4000); // dopo 4s senza tocco/mouse riparte
   }
 
-  // Pausa quando l’utente tocca / scrolla
+  // Mettiamo in pausa quando l’utente tocca, trascina o scrolla
   slider.addEventListener("touchstart", pauseAutoScroll, { passive: true });
   slider.addEventListener("touchmove",  pauseAutoScroll, { passive: true });
-  slider.addEventListener("touchend",   pauseAutoScroll, { passive: true });
   slider.addEventListener("mousedown",  pauseAutoScroll);
   slider.addEventListener("wheel",      pauseAutoScroll, { passive: true });
 
-  const speed      = 0.8;  // pixel per tick
-  const intervalMs = 20;
-
-  setInterval(() => {
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
-    if (maxScroll <= 0) return;
+  function doStep() {
     if (isUserInteracting) return;
 
-    if (slider.scrollLeft >= maxScroll) {
-      slider.scrollLeft = 0;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    if (maxScroll <= 0) return;
+
+    const next = slider.scrollLeft + slider.clientWidth;
+
+    if (next >= maxScroll - 5) {
+      // Torna all'inizio
+      slider.scrollTo({ left: 0, behavior: "smooth" });
     } else {
-      slider.scrollLeft += speed;
+      // Avanza di una "pagina" (circa una foto)
+      slider.scrollBy({ left: slider.clientWidth, behavior: "smooth" });
     }
-  }, intervalMs);
+  }
+
+  // Ogni 4 secondi avanza
+  setInterval(doStep, 4000);
 }
 
 // ===== INIT PAGINA =====
