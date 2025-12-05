@@ -92,57 +92,46 @@
   </section>
 
   <!-- ABOUT (multilingua, popolato da JS) -->
-  <section class="about">
-    <div class="about-card">
-      <h2 id="about-title">Bienvenidos</h2>
-      <p id="about-text"></p>
+<section class="about">
+  <div class="about-card">
+    <h2 id="about-title">Bienvenidos</h2>
+    <p id="about-text">
+      <!-- Il testo verrà sovrascritto da JS in base alla lingua -->
+    </p>
 
-      <div class="about-insta">
-        <a
-          href="http://instagram.com/restauranteelsecretoprohibido"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="social-link insta-link"
-          aria-label="Instagram Restaurante El Secreto Prohibido"
-        >
-          <img src="img/Instagram.png" alt="Instagram" class="insta-img">
-        </a>
+    <div class="about-insta">
+      <a href="http://instagram.com/restaurantelsecretoprohibido" target="_blank" rel="noopener noreferrer" class="social-link insta-link" aria-label="Instagram Restaurante El Secreto Prohibido">
+        <img src="img/instagram.png" alt="Instagram" class="insta-img">
+      </a>
 
-        <a
-          href="https://share.google/7NWwFjnQgonoOrNOb"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="social-link fb-link"
-          aria-label="Facebook Restaurante El Secreto Prohibido"
-        >
-          <img src="img/Facebook.png" alt="Facebook" class="fb-img">
-        </a>
-      </div>
+      <a href="https://www.facebook.com/share/1Fmj0ogno0Nb" target="_blank" rel="noopener noreferrer" class="social-link fb-link" aria-label="Facebook Restaurante El Secreto Prohibido">
+        <img src="img/Facebook.png" alt="Facebook" class="fb-img">
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- MENU -->
-  <section id="menu" class="menu-section">
-    <div class="menu-header">
-      <h2>Menú</h2>
-      <p>Elige idioma:</p>
-      <div class="lang-buttons">
-        <button class="lang-btn active" data-lang="es" aria-label="Español">
-          <span class="flag">🇪🇸</span> Español
-        </button>
-        <button class="lang-btn" data-lang="en" aria-label="English">
-          <span class="flag">🇬🇧</span> English
-        </button>
-        <button class="lang-btn" data-lang="de" aria-label="Deutsch">
-          <span class="flag">🇩🇪</span> Deutsch
-        </button>
-      </div>
-    </div>
+ <section id="menu" class="menu-section">
+  <div class="menu-header">
+    <h2>Menú</h2>
 
-    <div id="menu-container" class="menu-container">
-      <!-- Popolato da JS -->
+    <div class="lang-buttons">
+      <button class="lang-btn active" data-lang="es">
+        <span class="flag">🇪🇸</span> Español
+      </button>
+      <button class="lang-btn" data-lang="en">
+        <span class="flag">🇬🇧</span> English
+      </button>
+      <button class="lang-btn" data-lang="de">
+        <span class="flag">🇩🇪</span> Deutsch
+      </button>
     </div>
-  </section>
+  </div>
+
+  <!-- QUI il JS inserirà tutte le categorie e i piatti -->
+  <div id="menu-container"></div>
+</section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
