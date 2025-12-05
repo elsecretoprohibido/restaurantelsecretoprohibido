@@ -159,7 +159,9 @@ body{
 
 .gallery-slider{
   position: relative;
-  overflow: hidden;          /* lo scroll lo gestiamo in JS */
+  /* scroll sempre attivo, lo controlla JS */
+  overflow-x: auto;
+  overflow-y: hidden;
   border-radius: 16px;
   border: 1px solid #242428;
   margin-top: 10px;

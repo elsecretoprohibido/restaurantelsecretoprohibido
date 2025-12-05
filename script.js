@@ -496,20 +496,20 @@ function renderMenu(lang = "es") {
 
 function renderAllergens(lang = "es") {
   const allergensTitle = document.getElementById("allergens-title");
-  const allergensText = document.getElementById("allergens-text");
+  const allergensText  = document.getElementById("allergens-text");
   if (!allergensTitle || !allergensText) return;
 
   allergensTitle.textContent = allergensData[lang].title;
-  allergensText.textContent = allergensData[lang].text;
+  allergensText.textContent  = allergensData[lang].text;
 }
 
 function renderAbout(lang = "es") {
   const aboutTitle = document.getElementById("about-title");
-  const aboutText = document.getElementById("about-text");
+  const aboutText  = document.getElementById("about-text");
   if (!aboutTitle || !aboutText) return;
 
   aboutTitle.textContent = aboutData[lang].title;
-  aboutText.textContent = aboutData[lang].text;
+  aboutText.textContent  = aboutData[lang].text;
 }
 
 function renderHero(lang = "es") {
@@ -524,7 +524,6 @@ function renderHero(lang = "es") {
 function renderContact(lang = "es") {
   const bizumText = document.getElementById("bizum-text");
   if (!bizumText) return;
-
   bizumText.textContent = contactData[lang].bizum;
 }
 
@@ -537,6 +536,7 @@ const heroImages = [
   "img/IMG_3928.JPG",
   "img/IMG_3947.JPG"
 ];
+
 let currentHeroIndex = 0;
 
 function rotateHeroBackground(){
@@ -547,12 +547,12 @@ function rotateHeroBackground(){
   currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
 }
 
-// ===== AUTO-SCROLL GALLERIA "Galería del Local" =====
+// ===== GALLERY AUTO-SCROLL (desktop + mobile) =====
 function initGalleryAutoScroll() {
   const slider = document.querySelector(".gallery-slider");
   if (!slider) return;
 
-  let isUserInteracting = false;
+  let isUserInteracting  = false;
   let interactionTimeout = null;
 
   function pauseAutoScroll() {
@@ -560,35 +560,38 @@ function initGalleryAutoScroll() {
     if (interactionTimeout) clearTimeout(interactionTimeout);
     interactionTimeout = setTimeout(() => {
       isUserInteracting = false;
-    }, 3000); // dopo 3 secondi senza tocco riparte
+    }, 3000); // dopo 3s senza tocco/mouse riparte
   }
 
-  // Pausa quando l’utente interagisce
+  // pausa quando l’utente interagisce
   slider.addEventListener("touchstart", pauseAutoScroll, { passive: true });
   slider.addEventListener("touchmove",  pauseAutoScroll, { passive: true });
   slider.addEventListener("mousedown",  pauseAutoScroll);
   slider.addEventListener("wheel",      pauseAutoScroll, { passive: true });
 
-  const speed = 1.8;   // <<< VELOCITÀ: più alto = più veloce (es. 2, 2.5)
-  const intervalMs = 20;
+  // velocità: aumenta questo valore per farla andare più veloce
+  const speed = 0.7; // pixel per frame ~ 42px/secondo a 60fps
 
-  setInterval(() => {
+  function step() {
     const maxScroll = slider.scrollWidth - slider.clientWidth;
-    if (maxScroll <= 0) return;
 
-    if (isUserInteracting) return;
-
-    if (slider.scrollLeft >= maxScroll) {
-      slider.scrollLeft = 0;   // ricomincia da capo
-    } else {
-      slider.scrollLeft += speed;
+    if (!isUserInteracting && maxScroll > 0) {
+      if (slider.scrollLeft >= maxScroll - 1) {
+        slider.scrollLeft = 0;       // ricomincia dall’inizio
+      } else {
+        slider.scrollLeft += speed;
+      }
     }
-  }, intervalMs);
+
+    requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
 }
 
 // ===== INIT PAGINA =====
 function initPage(){
-  // Contenuti iniziali (ES)
+  // Contenuto iniziale (spagnolo)
   renderMenu("es");
   renderAbout("es");
   renderAllergens("es");
@@ -632,5 +635,5 @@ function initPage(){
   initGalleryAutoScroll();
 }
 
-// avvia quando il DOM è pronto
+// Avvio quando il DOM è pronto
 document.addEventListener("DOMContentLoaded", initPage);
