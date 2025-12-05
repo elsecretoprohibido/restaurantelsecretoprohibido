@@ -8,11 +8,11 @@ const menuData = {
       { num: 4, name: "Bocados diferentes en salsa tonnata", desc: "Conchas comestibles con atún, mayonesa, alcaparra, pimiento rojo asado y aceituna verde.", price: "11,00 €" },
     ]},
     { category: "Primer plato · Pasta fresca", items: [
-      { num: 5, name: "Aroma de bosque", desc: "Tallarines en salsa de setas, boletus, nata y pimienta negra.", price: "13,90 €" },
-      { num: 6, name: "Amatriciana", desc: "Tallarines a la Amatriciana con guanciale de cerdo, aceite de oliva, tomate, ajo, guindilla y queso pecorino romano.", price: "13,00 €" },
-      { num: 7, name: "Al verde", desc: "Tallarines con pistacho, bacón, nata, leche, pimienta negra, puerro, aceite de oliva y queso pecorino.", price: "13,90 €" },
-      { num: 8, name: "Delicado", desc: "Raviolis de ricotta y espinacas con salvia, mantequilla y queso parmesano.", price: "12,90 €" },
-      { num: 9, name: "Ragú", desc: "Raviolis de carne con salsa de tomate, aceite de oliva, carne de vacuno molida, salchicha, cebolla, zanahoria y vino tinto.", price: "13,90 €" },
+      { num: 5,  name: "Aroma de bosque", desc: "Tallarines en salsa de setas, boletus, nata y pimienta negra.", price: "13,90 €" },
+      { num: 6,  name: "Amatriciana", desc: "Tallarines a la Amatriciana con guanciale de cerdo, aceite de oliva, tomate, ajo, guindilla y queso pecorino romano.", price: "13,00 €" },
+      { num: 7,  name: "Al verde", desc: "Tallarines con pistacho, bacón, nata, leche, pimienta negra, puerro, aceite de oliva y queso pecorino.", price: "13,90 €" },
+      { num: 8,  name: "Delicado", desc: "Raviolis de ricotta y espinacas con salvia, mantequilla y queso parmesano.", price: "12,90 €" },
+      { num: 9,  name: "Ragú", desc: "Raviolis de carne con salsa de tomate, aceite de oliva, carne de vacuno molida, salchicha, cebolla, zanahoria y vino tinto.", price: "13,90 €" },
       { num: 10, name: "Sabor de mar y de tierra", desc: "Raviolones de langostinos y calabacín con nata, anchoas, aceite de oliva, pimienta negra, ajo y zucchini.", price: "14,00 €" },
       { num: 11, name: "Gorgonzola y nueces", desc: "Raviolis de gorgonzola y nueces con salsa 4 quesos.", price: "12,90 €" },
       { num: 12, name: "A la Genovesa", desc: "Trofie al pesto verde: albahaca, aceite de oliva, piñones, queso pecorino y ajo.", price: "13,90 €" },
@@ -45,12 +45,12 @@ const menuData = {
     ]},
     { category: "Postres", items: [
       { name: "Tarta de zanahoria con nueces", desc: "", price: "4,50 €" },
-      { name: "Profiteroles de chocolate", desc: "", price: "4,50 €" },
+      { name: "Profiteroles de chocolate",    desc: "", price: "4,50 €" },
       { name: "Tarta Santiago con almendras", desc: "", price: "4,20 €" },
-      { name: "Tarta de manzana", desc: "", price: "4,20 €" },
-      { name: "Tarta de queso y pistacho", desc: "", price: "4,50 €" },
-      { name: "Tiramisú", desc: "", price: "4,50 €" },
-      { name: "Tarta de queso ricotta y pera", desc: "", price: "4,50 €" },
+      { name: "Tarta de manzana",             desc: "", price: "4,20 €" },
+      { name: "Tarta de queso y pistacho",    desc: "", price: "4,50 €" },
+      { name: "Tiramisú",                     desc: "", price: "4,50 €" },
+      { name: "Tarta de queso ricotta y pera",desc: "", price: "4,50 €" },
     ]},
   ],
 
@@ -62,11 +62,11 @@ const menuData = {
       { num: 4, name: "Mixed bites in tonnato sauce", desc: "Edible shells with tuna, mayonnaise, caper, roasted red pepper, and green olive.", price: "11.00 €" },
     ]},
     { category: "First Course · Fresh pasta", items: [
-      { num: 5, name: "Forest aroma", desc: "Tagliatelle with mushrooms, boletus, cream, and black pepper.", price: "13.90 €" },
-      { num: 6, name: "Amatriciana", desc: "Amatriciana tagliatelle with pork cheek, olive oil, tomato, garlic, chili, and pecorino romano.", price: "13.00 €" },
-      { num: 7, name: "Al verde", desc: "Tagliatelle with pistachio, bacon, cream, milk, black pepper, leek, olive oil, and pecorino cheese.", price: "13.90 €" },
-      { num: 8, name: "Delicate", desc: "Ricotta and spinach ravioli with sage, butter, and parmesan cheese.", price: "12.90 €" },
-      { num: 9, name: "Ragù", desc: "Meat ravioli with tomato sauce, olive oil, ground beef, sausage, onion, carrots, and red wine.", price: "13.90 €" },
+      { num: 5,  name: "Forest aroma", desc: "Tagliatelle with mushrooms, boletus, cream, and black pepper.", price: "13.90 €" },
+      { num: 6,  name: "Amatriciana", desc: "Amatriciana tagliatelle with pork cheek, olive oil, tomato, garlic, chili, and pecorino romano.", price: "13.00 €" },
+      { num: 7,  name: "Al verde", desc: "Tagliatelle with pistachio, bacon, cream, milk, black pepper, leek, olive oil, and pecorino cheese.", price: "13.90 €" },
+      { num: 8,  name: "Delicate", desc: "Ricotta and spinach ravioli with sage, butter, and parmesan cheese.", price: "12.90 €" },
+      { num: 9,  name: "Ragù", desc: "Meat ravioli with tomato sauce, olive oil, ground beef, sausage, onion, carrots, and red wine.", price: "13.90 €" },
       { num: 10, name: "Sea & land flavor", desc: "Langoustine and zucchini ravioloni with cream, anchovies, olive oil, black pepper, garlic, and zucchini.", price: "14.00 €" },
       { num: 11, name: "Gorgonzola & walnuts", desc: "Gorgonzola and walnut ravioli with 4 cheese sauce.", price: "12.90 €" },
       { num: 12, name: "Genovese style", desc: "Trofie with green pesto: basil, olive oil, pine nuts, pecorino, and garlic.", price: "13.90 €" },
@@ -116,11 +116,11 @@ const menuData = {
       { num: 4, name: "Verschiedene Häppchen in Tonnato-Sauce", desc: "Essbare Muschelschalen mit Thunfisch, Mayonnaise, Kapern, gerösteter roter Paprika und grüner Olive.", price: "11,00 €" },
     ]},
     { category: "Erster Gang · Frische Pasta", items: [
-      { num: 5, name: "Waldaroma", desc: "Tagliatelle mit Pilzen, Steinpilzen, Sahne und schwarzem Pfeffer.", price: "13,90 €" },
-      { num: 6, name: "Amatriciana", desc: "Tagliatelle Amatriciana mit Guanciale, Olivenöl, Tomate, Knoblauch, Chili und Pecorino Romano.", price: "13,00 €" },
-      { num: 7, name: "Al verde", desc: "Tagliatelle mit Pistazie, Speck, Sahne, Milch, schwarzem Pfeffer, Lauch, Olivenöl und Pecorino.", price: "13,90 €" },
-      { num: 8, name: "Zart", desc: "Ricotta-Spinat-Ravioli mit Salbei, Butter und Parmesan.", price: "12,90 €" },
-      { num: 9, name: "Ragù", desc: "Fleischravioli in Tomatensauce mit Rinderhack, Wurst, Zwiebel, Karotte und Rotwein.", price: "13,90 €" },
+      { num: 5,  name: "Waldaroma", desc: "Tagliatelle mit Pilzen, Steinpilzen, Sahne und schwarzem Pfeffer.", price: "13,90 €" },
+      { num: 6,  name: "Amatriciana", desc: "Tagliatelle Amatriciana mit Guanciale, Olivenöl, Tomate, Knoblauch, Chili und Pecorino Romano.", price: "13,00 €" },
+      { num: 7,  name: "Al verde", desc: "Tagliatelle mit Pistazie, Speck, Sahne, Milch, schwarzem Pfeffer, Lauch, Olivenöl und Pecorino.", price: "13,90 €" },
+      { num: 8,  name: "Zart", desc: "Ricotta-Spinat-Ravioli mit Salbei, Butter und Parmesan.", price: "12,90 €" },
+      { num: 9,  name: "Ragù", desc: "Fleischravioli in Tomatensauce mit Rinderhack, Wurst, Zwiebel, Karotte und Rotwein.", price: "13,90 €" },
       { num: 10, name: "Geschmack von Meer und Land", desc: "Ravioloni mit Langostinos und Zucchini in Sahnesauce, Sardellen, Olivenöl, schwarzer Pfeffer, Knoblauch und Zucchini.", price: "14,00 €" },
       { num: 11, name: "Gorgonzola & Walnüsse", desc: "Gorgonzola-Walnuss-Ravioli mit 4-Käse-Sauce.", price: "12,90 €" },
       { num: 12, name: "Genueser Art", desc: "Trofie mit grünem Pesto: Basilikum, Olivenöl, Pinienkerne, Pecorino und Knoblauch.", price: "13,90 €" },
@@ -152,13 +152,13 @@ const menuData = {
       { num: 28, name: "Canapé", desc: "Essbarer Löffel mit Hummus, gerösteter roter Paprika sowie grünen und schwarzen Oliven.", price: "13,90 €" },
     ]},
     { category: "Desserts", items: [
-      { name: "Karotten-Walnuss-Kuchen", desc: "", price: "4,50 €" },
-      { name: "Schokoladen-Profiteroles", desc: "", price: "4,50 €" },
-      { name: "Tarta de Santiago mit Mandeln", desc: "", price: "4,20 €" },
-      { name: "Apfelkuchen", desc: "", price: "4,20 €" },
-      { name: "Pistazien-Käsekuchen", desc: "", price: "4,50 €" },
-      { name: "Tiramisù", desc: "", price: "4,50 €" },
-      { name: "Ricotta-Birnen-Käsekuchen", desc: "", price: "4,50 €" },
+      { name: "Karotten-Walnuss-Kuchen",      desc: "", price: "4,50 €" },
+      { name: "Schokoladen-Profiteroles",     desc: "", price: "4,50 €" },
+      { name: "Tarta de Santiago mit Mandeln",desc: "", price: "4,20 €" },
+      { name: "Apfelkuchen",                  desc: "", price: "4,20 €" },
+      { name: "Pistazien-Käsekuchen",         desc: "", price: "4,50 €" },
+      { name: "Tiramisù",                     desc: "", price: "4,50 €" },
+      { name: "Ricotta-Birnen-Käsekuchen",    desc: "", price: "4,50 €" },
     ]},
   ]
 };
@@ -170,19 +170,19 @@ const drinksData = {
       category: "Vinos · Botella (tinto)",
       items: [
         { name: "Conde de Leizao Crianza 2021", desc: "", price: "15,00 €" },
-        { name: "Mi Isla Tinto 2024", desc: "", price: "18,90 €" },
-        { name: "Listán Tinto", desc: "", price: "17,50 €" },
+        { name: "Mi Isla Tinto 2024",           desc: "", price: "18,90 €" },
+        { name: "Listán Tinto",                 desc: "", price: "17,50 €" },
         { name: "Flor de Chasna Tinto Barrica", desc: "", price: "22,00 €" },
-        { name: "Barbera d'Asti", desc: "", price: "20,00 €" },
-        { name: "Barbera d'Asti Superiore", desc: "", price: "22,50 €" },
-        { name: "Chianti", desc: "", price: "20,00 €" },
-        { name: "Chianti Riserva", desc: "", price: "22,50 €" }
+        { name: "Barbera d'Asti",               desc: "", price: "20,00 €" },
+        { name: "Barbera d'Asti Superiore",     desc: "", price: "22,50 €" },
+        { name: "Chianti",                      desc: "", price: "20,00 €" },
+        { name: "Chianti Riserva",              desc: "", price: "22,50 €" }
       ]
     },
     {
       category: "Vinos · Botella (blanco)",
       items: [
-        { name: "Laundum Chardonnay Organic", desc: "", price: "19,90 €" },
+        { name: "Laundum Chardonnay Organic",       desc: "", price: "19,90 €" },
         { name: "Testamento Blanco medalla de oro", desc: "", price: "22,00 €" }
       ]
     },
@@ -196,46 +196,46 @@ const drinksData = {
       category: "Vino de la casa",
       items: [
         { name: "Vino de la casa (copa)", desc: "", price: "2,50 €" },
-        { name: "Vino de la casa (1/4)", desc: "", price: "3,20 €" },
-        { name: "Vino de la casa (1/2)", desc: "", price: "6,00 €" },
-        { name: "Vino de la casa (1 L)", desc: "", price: "11,50 €" }
+        { name: "Vino de la casa (1/4)",  desc: "", price: "3,20 €" },
+        { name: "Vino de la casa (1/2)",  desc: "", price: "6,00 €" },
+        { name: "Vino de la casa (1 L)",  desc: "", price: "11,50 €" }
       ]
     },
     {
       category: "Refrescos",
       items: [
-        { name: "Coca-Cola", desc: "", price: "2,50 €" },
-        { name: "Coca-Cola Zero", desc: "", price: "2,50 €" },
-        { name: "Fanta Naranja", desc: "", price: "2,50 €" },
-        { name: "Fanta Limón", desc: "", price: "2,50 €" },
-        { name: "Tónica Schweppes", desc: "", price: "2,50 €" },
-        { name: "7Up", desc: "", price: "2,50 €" },
-        { name: "Nestea Limón", desc: "", price: "2,80 €" },
-        { name: "Nestea Melocotón", desc: "", price: "2,80 €" },
-        { name: "Nestea Mango-Piña", desc: "", price: "2,80 €" },
-        { name: "Appletiser", desc: "", price: "2,80 €" },
-        { name: "Aquarius Naranja", desc: "", price: "2,80 €" },
-        { name: "Red Bull", desc: "", price: "3,00 €" },
-        { name: "Zumo de melocotón", desc: "Batido de melocotón.", price: "2,50 €" },
-        { name: "Zumo de pera piña", desc: "Batido de pera y piña.", price: "2,50 €" }
+        { name: "Coca-Cola",             desc: "",                     price: "2,50 €" },
+        { name: "Coca-Cola Zero",        desc: "",                     price: "2,50 €" },
+        { name: "Fanta Naranja",         desc: "",                     price: "2,50 €" },
+        { name: "Fanta Limón",           desc: "",                     price: "2,50 €" },
+        { name: "Tónica Schweppes",      desc: "",                     price: "2,50 €" },
+        { name: "7Up",                   desc: "",                     price: "2,50 €" },
+        { name: "Nestea Limón",          desc: "",                     price: "2,80 €" },
+        { name: "Nestea Melocotón",      desc: "",                     price: "2,80 €" },
+        { name: "Nestea Mango-Piña",     desc: "",                     price: "2,80 €" },
+        { name: "Appletiser",            desc: "",                     price: "2,80 €" },
+        { name: "Aquarius Naranja",      desc: "",                     price: "2,80 €" },
+        { name: "Red Bull",              desc: "",                     price: "3,00 €" },
+        { name: "Zumo de melocotón",     desc: "Batido de melocotón.", price: "2,50 €" },
+        { name: "Zumo de pera piña",     desc: "Batido de pera y piña.", price: "2,50 €" }
       ]
     },
     {
       category: "Agua",
       items: [
-        { name: "Agua natural en botella (0,50 l)", desc: "Agua sin gas en botella.", price: "1,20 €" },
-        { name: "Agua natural en botella (1,50 l)", desc: "Agua sin gas en botella de plástico.", price: "2,30 €" },
-        { name: "Agua con gas en botella (0,50 l)", desc: "Agua con gas en botella de cristal.", price: "1,30 €" }
+        { name: "Agua natural en botella (0,50 l)", desc: "Agua sin gas en botella.",               price: "1,20 €" },
+        { name: "Agua natural en botella (1,50 l)", desc: "Agua sin gas en botella de plástico.",   price: "2,30 €" },
+        { name: "Agua con gas en botella (0,50 l)", desc: "Agua con gas en botella de cristal.",    price: "1,30 €" }
       ]
     },
     {
       category: "Cerveza",
       items: [
-        { name: "Dorada Pilsen", desc: "", price: "1,80 €" },
-        { name: "Dorada Especial", desc: "", price: "2,30 €" },
-        { name: "Dorada Sin Alcohol", desc: "", price: "2,00 €" },
-        { name: "Dorada Sin con Limón", desc: "", price: "2,30 €" },
-        { name: "1906 Estrella Galicia", desc: "", price: "3,00 €" }
+        { name: "Dorada Pilsen",           desc: "", price: "1,80 €" },
+        { name: "Dorada Especial",         desc: "", price: "2,30 €" },
+        { name: "Dorada Sin Alcohol",      desc: "", price: "2,00 €" },
+        { name: "Dorada Sin con Limón",    desc: "", price: "2,30 €" },
+        { name: "1906 Estrella Galicia",   desc: "", price: "3,00 €" }
       ]
     }
   ],
@@ -245,13 +245,13 @@ const drinksData = {
       category: "Red wine · Bottle",
       items: [
         { name: "Conde de Leizao Crianza 2021", desc: "", price: "15.00 €" },
-        { name: "Mi Isla Tinto 2024", desc: "", price: "18.90 €" },
-        { name: "Listán Tinto", desc: "", price: "17.50 €" },
+        { name: "Mi Isla Tinto 2024",           desc: "", price: "18.90 €" },
+        { name: "Listán Tinto",                 desc: "", price: "17.50 €" },
         { name: "Flor de Chasna Tinto Barrica", desc: "", price: "22.00 €" },
-        { name: "Barbera d'Asti", desc: "", price: "20.00 €" },
-        { name: "Barbera d'Asti Superiore", desc: "", price: "22.50 €" },
-        { name: "Chianti", desc: "", price: "20.00 €" },
-        { name: "Chianti Riserva", desc: "", price: "22.50 €" }
+        { name: "Barbera d'Asti",               desc: "", price: "20.00 €" },
+        { name: "Barbera d'Asti Superiore",     desc: "", price: "22.50 €" },
+        { name: "Chianti",                      desc: "", price: "20.00 €" },
+        { name: "Chianti Riserva",              desc: "", price: "22.50 €" }
       ]
     },
     {
@@ -270,47 +270,47 @@ const drinksData = {
     {
       category: "House wine",
       items: [
-        { name: "House wine (glass)", desc: "", price: "2.50 €" },
-        { name: "House wine (1/4 l)", desc: "", price: "3.20 €" },
-        { name: "House wine (1/2 l)", desc: "", price: "6.00 €" },
-        { name: "House wine (1 l)", desc: "", price: "11.50 €" }
+        { name: "House wine (glass)",  desc: "", price: "2.50 €" },
+        { name: "House wine (1/4 l)",  desc: "", price: "3.20 €" },
+        { name: "House wine (1/2 l)",  desc: "", price: "6.00 €" },
+        { name: "House wine (1 l)",    desc: "", price: "11.50 €" }
       ]
     },
     {
       category: "Soft drinks",
       items: [
-        { name: "Coca-Cola", desc: "", price: "2.50 €" },
-        { name: "Coca-Cola Zero", desc: "", price: "2.50 €" },
-        { name: "Fanta Orange", desc: "", price: "2.50 €" },
-        { name: "Fanta Lemon", desc: "", price: "2.50 €" },
-        { name: "Schweppes Tonic", desc: "", price: "2.50 €" },
-        { name: "7Up", desc: "", price: "2.50 €" },
-        { name: "Nestea Lemon", desc: "", price: "2.80 €" },
-        { name: "Nestea Peach", desc: "", price: "2.80 €" },
-        { name: "Nestea Mango-Pineapple", desc: "", price: "2.80 €" },
-        { name: "Appletiser", desc: "", price: "2.80 €" },
-        { name: "Aquarius Orange", desc: "", price: "2.80 €" },
-        { name: "Red Bull", desc: "", price: "3.00 €" },
-        { name: "Peach juice", desc: "Peach smoothie.", price: "2.50 €" },
-        { name: "Pear & pineapple juice", desc: "Pear and pineapple smoothie.", price: "2.50 €" }
+        { name: "Coca-Cola",               desc: "",                  price: "2.50 €" },
+        { name: "Coca-Cola Zero",          desc: "",                  price: "2.50 €" },
+        { name: "Fanta Orange",            desc: "",                  price: "2.50 €" },
+        { name: "Fanta Lemon",             desc: "",                  price: "2.50 €" },
+        { name: "Schweppes Tonic",         desc: "",                  price: "2.50 €" },
+        { name: "7Up",                     desc: "",                  price: "2.50 €" },
+        { name: "Nestea Lemon",            desc: "",                  price: "2.80 €" },
+        { name: "Nestea Peach",            desc: "",                  price: "2.80 €" },
+        { name: "Nestea Mango-Pineapple",  desc: "",                  price: "2.80 €" },
+        { name: "Appletiser",              desc: "",                  price: "2.80 €" },
+        { name: "Aquarius Orange",         desc: "",                  price: "2.80 €" },
+        { name: "Red Bull",                desc: "",                  price: "3.00 €" },
+        { name: "Peach juice",             desc: "Peach smoothie.",   price: "2.50 €" },
+        { name: "Pear & pineapple juice",  desc: "Pear and pineapple smoothie.", price: "2.50 €" }
       ]
     },
     {
       category: "Water",
       items: [
-        { name: "Still water (0.5 l bottle)", desc: "Still water in a bottle.", price: "1.20 €" },
-        { name: "Still water (1.5 l bottle)", desc: "Still water in a plastic bottle.", price: "2.30 €" },
+        { name: "Still water (0.5 l bottle)",  desc: "Still water in a bottle.",          price: "1.20 €" },
+        { name: "Still water (1.5 l bottle)",  desc: "Still water in a plastic bottle.",  price: "2.30 €" },
         { name: "Sparkling water (0.5 l bottle)", desc: "Sparkling water in a glass bottle.", price: "1.30 €" }
       ]
     },
     {
       category: "Beer",
       items: [
-        { name: "Dorada Pilsen", desc: "", price: "1.80 €" },
-        { name: "Dorada Especial", desc: "", price: "2.30 €" },
-        { name: "Dorada Alcohol Free", desc: "", price: "2.00 €" },
+        { name: "Dorada Pilsen",                desc: "", price: "1.80 €" },
+        { name: "Dorada Especial",              desc: "", price: "2.30 €" },
+        { name: "Dorada Alcohol Free",          desc: "", price: "2.00 €" },
         { name: "Dorada Alcohol Free with Lemon", desc: "", price: "2.30 €" },
-        { name: "1906 Estrella Galicia", desc: "", price: "3.00 €" }
+        { name: "1906 Estrella Galicia",       desc: "", price: "3.00 €" }
       ]
     }
   ],
@@ -320,20 +320,20 @@ const drinksData = {
       category: "Rotwein · Flasche",
       items: [
         { name: "Conde de Leizao Crianza 2021", desc: "", price: "15,00 €" },
-        { name: "Mi Isla Tinto 2024", desc: "", price: "18,90 €" },
-        { name: "Listán Tinto", desc: "", price: "17,50 €" },
+        { name: "Mi Isla Tinto 2024",           desc: "", price: "18,90 €" },
+        { name: "Listán Tinto",                 desc: "", price: "17,50 €" },
         { name: "Flor de Chasna Tinto Barrica", desc: "", price: "22,00 €" },
-        { name: "Barbera d'Asti", desc: "", price: "20,00 €" },
-        { name: "Barbera d'Asti Superiore", desc: "", price: "22,50 €" },
-        { name: "Chianti", desc: "", price: "20,00 €" },
-        { name: "Chianti Riserva", desc: "", price: "22,50 €" }
+        { name: "Barbera d'Asti",               desc: "", price: "20,00 €" },
+        { name: "Barbera d'Asti Superiore",     desc: "", price: "22,50 €" },
+        { name: "Chianti",                      desc: "", price: "20,00 €" },
+        { name: "Chianti Riserva",              desc: "", price: "22,50 €" }
       ]
     },
     {
       category: "Weißwein · Flasche",
       items: [
-        { name: "Laundum Chardonnay Organic", desc: "", price: "19,90 €" },
-        { name: "Testamento Blanco Goldmedaille", desc: "", price: "22,00 €" }
+        { name: "Laundum Chardonnay Organic",    desc: "", price: "19,90 €" },
+        { name: "Testamento Blanco Goldmedaille",desc: "", price: "22,00 €" }
       ]
     },
     {
@@ -345,47 +345,47 @@ const drinksData = {
     {
       category: "Hauswein",
       items: [
-        { name: "Hauswein (Glas)", desc: "", price: "2,50 €" },
-        { name: "Hauswein (1/4 l)", desc: "", price: "3,20 €" },
-        { name: "Hauswein (1/2 l)", desc: "", price: "6,00 €" },
-        { name: "Hauswein (1 l)", desc: "", price: "11,50 €" }
+        { name: "Hauswein (Glas)",   desc: "", price: "2,50 €" },
+        { name: "Hauswein (1/4 l)",  desc: "", price: "3,20 €" },
+        { name: "Hauswein (1/2 l)",  desc: "", price: "6,00 €" },
+        { name: "Hauswein (1 l)",    desc: "", price: "11,50 €" }
       ]
     },
     {
       category: "Erfrischungsgetränke",
       items: [
-        { name: "Coca-Cola", desc: "", price: "2,50 €" },
-        { name: "Coca-Cola Zero", desc: "", price: "2,50 €" },
-        { name: "Fanta Orange", desc: "", price: "2,50 €" },
-        { name: "Fanta Zitrone", desc: "", price: "2,50 €" },
-        { name: "Schweppes Tonic", desc: "", price: "2,50 €" },
-        { name: "7Up", desc: "", price: "2,50 €" },
-        { name: "Nestea Zitrone", desc: "", price: "2,80 €" },
-        { name: "Nestea Pfirsich", desc: "", price: "2,80 €" },
-        { name: "Nestea Mango-Ananas", desc: "", price: "2,80 €" },
-        { name: "Appletiser", desc: "", price: "2,80 €" },
-        { name: "Aquarius Orange", desc: "", price: "2,80 €" },
-        { name: "Red Bull", desc: "", price: "3,00 €" },
-        { name: "Pfirsichsaft", desc: "Pfirsich-Smoothie.", price: "2,50 €" },
-        { name: "Birnen-Ananas-Saft", desc: "Birnen-Ananas-Smoothie.", price: "2,50 €" }
+        { name: "Coca-Cola",              desc: "",                      price: "2,50 €" },
+        { name: "Coca-Cola Zero",         desc: "",                      price: "2,50 €" },
+        { name: "Fanta Orange",           desc: "",                      price: "2,50 €" },
+        { name: "Fanta Zitrone",          desc: "",                      price: "2,50 €" },
+        { name: "Schweppes Tonic",        desc: "",                      price: "2,50 €" },
+        { name: "7Up",                    desc: "",                      price: "2,50 €" },
+        { name: "Nestea Zitrone",         desc: "",                      price: "2,80 €" },
+        { name: "Nestea Pfirsich",        desc: "",                      price: "2,80 €" },
+        { name: "Nestea Mango-Ananas",    desc: "",                      price: "2,80 €" },
+        { name: "Appletiser",             desc: "",                      price: "2,80 €" },
+        { name: "Aquarius Orange",        desc: "",                      price: "2,80 €" },
+        { name: "Red Bull",               desc: "",                      price: "3,00 €" },
+        { name: "Pfirsichsaft",           desc: "Pfirsich-Smoothie.",    price: "2,50 €" },
+        { name: "Birnen-Ananas-Saft",     desc: "Birnen-Ananas-Smoothie.", price: "2,50 €" }
       ]
     },
     {
       category: "Wasser",
       items: [
-        { name: "Stilles Wasser (0,5 l Flasche)", desc: "Stilles Wasser in einer Flasche.", price: "1,20 €" },
-        { name: "Stilles Wasser (1,5 l Flasche)", desc: "Stilles Wasser in einer Plastikflasche.", price: "2,30 €" },
-        { name: "Mineralwasser mit Kohlensäure (0,5 l Flasche)", desc: "Sprudelwasser in einer Glasflasche.", price: "1,30 €" }
+        { name: "Stilles Wasser (0,5 l Flasche)",              desc: "Stilles Wasser in einer Flasche.",      price: "1,20 €" },
+        { name: "Stilles Wasser (1,5 l Flasche)",              desc: "Stilles Wasser in einer Plastikflasche.", price: "2,30 €" },
+        { name: "Mineralwasser mit Kohlensäure (0,5 l Flasche)", desc: "Sprudelwasser in einer Glasflasche.",  price: "1,30 €" }
       ]
     },
     {
       category: "Bier",
       items: [
-        { name: "Dorada Pilsen", desc: "", price: "1,80 €" },
-        { name: "Dorada Especial", desc: "", price: "2,30 €" },
-        { name: "Dorada Alkoholfrei", desc: "", price: "2,00 €" },
+        { name: "Dorada Pilsen",            desc: "", price: "1,80 €" },
+        { name: "Dorada Especial",          desc: "", price: "2,30 €" },
+        { name: "Dorada Alkoholfrei",       desc: "", price: "2,00 €" },
         { name: "Dorada Alkoholfrei mit Zitrone", desc: "", price: "2,30 €" },
-        { name: "1906 Estrella Galicia", desc: "", price: "3,00 €" }
+        { name: "1906 Estrella Galicia",    desc: "", price: "3,00 €" }
       ]
     }
   ]
@@ -446,15 +446,15 @@ const allergensData = {
 const heroData = {
   es: {
     text: "Cocina con alma. Sabores que no se olvidan.",
-    cta: "Ver Menú"
+    cta:  "Ver Menú"
   },
   en: {
     text: "Food with soul. Flavours you’ll never forget.",
-    cta: "View Menu"
+    cta:  "View Menu"
   },
   de: {
     text: "Küche mit Seele. Aromen, die man nicht vergisst.",
-    cta: "Menü ansehen"
+    cta:  "Menü ansehen"
   }
 };
 
@@ -547,7 +547,7 @@ function rotateHeroBackground(){
   currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
 }
 
-// ===== GALLERY AUTO-SCROLL (desktop + mobile) =====
+// ===== GALLERY AUTO-SCROLL (desktop + mobile, molto semplice) =====
 function initGalleryAutoScroll() {
   const slider = document.querySelector(".gallery-slider");
   if (!slider) return;
@@ -560,33 +560,33 @@ function initGalleryAutoScroll() {
     if (interactionTimeout) clearTimeout(interactionTimeout);
     interactionTimeout = setTimeout(() => {
       isUserInteracting = false;
-    }, 3000); // 3s dopo l’ultimo tocco/scroll riparte
+    }, 2500); // 2.5 secondi dopo l'ultimo tocco/movimento riparte
   }
 
+  // Pausa quando l’utente interagisce
   slider.addEventListener("touchstart", pauseAutoScroll, { passive: true });
   slider.addEventListener("touchmove",  pauseAutoScroll, { passive: true });
   slider.addEventListener("mousedown",  pauseAutoScroll);
   slider.addEventListener("wheel",      pauseAutoScroll, { passive: true });
 
-  const speed = 1.2;      // pixel per tick
-  const intervalMs = 20;  // ogni 20ms
+  const speed      = 1.2;  // pixel per tick (aumenta per più veloce)
+  const intervalMs = 20;   // ogni 20ms ~ 50 volte al secondo
 
   setInterval(() => {
     const maxScroll = slider.scrollWidth - slider.clientWidth;
-    if (maxScroll <= 0) return;
+    if (maxScroll <= 0) return; // niente da scrollare
+    if (isUserInteracting) return;
 
-    if (!isUserInteracting) {
-      if (slider.scrollLeft >= maxScroll - 1) {
-        slider.scrollLeft = 0;     // ricomincia da sinistra
-      } else {
-        slider.scrollLeft += speed;
-      }
+    if (slider.scrollLeft >= maxScroll) {
+      slider.scrollLeft = 0;    // ricomincia dall’inizio
+    } else {
+      slider.scrollLeft += speed;
     }
   }, intervalMs);
 }
 
 // ===== INIT PAGINA =====
-function initSite(){
+function initPage(){
   // Contenuto iniziale (spagnolo)
   renderMenu("es");
   renderAbout("es");
@@ -631,5 +631,5 @@ function initSite(){
   initGalleryAutoScroll();
 }
 
-// Avvio quando il DOM è pronto
-document.addEventListener("DOMContentLoaded", initSite);
+// Avvio quando tutta la pagina è caricata (DOM + immagini)
+window.addEventListener("load", initPage);
