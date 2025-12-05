@@ -530,7 +530,6 @@ function renderContact(lang = "es") {
 // ===== HERO SLIDESHOW =====
 const heroImages = [
   "img/IMG_3779.JPG",
-  "img/IMG_3803.JPG",
   "img/IMG_3839.JPG",
   "img/IMG_3868.JPG",
   "img/IMG_3928.JPG",
