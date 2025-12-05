@@ -130,7 +130,7 @@ const menuData = {
     ]},
     { category: "Erster Gang · Getrocknete Pasta", items: [
       { num: 16, name: "Klassisch", desc: "Spaghetti mit Bolognese-Sauce.", price: "12,90 €" },
-      { num: 17, name: "Guitarra", desc: "Spaghetti alla chitarra mit Tomaten-Sahne-Sauce, Pfeffer und Mozzarella.", price: "12,90 €" },
+      { num: 17, name: "Guitarra", desc: "Spaghetti alla chitarra mit Tomaten-Sahne-Sauce, Pfeffer und Mozarella.", price: "12,90 €" },
     ]},
     { category: "Fleisch & Hähnchen", items: [
       { num: 18, name: "Porchetta", desc: "Gerollter Schweinebraten mit Rosmarin und schwarzem Pfeffer, dazu Pommes frites.", price: "19,90 €" },
@@ -560,33 +560,33 @@ function initGalleryAutoScroll() {
     if (interactionTimeout) clearTimeout(interactionTimeout);
     interactionTimeout = setTimeout(() => {
       isUserInteracting = false;
-    }, 3000); // dopo 3s senza tocco/mouse riparte
+    }, 3000); // dopo 3s senza interazione riparte
   }
 
-  // pausa quando l’utente interagisce
+  // Pausa quando l’utente interagisce
   slider.addEventListener("touchstart", pauseAutoScroll, { passive: true });
   slider.addEventListener("touchmove",  pauseAutoScroll, { passive: true });
   slider.addEventListener("mousedown",  pauseAutoScroll);
   slider.addEventListener("wheel",      pauseAutoScroll, { passive: true });
 
-  // velocità: aumenta questo valore per farla andare più veloce
-  const speed = 0.7; // pixel per frame ~ 42px/secondo a 60fps
+  const speed  = 1.5;  // pixel per step (aumenta per più veloce)
+  const stepMs = 20;   // ogni quanti ms fare uno step
 
-  function step() {
+  function tick() {
     const maxScroll = slider.scrollWidth - slider.clientWidth;
 
     if (!isUserInteracting && maxScroll > 0) {
       if (slider.scrollLeft >= maxScroll - 1) {
-        slider.scrollLeft = 0;       // ricomincia dall’inizio
+        slider.scrollLeft = 0;   // ricomincia dall’inizio
       } else {
         slider.scrollLeft += speed;
       }
     }
 
-    requestAnimationFrame(step);
+    setTimeout(tick, stepMs);
   }
 
-  requestAnimationFrame(step);
+  tick();
 }
 
 // ===== INIT PAGINA =====
