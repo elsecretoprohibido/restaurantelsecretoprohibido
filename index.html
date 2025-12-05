@@ -4,20 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>El Secreto Prohibido</title>
+
+  <!-- Font per il logo -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
-<link rel="stylesheet" href="styles.css"/>
-<script defer src="script.js?v=10"></script>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css"/>
-  <!-- versione con query per evitare cache -->
-<script defer src="script.js?v=10"></script>
+
+  <!-- JS (con versione per evitare cache) -->
+  <script defer src="script.js?v=10"></script>
 </head>
 <body>
 
   <!-- NAVBAR -->
- <header class="navbar">
-  <div class="logo brand-name">El Secreto Prohibido</div>
-  ...
-</header>
+  <header class="navbar">
+    <div class="logo brand-name">El Secreto Prohibido</div>
     <nav class="nav-links">
       <a href="#home">Home</a>
       <a href="#gallery">Galería</a>
@@ -28,15 +29,28 @@
   </header>
 
   <!-- HERO / HOME -->
-<section id="home" class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="brand-name brand-hero">El Secreto Prohibido</h1>
-    <p id="hero-text">Cocina con alma. Sabores que no se olvidan.</p>
-    <a class="btn" id="hero-btn" href="#menu">Ver Menú</a>
-  </div>
-</section>
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="brand-name brand-hero">El Secreto Prohibido</h1>
+      <p id="hero-text">Cocina con alma. Sabores que no se olvidan.</p>
+      <a class="btn" id="hero-btn" href="#menu">Ver Menú</a>
+    </div>
+  </section>
 
+      <!-- SWITCH LINGUA (UNICO BLOCCO QUI) -->
+    <div class="lang-buttons">
+      <button class="lang-btn active" data-lang="es">
+        <span class="flag">🇪🇸</span> Español
+      </button>
+      <button class="lang-btn" data-lang="en">
+        <span class="flag">🇬🇧</span> English
+      </button>
+      <button class="lang-btn" data-lang="de">
+        <span class="flag">🇩🇪</span> Deutsch
+      </button>
+    </div>
+  
   <!-- GALLERY -->
   <section id="gallery" class="gallery">
     <h2>Galería del Local</h2>
@@ -94,47 +108,53 @@
     </div>
   </section>
 
-  <!-- ABOUT (multilingua, popolato da JS) -->
-<section class="about">
-  <div class="about-card">
-    <h2 id="about-title">Bienvenidos</h2>
-    <p id="about-text">
-      <!-- Il testo verrà sovrascritto da JS in base alla lingua -->
-    </p>
+  <!-- SPECIAL MENU · NOCHEBUENA -->
+  <section id="nochebuena" class="special-menu">
+    <div class="special-card">
+      <div class="special-header">
+        <span class="special-badge">Especial · 24 de diciembre</span>
+        <span class="special-price" id="nochebuena-price">69,00 €</span>
+      </div>
 
-    <div class="about-insta">
-      <a href="http://instagram.com/restaurantelsecretoprohibido" target="_blank" rel="noopener noreferrer" class="social-link insta-link" aria-label="Instagram Restaurante El Secreto Prohibido">
-        <img src="img/Instagram.png" alt="Instagram" class="insta-img">
-      </a>
+      <h2 id="nochebuena-title">Menú Nochebuena</h2>
 
-      <a href="https://www.facebook.com/share/1Fmj0ogno0Nb" target="_blank" rel="noopener noreferrer" class="social-link fb-link" aria-label="Facebook Restaurante El Secreto Prohibido">
-        <img src="img/Facebook.png" alt="Facebook" class="fb-img">
-      </a>
+      <div id="nochebuena-body">
+        <!-- Contenuto inserito da JS in base alla lingua -->
+      </div>
+
+      <p id="nochebuena-note" class="special-note"></p>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- ABOUT (multilingua, popolato da JS) -->
+  <section class="about">
+    <div class="about-card">
+      <h2 id="about-title">Bienvenidos</h2>
+      <p id="about-text">
+        <!-- Il testo verrà sovrascritto da JS in base alla lingua -->
+      </p>
+
+      <div class="about-insta">
+        <a href="http://instagram.com/restaurantelsecretoprohibido" target="_blank" rel="noopener noreferrer" class="social-link insta-link" aria-label="Instagram Restaurante El Secreto Prohibido">
+          <img src="img/Instagram.png" alt="Instagram" class="insta-img">
+        </a>
+
+        <a href="https://www.facebook.com/share/1Fmj0ogno0Nb" target="_blank" rel="noopener noreferrer" class="social-link fb-link" aria-label="Facebook Restaurante El Secreto Prohibido">
+          <img src="img/Facebook.png" alt="Facebook" class="fb-img">
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- MENU -->
- <section id="menu" class="menu-section">
-  <div class="menu-header">
-    <h2>Menú</h2>
-
-    <div class="lang-buttons">
-      <button class="lang-btn active" data-lang="es">
-        <span class="flag">🇪🇸</span> Español
-      </button>
-      <button class="lang-btn" data-lang="en">
-        <span class="flag">🇬🇧</span> English
-      </button>
-      <button class="lang-btn" data-lang="de">
-        <span class="flag">🇩🇪</span> Deutsch
-      </button>
+  <section id="menu" class="menu-section">
+    <div class="menu-header">
+      <h2>Menú</h2>
     </div>
-  </div>
 
-  <!-- QUI il JS inserirà tutte le categorie e i piatti -->
-  <div id="menu-container"></div>
-</section>
+    <!-- QUI il JS inserirà tutte le categorie e i piatti -->
+    <div id="menu-container"></div>
+  </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">

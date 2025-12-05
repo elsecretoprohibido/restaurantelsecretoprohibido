@@ -465,6 +465,126 @@ const contactData = {
   de: { bizum: "(Über Bizum reservieren, 20 € pro Person)" }
 };
 
+// ===== SPECIAL MENU · NOCHEBUENA =====
+const nocheBuenaData = {
+  es: {
+    title: "Menú Nochebuena",
+    price: "69,00 €",
+    body: `
+      <div class="special-menu-block">
+        <h3>Entrantes</h3>
+        <ul>
+          <li>Vol-au-vent de queso y setas</li>
+          <li>Grissini con jamón serrano curado</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Primer plato</h3>
+        <ul>
+          <li>Ravioli de espinaca con salsa de salvia y mantequilla</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Segundo plato</h3>
+        <ul>
+          <li>Polenta de harina de maíz con longaniza en salsa de tomate</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Postre</h3>
+        <ul>
+          <li>1 Tarta Santiago</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Bebida</h3>
+        <ul>
+          <li>Vino y café</li>
+        </ul>
+      </div>
+    `,
+    note: "IMPORTANTE: Reservar por WhatsApp al número 697 218 364 con una reserva de 20 € por persona."
+  },
+
+  en: {
+    title: "Christmas Eve Menu",
+    price: "€69.00",
+    body: `
+      <div class="special-menu-block">
+        <h3>Starters</h3>
+        <ul>
+          <li>Cheese and mushroom vol-au-vent</li>
+          <li>Grissini with cured Serrano ham</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>First course</h3>
+        <ul>
+          <li>Spinach ravioli with sage and butter sauce</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Second course</h3>
+        <ul>
+          <li>Corn polenta with longaniza sausage in tomato sauce</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Dessert</h3>
+        <ul>
+          <li>1 slice of Tarta de Santiago</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Drinks</h3>
+        <ul>
+          <li>Wine and coffee</li>
+        </ul>
+      </div>
+    `,
+    note: "IMPORTANT: Book via WhatsApp at 697 218 364 with a €20 deposit per person."
+  },
+
+  de: {
+    title: "Heiligabend-Menü",
+    price: "69,00 €",
+    body: `
+      <div class="special-menu-block">
+        <h3>Vorspeisen</h3>
+        <ul>
+          <li>Blätterteigküchlein mit Käse und Pilzen (Vol-au-vent)</li>
+          <li>Grissini mit gereiftem Serrano-Schinken</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Erster Gang</h3>
+        <ul>
+          <li>Spinat-Ravioli mit Salbei-Butter-Sauce</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Zweiter Gang</h3>
+        <ul>
+          <li>Maispolenta mit Longaniza-Wurst in Tomatensauce</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Dessert</h3>
+        <ul>
+          <li>1 Stück Tarta de Santiago</li>
+        </ul>
+      </div>
+      <div class="special-menu-block">
+        <h3>Getränke</h3>
+        <ul>
+          <li>Wein und Kaffee</li>
+        </ul>
+      </div>
+    `,
+    note: "WICHTIG: Reservierung per WhatsApp unter 697 218 364 mit 20 € Anzahlung pro Person."
+  }
+};
+
 // ===== RENDER FUNCTIONS =====
 function renderMenu(lang = "es") {
   const menuContainer = document.getElementById("menu-container");
@@ -527,6 +647,21 @@ function renderContact(lang = "es") {
   bizumText.textContent = contactData[lang].bizum;
 }
 
+function renderNocheBuena(lang = "es") {
+  const titleEl = document.getElementById("nochebuena-title");
+  const bodyEl  = document.getElementById("nochebuena-body");
+  const noteEl  = document.getElementById("nochebuena-note");
+  const priceEl = document.getElementById("nochebuena-price");
+
+  if (!titleEl || !bodyEl || !noteEl || !priceEl) return;
+
+  const data = nocheBuenaData[lang] || nocheBuenaData.es;
+  titleEl.textContent = data.title;
+  bodyEl.innerHTML    = data.body;
+  noteEl.textContent  = data.note;
+  priceEl.textContent = data.price;
+}
+
 // ===== HERO SLIDESHOW =====
 const heroImages = [
   "img/IMG_3779.JPG",
@@ -546,7 +681,7 @@ function rotateHeroBackground(){
   currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
 }
 
-// ===== GALLERY AUTO-SCROLL (desktop + mobile, molto semplice) =====
+// ===== GALLERY AUTO-SCROLL (desktop + mobile) =====
 function initGalleryAutoScroll() {
   const slider = document.querySelector(".gallery-slider");
   if (!slider) return;
@@ -592,6 +727,7 @@ function initPage(){
   renderAllergens("es");
   renderHero("es");
   renderContact("es");
+  renderNocheBuena("es");
 
   // Cambio lingua
   const langButtons = document.querySelectorAll(".lang-btn");
@@ -606,6 +742,7 @@ function initPage(){
       renderAllergens(lang);
       renderHero(lang);
       renderContact(lang);
+      renderNocheBuena(lang);
     });
   });
 
