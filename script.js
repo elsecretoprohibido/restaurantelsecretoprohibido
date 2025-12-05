@@ -547,53 +547,48 @@ function rotateHeroBackground(){
   currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
 }
 
-// ===== GALLERY AUTO-SCROLL (auto + swipe) =====
-function initGalleryAutoScroll(){
+// --- AUTO-SCROLL GALLERIA "Galería del Local" ---
+document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".gallery-slider");
   if (!slider) return;
 
   let isUserInteracting = false;
   let interactionTimeout = null;
-  let maxScroll = 0;
 
-  function updateMaxScroll(){
-    maxScroll = slider.scrollWidth - slider.clientWidth;
-  }
-
-  updateMaxScroll();
-  window.addEventListener("resize", updateMaxScroll);
-
-  function pauseAutoScroll(){
+  function pauseAutoScroll() {
     isUserInteracting = true;
     if (interactionTimeout) clearTimeout(interactionTimeout);
     interactionTimeout = setTimeout(() => {
       isUserInteracting = false;
-    }, 3000);
+    }, 3000); // 3 secondi dopo l'ultimo tocco/movimento riparte
   }
 
+  // Pausa quando l’utente interagisce
   slider.addEventListener("touchstart", pauseAutoScroll, { passive: true });
   slider.addEventListener("touchmove",  pauseAutoScroll, { passive: true });
   slider.addEventListener("mousedown",  pauseAutoScroll);
   slider.addEventListener("wheel",      pauseAutoScroll, { passive: true });
 
-  const speed = 1.7;   // pixel per step
-  const intervalMs = 20;
+  function startAutoScroll() {
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    if (maxScroll <= 0) return; // nulla da scrollare
 
-  setInterval(() => {
-    if (isUserInteracting) return;
+    const speed = 1.5;   // <<< VELOCITÀ: aumenta questo valore per farla andare più veloce (es. 2, 2.5)
+    const intervalMs = 20;
 
-    if (maxScroll <= 0) {
-      updateMaxScroll();
-      return;
-    }
+    setInterval(() => {
+      if (isUserInteracting) return;
 
-    if (slider.scrollLeft >= maxScroll - 1) {
-      slider.scrollLeft = 0;
-    } else {
-      slider.scrollLeft += speed;
-    }
-  }, intervalMs);
-}
+      if (slider.scrollLeft >= maxScroll) {
+        slider.scrollLeft = 0;   // ricomincia da capo
+      } else {
+        slider.scrollLeft += speed;
+      }
+    }, intervalMs);
+  }
+
+  startAutoScroll();
+});
 
 // ===== INIT PAGINA =====
 function initPage(){

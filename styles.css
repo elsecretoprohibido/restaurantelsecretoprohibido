@@ -159,7 +159,7 @@ body{
 
 .gallery-slider{
   position: relative;
-  overflow: hidden;     /* desktop: niente scroll-bar visibile */
+  overflow: hidden;          /* lo scroll lo gestiamo in JS */
   border-radius: 16px;
   border: 1px solid #242428;
   margin-top: 10px;
@@ -170,7 +170,7 @@ body{
   display: flex;
   gap: 10px;
   padding: 10px;
-  /* NESSUNA animazione CSS: lo scorrimento è gestito da JS */
+  /* NIENTE animation qui, lo fa JS */
 }
 
 .gallery-track img{
@@ -180,6 +180,24 @@ body{
   object-fit: cover;
   border-radius: 14px;
   border: 1px solid #222;
+}
+
+/* Mobile: swipe col dito + snap, ma lasciamo fare l’auto-scroll al JS */
+@media (max-width: 768px){
+  .gallery-slider{
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery-track{
+    width: max-content;
+  }
+
+  .gallery-track img{
+    scroll-snap-align: center;
+  }
 }
 
 /* MENU */
