@@ -533,7 +533,7 @@ const heroImages = [
   "img/IMG_3839.JPG",
   "img/IMG_3868.JPG",
   "img/IMG_3928.JPG",
-  "img/IMG_3947.JPG"
+  "img/IMG_3946.JPG"
 ];
 
 let currentHeroIndex = 0;
