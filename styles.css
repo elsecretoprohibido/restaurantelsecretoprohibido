@@ -512,12 +512,11 @@ body{
   }
 }
 
-/* GALLERIA mobile: swipe orizzontale + auto-scroll JS */
+/* GALLERIA mobile: swipe + auto-scroll JS (NO scroll-snap) */
 @media (max-width: 768px){
   .gallery-slider{
     overflow-x: auto;
     overflow-y: hidden;
-    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -526,8 +525,7 @@ body{
   }
 
   .gallery-track img{
-    width: 95vw;          /* quasi tutto lo schermo */
-    height: auto;         /* mantiene le proporzioni */
-    scroll-snap-align: center;
+    width: 95vw;      /* quasi tutto lo schermo */
+    height: auto;     /* mantiene le proporzioni */
   }
 }

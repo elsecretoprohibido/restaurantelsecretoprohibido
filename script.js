@@ -665,7 +665,6 @@ function renderNocheBuena(lang = "es") {
 // ===== HERO SLIDESHOW =====
 const heroImages = [
   "img/IMG_3779.JPG",
-  "img/IMG_3839.JPG",
   "img/IMG_3868.JPG",
   "img/IMG_3928.JPG",
   "img/IMG_3946.JPG"
