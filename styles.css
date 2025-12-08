@@ -64,8 +64,8 @@ body{
   color: #ff3b3b;                    /* rosso intenso */
   letter-spacing: 0.03em;
   text-shadow:
-    0 0 2px rgba(255, 59, 59, 0.4),  /* alone molto più delicato */
-    0 0 6px rgba(0, 0, 0, 0.25);     /* leggero contrasto, non troppo luminoso */
+    0 0 2px rgba(255, 59, 59, 0.4),  /* alone delicato */
+    0 0 6px rgba(0, 0, 0, 0.25);     /* leggero contrasto */
 }
 
 /* dimensioni diverse a seconda del contesto */
@@ -173,7 +173,7 @@ body{
 /* GALLERY */
 .gallery{
   padding: 44px 18px;
-  max-width:1100px;
+  max-width:1500px;   /* più grande su desktop */
   margin:0 auto;
 }
 .gallery h2{
@@ -201,34 +201,13 @@ body{
 
 .gallery-track img{
   flex: 0 0 auto;
-  /* l'immagine mantiene SEMPRE le sue proporzioni, niente deformazioni */
-  width: auto;
+  /* immagini grandi e proporzionate su desktop */
+  width: 540px;
   height: auto;
-  max-width: 360px;   /* limite orizzontale su desktop */
-  max-height: 240px;  /* altezza massima del riquadro */
-  object-fit: contain; /* mostra SEMPRE tutta la foto, senza tagliarla */
+  max-height: 360px;
+  object-fit: contain; /* mostra tutta la foto senza tagliarla */
   border-radius: 14px;
   border: 1px solid #222;
-}
-
-/* Mobile: swipe col dito + snap, ma lasciamo fare l’auto-scroll al JS */
-@media (max-width: 768px){
-  .gallery-slider{
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .gallery-track{
-    width: max-content;
-  }
-
-  .gallery-track img{
-    scroll-snap-align: center;
-    max-width: 80vw;   /* su mobile, massimo 80% della larghezza schermo */
-    max-height: 220px; /* leggermente più basso per stare comodo */
-  }
 }
 
 /* MENU */
@@ -245,9 +224,12 @@ body{
   gap:12px;
   margin-bottom: 18px;
 }
+
+/* PULSANTI LINGUA (usati in alto, sotto la galleria) */
 .lang-buttons{
   display:flex;
   gap:8px;
+  margin-bottom: 12px;
 }
 .lang-btn{
   padding:8px 12px;
@@ -471,6 +453,7 @@ body{
   }
 }
 
+/* NAVBAR mobile (burger) */
 @media (max-width: 640px){
   .nav-links{
     display:none;
@@ -495,10 +478,10 @@ body{
   }
 }
 
-/* Mobile: swipe orizzontale + auto-scroll JS */
+/* GALLERIA mobile: swipe orizzontale + auto-scroll JS */
 @media (max-width: 768px){
   .gallery-slider{
-    overflow-x: auto;           /* permette swipe con il dito */
+    overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -509,12 +492,8 @@ body{
   }
 
   .gallery-track img{
+    width: 95vw;          /* quasi tutto lo schermo */
+    height: auto;         /* mantiene le proporzioni */
     scroll-snap-align: center;
   }
-}
-
-.lang-buttons {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px; /* nuovo */
 }
