@@ -717,6 +717,57 @@ function initGalleryAutoScroll() {
   }, intervalMs);
 }
 
+// ===== LIGHTBOX GALLERIA =====
+function initGalleryLightbox() {
+  const images      = document.querySelectorAll(".gallery-track img");
+  const lightbox    = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-image");
+  const closeBtn    = document.getElementById("lightbox-close");
+
+  if (!images.length || !lightbox || !lightboxImg || !closeBtn) return;
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";  // niente scroll sotto
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  // Click / tap su ogni foto della galleria
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      openLightbox(img.src, img.alt);
+    });
+
+    // per alcuni browser mobile il tap è più reattivo su touchstart
+    img.addEventListener("touchstart", () => {
+      openLightbox(img.src, img.alt);
+    }, { passive: true });
+  });
+
+  // Pulsante X
+  closeBtn.addEventListener("click", closeLightbox);
+
+  // Clic sul fondale scuro chiude
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // ESC per chiudere da tastiera (utile su PC)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+}
+
 // ===== INIT PAGINA =====
 function initPage(){
   // Contenuto iniziale (spagnolo)
@@ -761,8 +812,9 @@ function initPage(){
   rotateHeroBackground();
   setInterval(rotateHeroBackground, 4000);
 
-  // Galleria auto-scroll
+  // Galleria auto-scroll + lightbox
   initGalleryAutoScroll();
+  initGalleryLightbox();
 }
 
 // Avvio quando tutta la pagina è caricata (DOM + immagini)
