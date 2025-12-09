@@ -88,7 +88,6 @@ body{
 }
 
 /* HERO */
-/* HERO */
 .hero{
   position: relative;
   min-height: 60vh;                 /* prima 85vh: ora è più bassa */
@@ -193,46 +192,65 @@ body{
   max-width: 1500px;
   margin: 0 auto;
 }
+
 .gallery h2{
   margin-bottom: 14px;
   font-size: 1.6rem;
 }
 
+/* Contenitore con altezza FISSA grande (pensata per la foto più alta) */
 .gallery-slider{
   position: relative;
-  overflow: hidden;              /* niente scroll orizzontale */
+  overflow: hidden;
   border-radius: 16px;
   border: 1px solid #242428;
   margin-top: 10px;
-}
 
-.gallery-track{
+  width: 100%;
+  max-width: 1500px;
+
+  /* altezza fissa DESKTOP/TABLET */
+  height: 520px;
+
   display: flex;
   align-items: center;
-  justify-content: center;      /* foto centrata */
+  justify-content: center;
+}
+
+/* Il track riempie completamente il contenitore */
+.gallery-track{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
 }
 
+/* L'immagine si adatta DENTRO allo spazio fisso senza cambiarne l'altezza */
 .gallery-track img{
-  flex: 0 0 auto;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
-  max-width: 900px;             /* grande su desktop */
-  max-height: 600px;
-  object-fit: contain;          /* nessun taglio, tutta la foto visibile */
+  object-fit: contain;     /* mostra SEMPRE tutta la foto */
   border-radius: 14px;
   border: 1px solid #222;
 }
 
-/* Mobile: foto sempre grande e leggibile */
+/* MOBILE: altezza fissa, un po’ più bassa ma comunque ampia */
 @media (max-width: 768px){
+  .gallery-slider{
+    height: 420px;         /* fissa: non cambia tra una foto e l’altra */
+  }
+
   .gallery-track{
     padding: 8px;
   }
 
   .gallery-track img{
     max-width: 100%;
-    max-height: 70vh;
+    max-height: 100%;
   }
 }
 
@@ -486,7 +504,6 @@ body{
     padding: 10px 8px;
   }
 
-  /* puoi lasciare anche questo, ma ormai .logo è già display:none; non fa danni */
   .logo{
     display:none;
   }
@@ -504,19 +521,5 @@ body{
 
   .burger{
     display:none;
-  }
-}
-
-/* GALLERIA mobile: una foto grande, centrata */
-@media (max-width: 768px){
-  .gallery-track{
-    padding: 8px;
-  }
-
-  .gallery-track img{
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 70vh;   /* non supera il 70% dell'altezza schermo */
   }
 }
