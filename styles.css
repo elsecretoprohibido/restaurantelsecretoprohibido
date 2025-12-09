@@ -27,20 +27,24 @@ body{
   z-index: 50;
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;      /* link spostati a sinistra */
+  gap: 24px;                       /* spazio tra blocchi nella navbar */
   padding:14px 18px;
   background: rgba(15,15,16,0.9);
   backdrop-filter: blur(6px);
   border-bottom:1px solid #222;
 }
+
+/* nascondiamo il nome del locale ovunque */
 .logo{
-  font-weight:700;
-  letter-spacing:0.5px;
+  display:none;
 }
+
 .nav-links{
   display:flex;
   gap:16px;
 }
+
 .nav-links a{
   color:var(--text);
   text-decoration:none;
@@ -50,6 +54,8 @@ body{
 .nav-links a:hover{
   color:var(--accent);
 }
+
+/* niente burger: non ci serve più */
 .burger{
   display:none;
   font-size:1.5rem;
@@ -473,45 +479,44 @@ body{
   }
 }
 
-/* NAVBAR mobile (burger) */
+/* NAVBAR mobile: niente logo, niente burger, solo link in riga */
 @media (max-width: 640px){
-  .nav-links{
+  .navbar{
+    justify-content: center;
+    padding: 10px 8px;
+  }
+
+  /* puoi lasciare anche questo, ma ormai .logo è già display:none; non fa danni */
+  .logo{
     display:none;
-    position:absolute;
-    top:56px;
-    right:12px;
-    background: var(--bg-soft);
-    padding:12px;
-    border-radius:12px;
-    border:1px solid #2a2a2f;
-    flex-direction:column;
-    gap:10px;
   }
-  .nav-links.open{
+
+  .nav-links{
     display:flex;
+    position: static;
+    background: transparent;
+    padding:0;
+    border:none;
+    flex:1;
+    justify-content: space-evenly; /* Home / Galería / Menú / Contacto distribuiti */
+    gap:8px;
   }
+
   .burger{
-    display:block;
-  }
-  .allergens-grid{
-    grid-template-columns: 1fr;
+    display:none;
   }
 }
 
-/* GALLERIA mobile: swipe + auto-scroll JS (NO scroll-snap) */
+/* GALLERIA mobile: una foto grande, centrata */
 @media (max-width: 768px){
-  .gallery-slider{
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-
   .gallery-track{
-    width: max-content;
+    padding: 8px;
   }
 
   .gallery-track img{
-    width: 95vw;      /* quasi tutto lo schermo */
-    height: auto;     /* mantiene le proporzioni */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh;   /* non supera il 70% dell'altezza schermo */
   }
 }

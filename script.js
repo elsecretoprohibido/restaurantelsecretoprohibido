@@ -816,7 +816,6 @@ function initPage(){
   setInterval(rotateHeroBackground, 4000);
 
   // Galleria
-  initGalleryAutoScroll();
   initGalleryLightbox();
 }
 
