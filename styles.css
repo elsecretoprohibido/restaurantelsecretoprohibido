@@ -82,21 +82,32 @@ body{
 }
 
 /* HERO */
+/* HERO */
 .hero{
-  position:relative;
-  min-height: 85vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background-image:url("img/IMG_3812.JPG");
-  background-size:cover;
-  background-position:center;
+  position: relative;
+  min-height: 60vh;                 /* prima 85vh: ora è più bassa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 18px 40px;          /* un po’ di spazio sopra/sotto */
+  background-image: url("img/IMG_3812.JPG");
+  background-size: cover;
+  background-position: center;
 }
+
 .hero-overlay{
-  position:absolute;
-  inset:0;
-  background: none;   /* niente sfumatura */
+  position: absolute;
+  inset: 0;
+  background: none;                 /* nessuna sfumatura */
+}
+
+/* hero un po’ più compatta su schermi piccoli */
+@media (max-width: 768px){
+  .hero{
+    min-height: 55vh;
+    padding: 50px 16px 32px;
+  }
 }
 
 .hero-content{
