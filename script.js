@@ -663,11 +663,32 @@ function renderNocheBuena(lang = "es") {
 }
 
 // ===== HERO SLIDESHOW =====
+
+// ===== GALLERY SLIDESHOW (una sola foto che cambia) =====
+function initGallerySlideshow() {
+  const track = document.querySelector(".gallery-track");
+  if (!track) return;
+
+  const images = Array.from(track.querySelectorAll("img"));
+  if (images.length === 0) return;
+
+  let currentIndex = 0;
+
+  // Mostra solo la prima immagine
+  images.forEach((img, index) => {
+    img.style.display = index === 0 ? "block" : "none";
+  });
+
+  // Cambia foto ogni 4 secondi (modifica 4000 se vuoi più lento/veloce)
+  setInterval(() => {
+    images[currentIndex].style.display = "none";
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].style.display = "block";
+  }, 4000);
+}
+
 const heroImages = [
-  "img/IMG_3779.JPG",
-  "img/IMG_3868.JPG",
-  "img/IMG_3928.JPG",
-  "img/IMG_3946.JPG"
+  "img/IMG_9999.JPG"
 ];
 
 let currentHeroIndex = 0;
@@ -680,43 +701,8 @@ function rotateHeroBackground(){
   currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
 }
 
-// ===== GALLERY AUTO-SCROLL (desktop + mobile) =====
-function initGalleryAutoScroll() {
-  const slider = document.querySelector(".gallery-slider");
-  if (!slider) return;
-
-  let isUserInteracting  = false;
-  let interactionTimeout = null;
-
-  function pauseAutoScroll() {
-    isUserInteracting = true;
-    if (interactionTimeout) clearTimeout(interactionTimeout);
-    interactionTimeout = setTimeout(() => {
-      isUserInteracting = false;
-    }, 2500); // 2.5 s dopo l’ultima interazione riparte
-  }
-
-  // Pausa quando l’utente interagisce
-  slider.addEventListener("touchstart", pauseAutoScroll, { passive: true });
-  slider.addEventListener("touchmove",  pauseAutoScroll, { passive: true });
-  slider.addEventListener("mousedown",  pauseAutoScroll);
-  slider.addEventListener("wheel",      pauseAutoScroll, { passive: true });
-
-  const speed      = 1.2;  // pixel per tick
-  const intervalMs = 20;   // ~50 fps
-
-  setInterval(() => {
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
-    if (maxScroll <= 0) return;
-    if (isUserInteracting) return;
-
-    if (slider.scrollLeft >= maxScroll) {
-      slider.scrollLeft = 0;    // ricomincia
-    } else {
-      slider.scrollLeft += speed;
-    }
-  }, intervalMs);
-}
+// Galleria: una sola foto che cambia
+  initGallerySlideshow();
 
 // ===== LIGHTBOX GALLERIA (tap vs drag) =====
 function initGalleryLightbox() {
