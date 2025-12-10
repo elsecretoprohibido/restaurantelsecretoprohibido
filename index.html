@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css"/>
 
   <!-- JS (con versione per evitare cache) -->
-<script defer src="script.js?v=12"></script>
+  <script defer src="script.js?v=13"></script>
 </head>
 <body>
 
@@ -38,7 +38,11 @@
     </div>
   </section>
 
-      <!-- SWITCH LINGUA (UNICO BLOCCO QUI) -->
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <h2>Galería del Local</h2>
+
+    <!-- SWITCH LINGUA -->
     <div class="lang-buttons">
       <button class="lang-btn active" data-lang="es">
         <span class="flag">🇪🇸</span> Español
@@ -50,24 +54,21 @@
         <span class="flag">🇩🇪</span> Deutsch
       </button>
     </div>
-  
-<!-- GALLERY -->
-<section id="gallery" class="gallery">
-  <h2>Galería del Local</h2>
 
-  <div class="gallery-video-wrapper">
-    <video
-      id="gallery-video"
-      src="img/video_collage_ristorante_slow_enhanced.mp4"   <!-- CAMBIA QUI IL PERCORSO DEL TUO VIDEO -->
-      autoplay
-      muted
-      loop
-      playsinline
-    >
-      Tu navegador no soporta el tag de vídeo.
-    </video>
-  </div>
-</section>
+    <!-- VIDEO GALLERIA -->
+    <div class="gallery-video-wrapper">
+      <video
+        id="gallery-video"
+        src="img/video_collage_ristorante_slow_enhanced.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        Tu navegador no soporta el tag de vídeo.
+      </video>
+    </div>
+  </section>
 
   <!-- SPECIAL MENU · NOCHEBUENA -->
   <section id="nochebuena" class="special-menu">
@@ -183,11 +184,5 @@
     <p>© <span id="year"></span> El Secreto Prohibido · Todos los derechos reservados.</p>
   </footer>
 
-    <!-- LIGHTBOX FOTO GALLERIA -->
-  <div id="lightbox" class="lightbox">
-    <span id="lightbox-close" class="lightbox-close">&times;</span>
-  </div>
-</body>
-</html>
 </body>
 </html>

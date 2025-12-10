@@ -662,40 +662,9 @@ function renderNocheBuena(lang = "es") {
   priceEl.textContent = data.price;
 }
 
-// ===== HERO SLIDESHOW =====
-
-// ===== GALLERY SLIDESHOW (una sola foto che cambia) =====
-function initGalleryVideo() {
-  const video = document.getElementById("gallery-video");
-  if (!video) return;
-
-  // assicuriamoci che sia muto (richiesto da molti browser mobile)
-  video.muted = true;
-
-  const tryPlay = () => {
-    const p = video.play();
-    if (p && p.then) {
-      p.catch(err => {
-        console.log("Autoplay bloccato dal browser:", err);
-      });
-    }
-  };
-
-  // Proviamo quando la pagina è visibile
-  if (document.visibilityState === "visible") {
-    tryPlay();
-  }
-
-  // Se si apre in background / nuova scheda, riproviamo quando diventa visibile
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible" && video.paused) {
-      tryPlay();
-    }
-  });
-}
-
+// ===== HERO BACKGROUND (se vuoi tenerlo, metti foto reali) =====
 const heroImages = [
-  "img/IMG_9999.JPG"
+  "img/IMG_3812.JPG"
 ];
 
 let currentHeroIndex = 0;
@@ -708,72 +677,31 @@ function rotateHeroBackground(){
   currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
 }
 
-// Galleria: una sola foto che cambia
-  initGallerySlideshow();
+// ===== VIDEO GALLERIA (autoplay forzato) =====
+function initGalleryVideo() {
+  const video = document.getElementById("gallery-video");
+  if (!video) return;
 
-// ===== LIGHTBOX GALLERIA (tap vs drag) =====
-function initGalleryLightbox() {
-  const images      = document.querySelectorAll(".gallery-track img");
-  const lightbox    = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-image");
-  const closeBtn    = document.getElementById("lightbox-close");
+  video.muted = true; // richiesto per l’autoplay
 
-  if (!images.length || !lightbox || !lightboxImg || !closeBtn) return;
-
-  function openLightbox(src, alt) {
-    lightboxImg.src = src;
-    lightboxImg.alt = alt || "";
-    lightbox.classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove("open");
-    document.body.style.overflow = "";
-  }
-
-  // soglie per capire se è un TAP o un DRAG
-  const MAX_MOVE = 10;    // px
-  const MAX_TIME = 300;   // ms
-
-  images.forEach(img => {
-    let startX = 0;
-    let startY = 0;
-    let startTime = 0;
-
-    img.addEventListener("pointerdown", (e) => {
-      startX = e.clientX;
-      startY = e.clientY;
-      startTime = Date.now();
-    });
-
-    img.addEventListener("pointerup", (e) => {
-      const dx = Math.abs(e.clientX - startX);
-      const dy = Math.abs(e.clientY - startY);
-      const dt = Date.now() - startTime;
-
-      // TAP: poco movimento e poco tempo ➜ apri foto
-      if (dx < MAX_MOVE && dy < MAX_MOVE && dt < MAX_TIME) {
-        openLightbox(img.src, img.alt);
-      }
-      // se invece ha trascinato di più ➜ swipe: non apriamo niente
-    });
-  });
-
-  // Pulsante X
-  closeBtn.addEventListener("click", closeLightbox);
-
-  // Clic sul fondale scuro chiude
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
+  const tryPlay = () => {
+    const p = video.play();
+    if (p && p.then) {
+      p.catch(err => {
+        console.log("Autoplay bloccato dal browser:", err);
+      });
     }
-  });
+  };
 
-  // ESC da tastiera
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeLightbox();
+  // Se la pagina è già visibile
+  if (document.visibilityState === "visible") {
+    tryPlay();
+  }
+
+  // Se viene aperta in background, riproviamo quando diventa visibile
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && video.paused) {
+      tryPlay();
     }
   });
 }
@@ -788,7 +716,7 @@ function initPage(){
   renderContact("es");
   renderNocheBuena("es");
 
-  // Cambio lingua (unico blocco di pulsanti sotto "Galería del local")
+  // Cambio lingua (pulsanti sotto "Galería del local")
   const langButtons = document.querySelectorAll(".lang-btn");
   langButtons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -805,7 +733,7 @@ function initPage(){
     });
   });
 
-  // Mobile nav
+  // Mobile nav (se un giorno vorrai riattivare il burger)
   const burger   = document.querySelector(".burger");
   const navLinks = document.querySelector(".nav-links");
   if (burger && navLinks) {
@@ -818,25 +746,12 @@ function initPage(){
     yearEl.textContent = new Date().getFullYear();
   }
 
-function initPage(){
-  // ... le tue altre inizializzazioni
-  renderMenu("es");
-  renderAbout("es");
-  renderAllergens("es");
-  renderHero("es");
-  renderContact("es");
-  renderNocheBuena("es");
-
-  // avvia il video della galleria
-  initGalleryVideo();
-}
-
-  // Hero slideshow
+  // Hero slideshow (facoltativo)
   rotateHeroBackground();
-  setInterval(rotateHeroBackground, 4000);
+  setInterval(rotateHeroBackground, 8000);
 
-  // Galleria
-  initGalleryLightbox();
+  // Video galleria
+  initGalleryVideo();
 }
 
 // Avvio quando tutta la pagina (DOM + immagini) è caricata
