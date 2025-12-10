@@ -354,11 +354,52 @@ body{
 }
 
 .special-card{
+  position: relative;
   background: radial-gradient(circle at top, #2a1b1b 0, #151518 55%, #0f0f10 100%);
   border-radius: 18px;
-  border: 1px solid rgba(224, 177, 90, 0.6);
+  border: 1px solid rgba(224, 177, 90, 0.9);
   padding: 22px 20px;
   box-shadow: 0 0 26px rgba(0,0,0,0.6);
+  overflow: hidden; /* per gli effetti decorativi */
+}
+
+/* bordo che “respira” leggermente in stile natalizio */
+.special-card::before{
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    #ff3b3b,
+    #e0b15a,
+    #1fd37f,
+    #e0b15a,
+    #ff3b3b
+  );
+  opacity: 0.2;
+  animation: xmas-glow 8s linear infinite;
+  z-index: -1;
+}
+
+/* leggero effetto di piccoli fiocchi sullo sfondo */
+.special-card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.22) 1px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.18) 1px, transparent 2px);
+  background-size: 180px 180px, 220px 220px;
+  background-position: 0 0, 40px 60px;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+/* animazione lieve del bordo */
+@keyframes xmas-glow{
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .special-header{
@@ -369,9 +410,11 @@ body{
   margin-bottom:8px;
 }
 
+/* badge con albero di Natale */
 .special-badge{
   display:inline-flex;
   align-items:center;
+  gap: 6px;
   padding:4px 10px;
   border-radius:999px;
   font-size:0.8rem;
@@ -381,17 +424,42 @@ body{
   color: var(--accent);
 }
 
+.special-badge::before{
+  content: "🎄";
+}
+
 .special-price{
   font-weight:700;
   font-size:1.2rem;
   color: #ffdf8a;
 }
 
+/* titolo con decorazioni laterali */
 .special-card h2{
   font-size:1.6rem;
   margin-bottom:10px;
+  text-align:center;
+  position: relative;
 }
 
+.special-card h2::before,
+.special-card h2::after{
+  content: "❄️";
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.special-card h2::before{
+  left: -4px;
+}
+
+.special-card h2::after{
+  right: -4px;
+}
+
+/* blocchi del menù */
 .special-menu-block{
   margin-bottom:10px;
 }
@@ -400,6 +468,15 @@ body{
   font-size:1rem;
   margin-bottom:4px;
   color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* piccolo’ bullet’ natalizio prima di ogni sottotitolo */
+.special-menu-block h3::before{
+  content: "✨";
+  font-size: 0.9rem;
 }
 
 .special-menu-block ul{
@@ -413,6 +490,13 @@ body{
   margin-top:12px;
   color: var(--muted);
   font-size:0.9rem;
+}
+
+/* un piccolo accento rosso sul testo della nota quando c'è hover (desktop) */
+@media (hover: hover){
+  .special-note:hover{
+    color: #ffb3b3;
+  }
 }
 
 /* ALLERGENS */
