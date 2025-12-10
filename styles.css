@@ -227,10 +227,20 @@ body{
   display: block;
 }
 
-/* MOBILE: stessa logica, nessun cambio di altezza, solo si restringe */
+/* MOBILE: video pieno, in evidenza */
 @media (max-width: 768px){
   .gallery-video-wrapper{
     max-width: 100%;
+    aspect-ratio: auto;   /* togliamo il vincolo 16:9 */
+    height: 65vh;         /* riempie bene lo schermo, puoi fare 60–70vh a gusto */
+  }
+
+  #gallery-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* RIEMPIE tutto il riquadro, anche se taglia un po’ i bordi */
+    border-radius: 16px;
+    display: block;
   }
 }
 
@@ -363,6 +373,12 @@ body{
   overflow: hidden; /* per gli effetti decorativi */
 }
 
+/* Tutto il contenuto sopra gli effetti */
+.special-card > *{
+  position: relative;
+  z-index: 2;
+}
+
 /* bordo che “respira” leggermente in stile natalizio */
 .special-card::before{
   content: "";
@@ -377,29 +393,41 @@ body{
     #e0b15a,
     #ff3b3b
   );
-  opacity: 0.2;
-  animation: xmas-glow 8s linear infinite;
-  z-index: -1;
+  opacity: 0.32;                 /* un po’ più visibile */
+  animation: xmas-glow 14s linear infinite;
+  z-index: 0;
 }
 
-/* leggero effetto di piccoli fiocchi sullo sfondo */
+/* leggera neve animata sullo sfondo */
 .special-card::after{
   content: "";
   position: absolute;
   inset: 0;
   background-image:
     radial-gradient(circle, rgba(255,255,255,0.22) 1px, transparent 2px),
-    radial-gradient(circle, rgba(255,255,255,0.18) 1px, transparent 2px);
+    radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 2px);
   background-size: 180px 180px, 220px 220px;
   background-position: 0 0, 40px 60px;
-  opacity: 0.16;
+  opacity: 0.28;
   pointer-events: none;
+  animation: snow-fall 22s linear infinite;
+  z-index: 1;
 }
 
 /* animazione lieve del bordo */
 @keyframes xmas-glow{
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* neve che scorre lentamente verso il basso */
+@keyframes snow-fall{
+  0%{
+    background-position: 0 0, 40px 60px;
+  }
+  100%{
+    background-position: 0 260px, 40px 320px;
+  }
 }
 
 .special-header{
@@ -410,7 +438,7 @@ body{
   margin-bottom:8px;
 }
 
-/* badge con albero di Natale */
+/* badge con albero di Natale + effetto "respiro" */
 .special-badge{
   display:inline-flex;
   align-items:center;
@@ -420,21 +448,47 @@ body{
   font-size:0.8rem;
   text-transform:uppercase;
   letter-spacing:0.08em;
-  background: rgba(224,177,90,0.12);
+  background: rgba(224,177,90,0.16);
   color: var(--accent);
+  animation: badge-breathe 5.5s ease-in-out infinite;
 }
 
 .special-badge::before{
   content: "🎄";
 }
 
+@keyframes badge-breathe{
+  0%   { transform: scale(1);     box-shadow: 0 0 0 rgba(224,177,90,0); }
+  50%  { transform: scale(1.06);  box-shadow: 0 0 12px rgba(224,177,90,0.45); }
+  100% { transform: scale(1);     box-shadow: 0 0 0 rgba(224,177,90,0); }
+}
+
+/* prezzo con alone dorato che pulsa piano */
 .special-price{
+  position: relative;
   font-weight:700;
   font-size:1.2rem;
   color: #ffdf8a;
 }
 
-/* titolo con decorazioni laterali */
+.special-price::after{
+  content: "";
+  position:absolute;
+  inset: -4px -10px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255,223,138,0.5), transparent 70%);
+  opacity: 0;
+  z-index: -1;
+  animation: price-pulse 4.2s ease-in-out infinite;
+}
+
+@keyframes price-pulse{
+  0%   { opacity: 0;   transform: scale(0.9); }
+  40%  { opacity: 0.9; transform: scale(1);   }
+  100% { opacity: 0;   transform: scale(1.05);}
+}
+
+/* titolo con piccole decorazioni laterali */
 .special-card h2{
   font-size:1.6rem;
   margin-bottom:10px;
@@ -445,10 +499,11 @@ body{
 .special-card h2::before,
 .special-card h2::after{
   content: "❄️";
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0.9;
 }
 
 .special-card h2::before{
@@ -473,7 +528,7 @@ body{
   gap: 6px;
 }
 
-/* piccolo’ bullet’ natalizio prima di ogni sottotitolo */
+/* piccolo ‘sparkle’ davanti ai sottotitoli */
 .special-menu-block h3::before{
   content: "✨";
   font-size: 0.9rem;
@@ -492,7 +547,7 @@ body{
   font-size:0.9rem;
 }
 
-/* un piccolo accento rosso sul testo della nota quando c'è hover (desktop) */
+/* su desktop: leggero effetto al passaggio del mouse sulla nota */
 @media (hover: hover){
   .special-note:hover{
     color: #ffb3b3;
