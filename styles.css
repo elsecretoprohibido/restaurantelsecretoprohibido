@@ -198,8 +198,8 @@ body{
   font-size: 1.6rem;
 }
 
-/* Contenitore con altezza FISSA grande (pensata per la foto più alta) */
-.gallery-slider{
+/* Contenitore video con spazio FISSO */
+.gallery-video-wrapper{
   position: relative;
   overflow: hidden;
   border-radius: 16px;
@@ -209,7 +209,7 @@ body{
   width: 100%;
   max-width: 1500px;
 
-  /* altezza fissa DESKTOP/TABLET */
+  /* altezza fissa desktop/tablet: nessun movimento del menu sotto */
   height: 520px;
 
   display: flex;
@@ -217,40 +217,17 @@ body{
   justify-content: center;
 }
 
-/* Il track riempie completamente il contenitore */
-.gallery-track{
+.gallery-video-wrapper video{
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  object-fit: cover;   /* copre bene il riquadro, niente bande nere */
+  border-radius: 16px;
 }
 
-/* L'immagine si adatta DENTRO allo spazio fisso senza cambiarne l'altezza */
-.gallery-track img{
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;     /* mostra SEMPRE tutta la foto */
-  border-radius: 14px;
-  border: 1px solid #222;
-}
-
-/* MOBILE: altezza fissa, un po’ più bassa ma comunque ampia */
+/* MOBILE: spazio un po’ più basso ma sempre FISSO */
 @media (max-width: 768px){
-  .gallery-slider{
-    height: 420px;         /* fissa: non cambia tra una foto e l’altra */
-  }
-
-  .gallery-track{
-    padding: 8px;
-  }
-
-  .gallery-track img{
-    max-width: 100%;
-    max-height: 100%;
+  .gallery-video-wrapper{
+    height: 420px;     /* puoi alzare/abbassare questo valore a gusto tuo */
   }
 }
 
