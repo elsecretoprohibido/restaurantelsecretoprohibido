@@ -229,6 +229,14 @@ body{
   .gallery-video-wrapper{
     height: 420px;     /* puoi alzare/abbassare questo valore a gusto tuo */
   }
+
+  .gallery-video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* o contain, se preferisci non tagliare */
+  display: block;
+}
+
 }
 
 /* MENU */

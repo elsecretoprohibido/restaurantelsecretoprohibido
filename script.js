@@ -665,26 +665,33 @@ function renderNocheBuena(lang = "es") {
 // ===== HERO SLIDESHOW =====
 
 // ===== GALLERY SLIDESHOW (una sola foto che cambia) =====
-function initGallerySlideshow() {
-  const track = document.querySelector(".gallery-track");
-  if (!track) return;
+function initGalleryVideo() {
+  const video = document.getElementById("gallery-video");
+  if (!video) return;
 
-  const images = Array.from(track.querySelectorAll("img"));
-  if (images.length === 0) return;
+  // assicuriamoci che sia muto (richiesto da molti browser mobile)
+  video.muted = true;
 
-  let currentIndex = 0;
+  const tryPlay = () => {
+    const p = video.play();
+    if (p && p.then) {
+      p.catch(err => {
+        console.log("Autoplay bloccato dal browser:", err);
+      });
+    }
+  };
 
-  // Mostra solo la prima immagine
-  images.forEach((img, index) => {
-    img.style.display = index === 0 ? "block" : "none";
+  // Proviamo quando la pagina è visibile
+  if (document.visibilityState === "visible") {
+    tryPlay();
+  }
+
+  // Se si apre in background / nuova scheda, riproviamo quando diventa visibile
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && video.paused) {
+      tryPlay();
+    }
   });
-
-  // Cambia foto ogni 4 secondi (modifica 4000 se vuoi più lento/veloce)
-  setInterval(() => {
-    images[currentIndex].style.display = "none";
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].style.display = "block";
-  }, 4000);
 }
 
 const heroImages = [
@@ -810,6 +817,19 @@ function initPage(){
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+function initPage(){
+  // ... le tue altre inizializzazioni
+  renderMenu("es");
+  renderAbout("es");
+  renderAllergens("es");
+  renderHero("es");
+  renderContact("es");
+  renderNocheBuena("es");
+
+  // avvia il video della galleria
+  initGalleryVideo();
+}
 
   // Hero slideshow
   rotateHeroBackground();
