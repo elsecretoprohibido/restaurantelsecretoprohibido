@@ -386,51 +386,19 @@ body{
   overflow: hidden; /* per gli effetti decorativi */
 }
 
-/* Tutto il contenuto sopra gli effetti */
-.special-card > *{
-  position: relative;
-  z-index: 2;
-}
-
-/* bordo che “respira” leggermente in stile natalizio */
-.special-card::before{
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: conic-gradient(
-    from 0deg,
-    #ff3b3b,
-    #e0b15a,
-    #1fd37f,
-    #e0b15a,
-    #ff3b3b
-  );
-  opacity: 0.32;                 /* un po’ più visibile */
-  animation: xmas-glow 14s linear infinite;
-  z-index: 0;
-}
-
-/* leggera neve animata sullo sfondo */
+/* ❄️ solo neve leggera sullo sfondo, niente rettangolo che ruota */
 .special-card::after{
   content: "";
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.22) 1px, transparent 2px),
-    radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 2px);
+    radial-gradient(circle, rgba(255,255,255,0.18) 1px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 2px);
   background-size: 180px 180px, 220px 220px;
   background-position: 0 0, 40px 60px;
-  opacity: 0.28;
+  opacity: 0.16;
   pointer-events: none;
   animation: snow-fall 22s linear infinite;
-  z-index: 1;
-}
-
-/* animazione lieve del bordo */
-@keyframes xmas-glow{
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 
 /* neve che scorre lentamente verso il basso */
@@ -461,7 +429,7 @@ body{
   font-size:0.8rem;
   text-transform:uppercase;
   letter-spacing:0.08em;
-  background: rgba(224,177,90,0.16);
+  background: rgba(224,177,90,0.12);
   color: var(--accent);
   animation: badge-breathe 5.5s ease-in-out infinite;
 }
@@ -472,7 +440,7 @@ body{
 
 @keyframes badge-breathe{
   0%   { transform: scale(1);     box-shadow: 0 0 0 rgba(224,177,90,0); }
-  50%  { transform: scale(1.06);  box-shadow: 0 0 12px rgba(224,177,90,0.45); }
+  50%  { transform: scale(1.04);  box-shadow: 0 0 10px rgba(224,177,90,0.33); }
   100% { transform: scale(1);     box-shadow: 0 0 0 rgba(224,177,90,0); }
 }
 
@@ -489,7 +457,7 @@ body{
   position:absolute;
   inset: -4px -10px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255,223,138,0.5), transparent 70%);
+  background: radial-gradient(circle, rgba(255,223,138,0.38), transparent 70%);
   opacity: 0;
   z-index: -1;
   animation: price-pulse 4.2s ease-in-out infinite;
@@ -497,7 +465,7 @@ body{
 
 @keyframes price-pulse{
   0%   { opacity: 0;   transform: scale(0.9); }
-  40%  { opacity: 0.9; transform: scale(1);   }
+  40%  { opacity: 0.7; transform: scale(1);   }
   100% { opacity: 0;   transform: scale(1.05);}
 }
 
@@ -516,7 +484,7 @@ body{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .special-card h2::before{
