@@ -142,16 +142,19 @@
         <p>Lun–Dom: 13:00 16:00 / 19:00 22:00</p>
       </div>
 
-      <div class="contact-card">
-        <h3>Reservas</h3>
-        <p>
-          +34 822 02 92 19<br/>
-          +34 621 24 71 82<br/>
-          <a id="bizum-text" class="bizum-link" href="tel:+34621247182">
-            (Reservar por Bizum, 20 euro por persona)
-          </a>
-        </p>
-      </div>
+     <div class="contact-card">
+  <h3>Reservas</h3>
+  <p>
+    +34 822 02 92 19<br/>
+    +34 621 24 71 82<br/>
+    <a id="bizum-text" class="bizum-link" href="tel:+34621247182">
+      (Reservar por Bizum, 20 euro por persona)
+    </a>
+  </p>
+
+  <!-- BOTÓN DE RESERVA DISH -->
+  <div id="hors-hydra-559f49da-9b98-4cbc-9b41-96d630df3c7e"></div>
+</div>
     </div>
   </section>
 
@@ -183,6 +186,30 @@
   <footer class="footer">
     <p>© <span id="year"></span> El Secreto Prohibido · Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+  var _hors = [
+    ['eid','hydra-559f49da-9b98-4cbc-9b41-96d630df3c7e'],
+    ['tagid','hors-hydra-559f49da-9b98-4cbc-9b41-96d630df3c7e'],
+    ['width','100%'],
+    ['height',''],
+    ['foregroundColor',''],
+    ['backgroundColor',''],
+    ['linkColor',''],
+    ['errorColor',''],
+    ['primaryButtonForegroundColor',''],
+    ['primaryButtonBackgroundColor',''],
+    ['secondaryButtonForegroundColor',''],
+    ['secondaryButtonBackgroundColor','']
+  ];
+
+  (function(d, t) {
+    var e = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    e.src = "https://reservation.dish.co/widget.js";
+    s.parentNode.insertBefore(e, s);
+  }(document, 'script'));
+</script>
 
 </body>
 </html>
