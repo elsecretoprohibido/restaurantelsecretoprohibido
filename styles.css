@@ -535,6 +535,100 @@ body{
   }
 }
 
+/* ===== MENÚ NOCHE VIEJA (oro/nero stile locandina) ===== */
+
+.special-menu--nochevieja{
+  margin-top: 32px;
+}
+
+.special-card--nochevieja{
+  text-align: center;
+  /* sfondo nero con fascia dorata “morbida” */
+  background:
+    radial-gradient(circle at top, #f4c86e 0, #0b0b0c 45%, #000 100%);
+  border-color: rgba(244,200,110,0.9);
+}
+
+/* niente pseudo-elemento che ruota per questa card */
+.special-card--nochevieja::before,
+.special-card--nochevieja::after{
+  content: none;
+}
+
+.ny-header{
+  margin-bottom: 18px;
+}
+
+.ny-year{
+  font-size: clamp(3rem, 7vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #f8e3ac;
+  text-shadow: 0 0 18px rgba(0,0,0,0.9);
+  margin-bottom: 6px;
+}
+
+.ny-subtitle{
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #f4c86e;
+}
+
+/* titoletti tipo locandina */
+.special-card--nochevieja .special-menu-block h3{
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  justify-content: center;
+}
+
+/* lista centrata e senza pallini a sinistra */
+.special-card--nochevieja .special-menu-block ul{
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* leggero “bordo” di coriandoli dorati laterali */
+.special-card--nochevieja{
+  position: relative;
+  overflow: hidden;
+}
+
+.special-card--nochevieja::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(244,200,110,0.7) 1px, transparent 2px),
+    radial-gradient(circle, rgba(244,200,110,0.45) 1px, transparent 2px);
+  background-size: 180px 180px, 220px 220px;
+  background-position: -60px 0, calc(100% + 40px) 40px;
+  background-repeat: repeat-y;
+  opacity: 0.65;
+}
+
+/* prezzo + nota */
+.ny-footer{
+  margin-top: 10px;
+}
+
+.ny-price{
+  font-weight: 700;
+  color: #f4c86e;
+  margin-bottom: 4px;
+}
+
+.ny-note{
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.ny-widget{
+  margin-top: 16px;
+}
+
 /* ALLERGENS */
 .allergens{
   padding: 44px 18px;

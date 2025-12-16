@@ -585,6 +585,129 @@ const nocheBuenaData = {
   }
 };
 
+// ===== SPECIAL MENU · NOCHE VIEJA =====
+const nocheViejaData = {
+  es: {
+    title: "Menú Noche Vieja",
+    price: "79,00 €",
+    body: `
+      <div class="special-menu-block ny-block">
+        <h3>Entrantes</h3>
+        <ul>
+          <li>Tulipa con salsa tonnata</li>
+          <li>Tosta de burrata con aguacate, anchoas, pistacho y tomate</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Primer plato</h3>
+        <ul>
+          <li>Trofie (pasta fresca) a la Genovesa con pesto verde</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Segundo plato</h3>
+        <ul>
+          <li>Cotechino de cerdo con lentejas</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Postres</h3>
+        <ul>
+          <li>Tarta de zanahoria</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Bebidas · Vino · Café</h3>
+        <ul>
+          <li>1 botella de Cava Brut (uva blanca)</li>
+        </ul>
+      </div>
+    `,
+    note:
+      "Reservar por Bizum al 621 247 182 (20 € por persona) y por más información al 697 218 364."
+  },
+
+  en: {
+    title: "New Year's Eve Menu",
+    price: "€79.00",
+    body: `
+      <div class="special-menu-block ny-block">
+        <h3>Starters</h3>
+        <ul>
+          <li>Tulip pastry with tonnato sauce</li>
+          <li>Burrata toast with avocado, anchovies, pistachio and tomato</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>First course</h3>
+        <ul>
+          <li>Fresh trofie pasta Genovese style with green pesto</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Second course</h3>
+        <ul>
+          <li>Pork cotechino with lentils</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Dessert</h3>
+        <ul>
+          <li>Carrot cake</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Drinks · Wine · Coffee</h3>
+        <ul>
+          <li>1 bottle of Cava Brut (white grape)</li>
+        </ul>
+      </div>
+    `,
+    note:
+      "Reserve via Bizum at +34 621 247 182 (€20 per person) and for more information call +34 697 218 364."
+  },
+
+  de: {
+    title: "Silvester-Menü",
+    price: "79,00 €",
+    body: `
+      <div class="special-menu-block ny-block">
+        <h3>Vorspeisen</h3>
+        <ul>
+          <li>Blätterteig-Tulpe mit Thunfischsauce (Tonnato)</li>
+          <li>Toast mit Burrata, Avocado, Sardellen, Pistazien und Tomate</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Erster Gang</h3>
+        <ul>
+          <li>Frische Trofie-Pasta Genueser Art mit grünem Pesto</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Zweiter Gang</h3>
+        <ul>
+          <li>Schweine-Cotechino mit Linsen</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Dessert</h3>
+        <ul>
+          <li>Karottenkuchen</li>
+        </ul>
+      </div>
+      <div class="special-menu-block ny-block">
+        <h3>Getränke · Wein · Kaffee</h3>
+        <ul>
+          <li>1 Flasche Cava Brut (weiße Traube)</li>
+        </ul>
+      </div>
+    `,
+    note:
+      "Reservierung per Bizum unter +34 621 247 182 (20 € pro Person) und für weitere Informationen +34 697 218 364."
+  }
+};
+
 // ===== RENDER FUNCTIONS =====
 function renderMenu(lang = "es") {
   const menuContainer = document.getElementById("menu-container");
@@ -662,6 +785,21 @@ function renderNocheBuena(lang = "es") {
   priceEl.textContent = data.price;
 }
 
+function renderNocheVieja(lang = "es") {
+  const titleEl = document.getElementById("nochevieja-title");
+  const bodyEl  = document.getElementById("nochevieja-body");
+  const noteEl  = document.getElementById("nochevieja-note");
+  const priceEl = document.getElementById("nochevieja-price");
+
+  if (!titleEl || !bodyEl || !noteEl || !priceEl) return;
+
+  const data = nocheViejaData[lang] || nocheViejaData.es;
+  titleEl.textContent = data.title;
+  bodyEl.innerHTML    = data.body;
+  noteEl.textContent  = data.note;
+  priceEl.textContent = data.price;
+}
+
 // ===== HERO BACKGROUND (se vuoi tenerlo, metti foto reali) =====
 const heroImages = [
   "img/IMG_3812.JPG"
@@ -715,6 +853,8 @@ function initPage(){
   renderHero("es");
   renderContact("es");
   renderNocheBuena("es");
+  renderNocheVieja("es");
+
 
   // Cambio lingua (pulsanti sotto "Galería del local")
   const langButtons = document.querySelectorAll(".lang-btn");
@@ -730,6 +870,7 @@ function initPage(){
       renderHero(lang);
       renderContact(lang);
       renderNocheBuena(lang);
+      renderNocheVieja(lang);
     });
   });
 
