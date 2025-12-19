@@ -198,62 +198,84 @@ body{
   font-size: 1.6rem;
 }
 
-/* Contenitore video – DESKTOP/TABLET */
+/* VIDEO + STRISCIA FOTO FIANCHEGGIATE (DESKTOP + MOBILE) */
+.gallery-media{
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  margin-top: 10px;
+
+  /* altezza fissa condivisa da video e colonna foto */
+  height: min(60vh, 480px);
+}
+
+/* VIDEO – colonna principale */
 .gallery-video-wrapper{
+  flex: 2 1 0;                 /* video più grande della colonna foto */
   position: relative;
   overflow: hidden;
   border-radius: 16px;
   border: 1px solid #242428;
-  margin-top: 10px;
-
-  width: 100%;
-  max-width: 1500px;
-
-  /* proporzione fissa orizzontale */
-  aspect-ratio: 16 / 9;
   background: #000;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
 }
 
-/* Video – DESKTOP/TABLET */
 #gallery-video{
   width: 100%;
   height: 100%;
-  object-fit: contain;   /* desktop: niente tagli */
+  object-fit: contain;   /* mostra tutto il video, senza tagliare */
   border-radius: 16px;
+  display: block;
+  background: #000;      /* opzionale: riempie eventuali bordi con nero */
+}
+
+/* STRISCIA VERTICALE – colonna a fianco del video */
+.gallery-strip-vertical{
+  flex: 1 1 0;                 /* colonna più stretta */
+  border-radius: 16px;
+  border: 1px solid #242428;
+  overflow: hidden;
+  background: #000;
+  height: 100%;                /* STESSA ALTEZZA DEL VIDEO */
+}
+
+.gallery-strip-vertical-inner{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px;
+
+  /* la colonna è più alta del riquadro: si vede solo "la finestra" */
+  animation: gallery-vertical-scroll 18s linear infinite;
+}
+
+/* singole foto nella colonna */
+.gallery-strip-vertical-inner img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
   display: block;
 }
 
-/* MOBILE: video in primo piano, riquadro pieno */
+/* ANIMAZIONE: scorrimento verticale infinito */
+@keyframes gallery-vertical-scroll{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-50%);  /* funziona se hai duplicato la sequenza di foto in HTML */
+  }
+}
+
+/* MOBILE: sempre affiancati, solo un po’ più compatti */
 @media (max-width: 768px){
-
   .gallery{
-    padding: 32px 0; /* un po' meno padding laterale, il video si allarga */
+    padding: 32px 8px;
   }
 
-  .gallery-video-wrapper{
-    /* full width a bordo schermo */
-    width: 100vw;
-    max-width: 100vw;
-    margin: 10px 0 0 0;
-    margin-left: calc(50% - 50vw);
-
-    /* più alto, in evidenza */
-    height: 65vh;
-    aspect-ratio: auto;   /* niente vincolo 16:9 */
-    
-    border-radius: 0;     /* niente bordi che creano margini scuri */
-    border: none;
-  }
-
-  #gallery-video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    /* riempie tutto il riquadro anche se deve tagliare un po' */
-    border-radius: 0;
+  .gallery-media{
+    height: 55vh;               /* un po’ più basso su schermi piccoli */
   }
 }
 
