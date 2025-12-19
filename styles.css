@@ -272,6 +272,44 @@ body{
   margin-bottom: 18px;
 }
 
+/* STRIP FOTO SOPRA IL MENU */
+.menu-strip{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #242428;
+  margin-bottom: 20px;
+  background: #000;
+}
+
+.menu-strip-inner{
+  display: flex;
+  gap: 6px;
+  animation: menu-strip-scroll 3s linear infinite;
+}
+
+.menu-strip img{
+  flex: 0 0 auto;
+  height: 140px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* un po’ più basso su mobile */
+@media (max-width: 768px){
+  .menu-strip img{
+    height: 110px;
+  }
+}
+
+/* animazione di scorrimento continuo */
+@keyframes menu-strip-scroll{
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* dopo metà larghezza, la 2ª sequenza prende il posto della 1ª */
+}
+
 /* PULSANTI LINGUA (usati in alto, sotto la galleria) */
 .lang-buttons{
   display:flex;
