@@ -7,7 +7,7 @@ const menuData = {
       { num: 3, name: "Volcán de queso y setas", desc: "Vol-au-vent con salsa de setas y 4 quesos.", price: "9,00 €" },
       { num: 4, name: "Bocados diferentes en salsa tonnata", desc: "Conchas comestibles con atún, mayonesa, alcaparra, pimiento rojo asado y aceituna verde.", price: "11,00 €" },
     ]},
-    { category: "Primer plato · Pasta fresca", items: [
+    { category: "Primeros platos · Pasta fresca", items: [
       { num: 5, name: "Aroma de bosque", desc: "Tallarines en salsa de setas, boletus, nata y pimienta negra.", price: "13,90 €" },
       { num: 6, name: "Amatriciana", desc: "Tallarines a la Amatriciana con guanciale de cerdo, aceite de oliva, tomate, ajo, guindilla y queso pecorino romano.", price: "13,00 €" },
       { num: 7, name: "Al verde", desc: "Tallarines con pistacho, bacón, nata, leche, pimienta negra, puerro, aceite de oliva y queso pecorino.", price: "13,90 €" },
@@ -20,11 +20,11 @@ const menuData = {
       { num: 14, name: "Saquitos de peras y gorgonzola", desc: "Fagottini de peras y queso con salsa de gorgonzola.", price: "12,90 €" },
       { num: 15, name: "Emilia", desc: "Tortelloni de carne con salsa boloñesa.", price: "12,90 €" },
     ]},
-    { category: "Primer plato · Pasta seca", items: [
+    { category: "Primeros platos · Pasta seca", items: [
       { num: 16, name: "Clásico", desc: "Spaghetti con salsa boloñesa.", price: "12,90 €" },
       { num: 17, name: "Guitarra", desc: "Spaghetti a la guitarra con salsa de tomate, nata, pimienta y queso mozzarella.", price: "12,90 €" },
     ]},
-    { category: "Carnes y pollo", items: [
+    { category: "Segundos platos", items: [
       { num: 18, name: "Porqueta", desc: "Porchetta carne de cerdo enrollada con romero y pimienta negra con papas fritas.", price: "19,90 €" },
       { num: 19, name: "Pollo", desc: "Pechuga de pollo a la plancha o con salsa de soja y champiñones.", price: "9,50 €" },
       { num: 20, name: "Salchicha", desc: "Salchicha con papas fritas.", price: "9,50 €" },
@@ -38,8 +38,6 @@ const menuData = {
     { category: "Platos vegetarianos", items: [
       { num: 25, name: "Albóndigas", desc: "Albóndigas de berenjena con salsa de tomate.", price: "11,90 €" },
       { num: 26, name: "Parrillada vegetal", desc: "Asado de pimiento rojo, verde, amarillo, berenjena, champiñones y tomate.", price: "13,90 €" },
-    ]},
-    { category: "Segundo plato", items: [
       { num: 27, name: "Peras cremosas", desc: "Peras con queso y nueces.", price: "6,00 €" },
       { num: 28, name: "Canapé", desc: "Cuchara comestible con hummus, pimiento rojo asado, aceituna verde y negra.", price: "13,90 €" },
     ]},
@@ -78,7 +76,7 @@ const menuData = {
       { num: 16, name: "Classic", desc: "Spaghetti with Bolognese sauce.", price: "12.90 €" },
       { num: 17, name: "Guitarra", desc: "Spaghetti alla chitarra with tomato, cream, pepper, and mozzarella cheese sauce.", price: "12.90 €" },
     ]},
-    { category: "Meat & chicken", items: [
+    { category: "Second Course", items: [
       { num: 18, name: "Porchetta", desc: "Rolled pork with rosemary and black pepper, served with french fries.", price: "19.90 €" },
       { num: 19, name: "Chicken breast", desc: "Grilled chicken breast, plain or with soy sauce and mushrooms.", price: "9.50 €" },
       { num: 20, name: "Sausage", desc: "Sausage with french fries.", price: "9.50 €" },
@@ -92,8 +90,6 @@ const menuData = {
     { category: "Vegetarian dishes", items: [
       { num: 25, name: "Eggplant meatballs", desc: "Eggplant meatballs with tomato sauce.", price: "11.90 €" },
       { num: 26, name: "Vegetable grill", desc: "Grilled red, green and yellow peppers, eggplant, mushrooms, and tomato.", price: "13.90 €" },
-    ]},
-    { category: "Second Course", items: [
       { num: 27, name: "Creamy pears", desc: "Pears with cheese and walnuts.", price: "6.00 €" },
       { num: 28, name: "Canapé", desc: "Edible spoon with hummus, roasted red pepper, green and black olives.", price: "13.90 €" },
     ]},
@@ -132,7 +128,7 @@ const menuData = {
       { num: 16, name: "Klassisch", desc: "Spaghetti mit Bolognese-Sauce.", price: "12,90 €" },
       { num: 17, name: "Guitarra", desc: "Spaghetti alla chitarra mit Tomaten-Sahne-Sauce, Pfeffer und Mozzarella.", price: "12,90 €" },
     ]},
-    { category: "Fleisch & Hähnchen", items: [
+    { category: "Hauptgerichte", items: [
       { num: 18, name: "Porchetta", desc: "Gerollter Schweinebraten mit Rosmarin und schwarzem Pfeffer, dazu Pommes frites.", price: "19,90 €" },
       { num: 19, name: "Hähnchenbrust", desc: "Gegrillte Hähnchenbrust, natur oder mit Sojasauce und Champignons.", price: "9,50 €" },
       { num: 20, name: "Wurst", desc: "Wurst mit Pommes frites.", price: "9,50 €" },
@@ -146,8 +142,6 @@ const menuData = {
     { category: "Vegetarische Gerichte", items: [
       { num: 25, name: "Auberginenbällchen", desc: "Auberginenbällchen mit Tomatensauce.", price: "11,90 €" },
       { num: 26, name: "Gemüse vom Grill", desc: "Gegrillte rote, grüne und gelbe Paprika, Aubergine, Champignons und Tomate.", price: "13,90 €" },
-    ]},
-    { category: "Zweiter Gang", items: [
       { num: 27, name: "Cremige Birnen", desc: "Birnen mit Käse und Walnüssen.", price: "6,00 €" },
       { num: 28, name: "Canapé", desc: "Essbarer Löffel mit Hummus, gerösteter roter Paprika sowie grünen und schwarzen Oliven.", price: "13,90 €" },
     ]},
@@ -585,11 +579,11 @@ const nocheBuenaData = {
   }
 };
 
-// ===== SPECIAL MENU · NOCHE VIEJA =====
+// ===== SPECIAL MENU · NOCHEVIEJA =====
 const nocheViejaData = {
   es: {
-    title: "Menú Noche Vieja",
-    price: "79,00 €",
+    title: "Menú NocheVieja",
+    price: "89,00 €",
     body: `
       <div class="special-menu-block ny-block">
         <h3>Entrantes</h3>
