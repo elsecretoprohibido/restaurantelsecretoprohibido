@@ -886,3 +886,27 @@ body{
     height: 220px; /* un filo più alta su mobile */
   }
 }
+
+/* ===== MENÚ DE REYES (locandina) ===== */
+.reyes-section{
+  padding: 32px 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reyes-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.reyes-flyer{
+  display: none;          /* di base nascoste, ne mostriamo una col JS */
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(0,0,0,0.35);
+}
+
+/* quella attiva per la lingua selezionata */
+.reyes-flyer.active{
+  display: block;
+}

@@ -2,94 +2,91 @@
 const newDishesData = {
   es: {
     title: "Nuevos platos 😋",
-    subtitle: "Descubre nuestras últimas creaciones, elaboradas con cariño cada día.",
-    badge: "Nuevo",
+    subtitle: "Descubre nuestras últimas creaciones, elaboradas con ingredientes frescos y mucho cariño.",
     dishes: [
       {
         img: "img/nuevo_plato_1.jpeg",
         name: "Alitas en barbacoa de pollo con papas fritas 😋",
-        desc: "Alitas de pollo crujientes con salsa barbacoa casera y papas fritas."
+        desc: "Alitas de pollo marinadas en salsa barbacoa, acompañadas de papas fritas crujientes."
       },
       {
         img: "img/nuevo_plato_2.jpeg",
         name: "Costilla de cerdo en barbacoa con papas bravas 😋",
-        desc: "Costilla de cerdo a la barbacoa acompañada de papas bravas caseras."
+        desc: "Costillas de cerdo a baja cocción con salsa barbacoa y papas bravas."
       },
       {
         img: "img/nuevo_plato_3.jpeg",
         name: "Codillo de cerdo con papas fritas 😋",
-        desc: "Codillo de cerdo tierno y jugoso con crujientes papas fritas."
+        desc: "Codillo de cerdo asado, servido con papas fritas."
       },
       {
         img: "img/nuevo_plato_4.jpeg",
         name: "Garbanzas con chorizo 😋",
-        desc: "Garbanzas guisadas a fuego lento con chorizo y sabores tradicionales."
+        desc: "Garbanzos guisados al estilo canario con chorizo."
       },
       {
         img: "img/nuevo_plato_5.jpeg",
         name: "Albóndigas en salsa de tomate con papas fritas 😋",
-        desc: "Albóndigas caseras en salsa de tomate con papas fritas."
+        desc: "Albóndigas caseras en salsa de tomate acompañadas de papas fritas."
       }
     ]
   },
 
   en: {
     title: "New dishes 😋",
-    subtitle: "Discover our latest creations, freshly prepared every day.",
-    badge: "New",
+    subtitle: "Discover our latest creations, prepared with fresh ingredients and lots of care.",
     dishes: [
       {
         img: "img/nuevo_plato_1.jpeg",
-        name: "BBQ chicken wings with French fries 😋",
-        desc: "Crispy chicken wings with homemade BBQ sauce and French fries."
+        name: "BBQ chicken wings with french fries 😋",
+        desc: "Marinated chicken wings in BBQ sauce, served with crispy french fries."
       },
       {
         img: "img/nuevo_plato_2.jpeg",
         name: "BBQ pork ribs with patatas bravas 😋",
-        desc: "Slow-cooked pork ribs in BBQ sauce served with patatas bravas."
+        desc: "Slow-cooked pork ribs with BBQ sauce and spicy patatas bravas."
       },
       {
         img: "img/nuevo_plato_3.jpeg",
-        name: "Pork knuckle with French fries 😋",
-        desc: "Tender pork knuckle served with crispy French fries."
+        name: "Pork knuckle with french fries 😋",
+        desc: "Roasted pork knuckle served with french fries."
       },
       {
         img: "img/nuevo_plato_4.jpeg",
         name: "Chickpeas with chorizo 😋",
-        desc: "Slow-cooked chickpeas with chorizo and traditional spices."
+        desc: "Canarian-style stewed chickpeas with chorizo."
       },
       {
         img: "img/nuevo_plato_5.jpeg",
-        name: "Meatballs in tomato sauce with French fries 😋",
-        desc: "Homemade meatballs in tomato sauce with French fries."
+        name: "Meatballs in tomato sauce with french fries 😋",
+        desc: "Homemade meatballs in tomato sauce with french fries."
       }
     ]
   },
 
   de: {
     title: "Neue Gerichte 😋",
-    subtitle: "Entdeckt unsere neuesten Kreationen, täglich frisch zubereitet.",
-    badge: "Neu",
+    subtitle: "Entdeckt unsere neuesten Kreationen, täglich frisch und mit viel Liebe zubereitet.",
     dishes: [
       {
         img: "img/nuevo_plato_1.jpeg",
         name: "Hähnchenflügel in Barbecuesauce mit Pommes 😋",
-        desc: "Knusprige Hähnchenflügel mit hausgemachter Barbecuesauce und Pommes frites."
+        desc: "Marinierte Hähnchenflügel in Barbecuesauce mit knusprigen Pommes frites."
       },
       {
         img: "img/nuevo_plato_2.jpeg",
-        name: "Schweinerippchen in Barbecuesauce mit Patatas Bravas 😋",
-        desc: "Zart geschmorte Schweinerippchen in Barbecuesauce mit Patatas Bravas."
+        name: "BBQ-Schweinerippchen mit Patatas bravas 😋",
+        desc: "Schonend gegarte Schweinerippchen in Barbecuesauce mit würzigen Patatas bravas."
       },
       {
         img: "img/nuevo_plato_3.jpeg",
-        name: "Schweinehaxe mit Pommes frites 😋",
-        desc: "Zarte, saftige Schweinehaxe mit knusprigen Pommes frites."
+        name: "Schweinehaxe mit Pommes 😋",
+        desc: "Ofengebackene Schweinehaxe, serviert mit Pommes frites."
       },
       {
         img: "img/nuevo_plato_4.jpeg",
         name: "Kichererbsen mit Chorizo 😋",
-        desc: "Langsam geschmorte Kichererbsen mit Chorizo und traditionellen Gewürzen."
+        desc: "Kanarischer Eintopf aus Kichererbsen mit Chorizo."
       },
       {
         img: "img/nuevo_plato_5.jpeg",
@@ -898,32 +895,48 @@ function renderNocheVieja(lang = "es") {
 
 function renderNewDishes(lang = "es") {
   const data = newDishesData[lang] || newDishesData.es;
+  const section = document.querySelector(".new-dishes");
+  if (!section || !data) return;
 
-  const titleEl    = document.getElementById("new-dishes-title");
-  const subtitleEl = document.getElementById("new-dishes-subtitle");
-  const gridEl     = document.getElementById("new-dishes-grid");
+  const titleEl    = section.querySelector(".new-dishes-header h2");
+  const subtitleEl = section.querySelector(".new-dishes-header p");
+  const cards      = section.querySelectorAll(".new-dish-card");
+  const badges     = section.querySelectorAll(".new-dish-badge");
 
-  if (!titleEl || !gridEl || !data) return;
+  if (titleEl)    titleEl.textContent    = data.title;
+  if (subtitleEl) subtitleEl.textContent = data.subtitle;
 
-  titleEl.textContent = data.title;
-  if (subtitleEl) {
-    subtitleEl.textContent = data.subtitle;
-  }
+  cards.forEach((card, index) => {
+    const dish = data.dishes[index];
+    if (!dish) return;
 
-  gridEl.innerHTML = "";
+    const img = card.querySelector("img");
+    const h3  = card.querySelector("h3");
+    const p   = card.querySelector("p");
 
-  data.dishes.forEach(dish => {
-    const card = document.createElement("article");
-    card.className = "new-dish-card";
-    card.innerHTML = `
-      <div class="new-dish-image-wrapper">
-        <img src="${dish.img}" alt="${dish.name}" loading="lazy">
-        <span class="new-dish-badge">${data.badge}</span>
-      </div>
-      <h3>${dish.name}</h3>
-      <p>${dish.desc}</p>
-    `;
-    gridEl.appendChild(card);
+    if (img && dish.img) {
+      img.src = dish.img;
+      img.alt = dish.name;
+    }
+    if (h3) h3.textContent = dish.name;
+    if (p)  p.textContent  = dish.desc || "";
+  });
+
+  // badge "Nuevo" / "New" / "Neu"
+  badges.forEach(badge => {
+    if (lang === "es")      badge.textContent = "Nuevo";
+    else if (lang === "en") badge.textContent = "New";
+    else if (lang === "de") badge.textContent = "Neu";
+  });
+}
+
+function renderReyes(lang = "es") {
+  const flyers = document.querySelectorAll(".reyes-flyer");
+  if (!flyers.length) return;
+
+  flyers.forEach(img => {
+    const imgLang = img.dataset.lang || "es";
+    img.classList.toggle("active", imgLang === lang);
   });
 }
 
@@ -982,6 +995,7 @@ function initPage(){
   renderNocheBuena("es");
   renderNocheVieja("es");
   renderNewDishes("es");
+  renderReyes("es");
 
   // Cambio lingua (pulsanti sotto "Galería del local")
   const langButtons = document.querySelectorAll(".lang-btn");
@@ -999,6 +1013,7 @@ function initPage(){
       renderNocheBuena(lang);
       renderNocheVieja(lang);
       renderNewDishes(lang);
+      renderReyes(lang);
     });
   });
 
