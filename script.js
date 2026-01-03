@@ -1,3 +1,105 @@
+// ===== NUEVOS PLATOS / NEW DISHES =====
+const newDishesData = {
+  es: {
+    title: "Nuevos platos 😋",
+    subtitle: "Descubre nuestras últimas creaciones, elaboradas con cariño cada día.",
+    badge: "Nuevo",
+    dishes: [
+      {
+        img: "img/nuevo_plato_1.jpeg",
+        name: "Alitas en barbacoa de pollo con papas fritas 😋",
+        desc: "Alitas de pollo crujientes con salsa barbacoa casera y papas fritas."
+      },
+      {
+        img: "img/nuevo_plato_2.jpeg",
+        name: "Costilla de cerdo en barbacoa con papas bravas 😋",
+        desc: "Costilla de cerdo a la barbacoa acompañada de papas bravas caseras."
+      },
+      {
+        img: "img/nuevo_plato_3.jpeg",
+        name: "Codillo de cerdo con papas fritas 😋",
+        desc: "Codillo de cerdo tierno y jugoso con crujientes papas fritas."
+      },
+      {
+        img: "img/nuevo_plato_4.jpeg",
+        name: "Garbanzas con chorizo 😋",
+        desc: "Garbanzas guisadas a fuego lento con chorizo y sabores tradicionales."
+      },
+      {
+        img: "img/nuevo_plato_5.jpeg",
+        name: "Albóndigas en salsa de tomate con papas fritas 😋",
+        desc: "Albóndigas caseras en salsa de tomate con papas fritas."
+      }
+    ]
+  },
+
+  en: {
+    title: "New dishes 😋",
+    subtitle: "Discover our latest creations, freshly prepared every day.",
+    badge: "New",
+    dishes: [
+      {
+        img: "img/nuevo_plato_1.jpeg",
+        name: "BBQ chicken wings with French fries 😋",
+        desc: "Crispy chicken wings with homemade BBQ sauce and French fries."
+      },
+      {
+        img: "img/nuevo_plato_2.jpeg",
+        name: "BBQ pork ribs with patatas bravas 😋",
+        desc: "Slow-cooked pork ribs in BBQ sauce served with patatas bravas."
+      },
+      {
+        img: "img/nuevo_plato_3.jpeg",
+        name: "Pork knuckle with French fries 😋",
+        desc: "Tender pork knuckle served with crispy French fries."
+      },
+      {
+        img: "img/nuevo_plato_4.jpeg",
+        name: "Chickpeas with chorizo 😋",
+        desc: "Slow-cooked chickpeas with chorizo and traditional spices."
+      },
+      {
+        img: "img/nuevo_plato_5.jpeg",
+        name: "Meatballs in tomato sauce with French fries 😋",
+        desc: "Homemade meatballs in tomato sauce with French fries."
+      }
+    ]
+  },
+
+  de: {
+    title: "Neue Gerichte 😋",
+    subtitle: "Entdeckt unsere neuesten Kreationen, täglich frisch zubereitet.",
+    badge: "Neu",
+    dishes: [
+      {
+        img: "img/nuevo_plato_1.jpeg",
+        name: "Hähnchenflügel in Barbecuesauce mit Pommes 😋",
+        desc: "Knusprige Hähnchenflügel mit hausgemachter Barbecuesauce und Pommes frites."
+      },
+      {
+        img: "img/nuevo_plato_2.jpeg",
+        name: "Schweinerippchen in Barbecuesauce mit Patatas Bravas 😋",
+        desc: "Zart geschmorte Schweinerippchen in Barbecuesauce mit Patatas Bravas."
+      },
+      {
+        img: "img/nuevo_plato_3.jpeg",
+        name: "Schweinehaxe mit Pommes frites 😋",
+        desc: "Zarte, saftige Schweinehaxe mit knusprigen Pommes frites."
+      },
+      {
+        img: "img/nuevo_plato_4.jpeg",
+        name: "Kichererbsen mit Chorizo 😋",
+        desc: "Langsam geschmorte Kichererbsen mit Chorizo und traditionellen Gewürzen."
+      },
+      {
+        img: "img/nuevo_plato_5.jpeg",
+        name: "Fleischbällchen in Tomatensauce mit Pommes 😋",
+        desc: "Hausgemachte Fleischbällchen in Tomatensauce mit Pommes frites."
+      }
+    ]
+  }
+};
+
 // ===== MENU DATA (con numeri) =====
 const menuData = {
   es: [
@@ -794,6 +896,37 @@ function renderNocheVieja(lang = "es") {
   priceEl.textContent = data.price;
 }
 
+function renderNewDishes(lang = "es") {
+  const data = newDishesData[lang] || newDishesData.es;
+
+  const titleEl    = document.getElementById("new-dishes-title");
+  const subtitleEl = document.getElementById("new-dishes-subtitle");
+  const gridEl     = document.getElementById("new-dishes-grid");
+
+  if (!titleEl || !gridEl || !data) return;
+
+  titleEl.textContent = data.title;
+  if (subtitleEl) {
+    subtitleEl.textContent = data.subtitle;
+  }
+
+  gridEl.innerHTML = "";
+
+  data.dishes.forEach(dish => {
+    const card = document.createElement("article");
+    card.className = "new-dish-card";
+    card.innerHTML = `
+      <div class="new-dish-image-wrapper">
+        <img src="${dish.img}" alt="${dish.name}" loading="lazy">
+        <span class="new-dish-badge">${data.badge}</span>
+      </div>
+      <h3>${dish.name}</h3>
+      <p>${dish.desc}</p>
+    `;
+    gridEl.appendChild(card);
+  });
+}
+
 // ===== HERO BACKGROUND (se vuoi tenerlo, metti foto reali) =====
 const heroImages = [
   "img/IMG_3812.JPG"
@@ -848,7 +981,7 @@ function initPage(){
   renderContact("es");
   renderNocheBuena("es");
   renderNocheVieja("es");
-
+  renderNewDishes("es");
 
   // Cambio lingua (pulsanti sotto "Galería del local")
   const langButtons = document.querySelectorAll(".lang-btn");
@@ -865,6 +998,7 @@ function initPage(){
       renderContact(lang);
       renderNocheBuena(lang);
       renderNocheVieja(lang);
+      renderNewDishes(lang);
     });
   });
 
