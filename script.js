@@ -994,8 +994,8 @@ function initPage(){
   renderContact("es");
   renderNocheBuena("es");
   renderNocheVieja("es");
-  renderNewDishes("es");
-  renderReyes("es");
+renderNewDishes("es");
+// renderReyes("es");   // locandina Reyes disattivata
 
   // Cambio lingua (pulsanti sotto "Galería del local")
   const langButtons = document.querySelectorAll(".lang-btn");
@@ -1013,7 +1013,8 @@ function initPage(){
       renderNocheBuena(lang);
       renderNocheVieja(lang);
       renderNewDishes(lang);
-      renderReyes(lang);
+     renderNewDishes(lang);
+// renderReyes(lang);   // locandina Reyes disattivata
     });
   });
 
