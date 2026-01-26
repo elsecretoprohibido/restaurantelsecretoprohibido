@@ -95,6 +95,69 @@ const newDishesData = {
       }
     ]
   }
+    ,
+  it: {
+    title: "Nuovi piatti 😋",
+    subtitle: "Scopri le nostre ultime creazioni, preparate con ingredienti freschi e tanto amore.",
+    dishes: [
+      {
+        img: "img/nuevo_plato_1.jpeg",
+        name: "Alette di pollo alla barbecue con patatine fritte 😋",
+        desc: "Alette di pollo marinate in salsa barbecue, servite con patatine croccanti."
+      },
+      {
+        img: "img/nuevo_plato_2.jpeg",
+        name: "Costine di maiale alla barbecue con patatas bravas 😋",
+        desc: "Costine di maiale a cottura lenta con salsa barbecue e patatas bravas piccanti."
+      },
+      {
+        img: "img/nuevo_plato_3.jpeg",
+        name: "Stinco di maiale con patatine fritte 😋",
+        desc: "Stinco di maiale arrosto, servito con patatine fritte."
+      },
+      {
+        img: "img/nuevo_plato_4.jpeg",
+        name: "Ceci con chorizo 😋",
+        desc: "Ceci stufati in stile canario con chorizo."
+      },
+      {
+        img: "img/nuevo_plato_5.jpeg",
+        name: "Polpette in salsa di pomodoro con patatine 😋",
+        desc: "Polpette fatte in casa in salsa di pomodoro, accompagnate da patatine fritte."
+      }
+    ]
+  },
+  fr: {
+    title: "Nouveaux plats 😋",
+    subtitle: "Découvrez nos dernières créations, préparées avec des ingrédients frais et beaucoup de soin.",
+    dishes: [
+      {
+        img: "img/nuevo_plato_1.jpeg",
+        name: "Ailes de poulet barbecue avec frites 😋",
+        desc: "Ailes de poulet marinées dans une sauce barbecue, servies avec des frites croustillantes."
+      },
+      {
+        img: "img/nuevo_plato_2.jpeg",
+        name: "Côtes de porc barbecue avec patatas bravas 😋",
+        desc: "Côtes de porc longuement mijotées avec sauce barbecue et patatas bravas épicées."
+      },
+      {
+        img: "img/nuevo_plato_3.jpeg",
+        name: "Jarret de porc avec frites 😋",
+        desc: "Jarret de porc rôti, servi avec des frites."
+      },
+      {
+        img: "img/nuevo_plato_4.jpeg",
+        name: "Pois chiches au chorizo 😋",
+        desc: "Pois chiches mijotés à la canarienne avec du chorizo."
+      },
+      {
+        img: "img/nuevo_plato_5.jpeg",
+        name: "Boulettes de viande en sauce tomate avec frites 😋",
+        desc: "Boulettes de viande maison en sauce tomate, accompagnées de frites."
+      }
+    ]
+  }
 };
 
 // ===== MENU DATA (con numeri) =====
@@ -252,6 +315,110 @@ const menuData = {
       { name: "Pistazien-Käsekuchen", desc: "", price: "4,50 €" },
       { name: "Tiramisù", desc: "", price: "4,50 €" },
       { name: "Ricotta-Birnen-Käsekuchen", desc: "", price: "4,50 €" },
+    ]},
+  ],
+
+  it: [
+    { category: "Antipasti", items: [
+      { num: 1, name: "Pere cremose", desc: "Pere con formaggio e noci.", price: "6,00 €" },
+      { num: 2, name: "Bruschette al verde", desc: "Bruschette con acciughe, aglio, prezzemolo tritato e olio d'oliva.", price: "8,00 €" },
+      { num: 3, name: "Vulcano di formaggio e funghi", desc: "Vol-au-vent con salsa di funghi e 4 formaggi.", price: "9,00 €" },
+      { num: 4, name: "Bocconcini misti in salsa tonnata", desc: "Conchiglie commestibili con tonno, maionese, capperi, peperone rosso arrostito e oliva verde.", price: "11,00 €" },
+    ]},
+    { category: "Primi piatti · Pasta fresca", items: [
+      { num: 5, name: "Profumo di bosco", desc: "Tagliatelle con funghi, porcini, panna e pepe nero.", price: "13,90 €" },
+      { num: 6, name: "Amatriciana", desc: "Tagliatelle all'Amatriciana con guanciale di maiale, olio d'oliva, pomodoro, aglio, peperoncino e pecorino romano.", price: "13,00 €" },
+      { num: 7, name: "Al verde", desc: "Tagliatelle con pistacchio, pancetta, panna, latte, pepe nero, porro, olio d'oliva e pecorino.", price: "13,90 €" },
+      { num: 8, name: "Delicato", desc: "Ravioli di ricotta e spinaci con salvia, burro e parmigiano.", price: "12,90 €" },
+      { num: 9, name: "Ragù", desc: "Ravioli di carne con salsa di pomodoro, olio d'oliva, carne di manzo macinata, salsiccia, cipolla, carota e vino rosso.", price: "13,90 €" },
+      { num: 10, name: "Sapori di mare e di terra", desc: "Ravioloni di mazzancolle e zucchine con panna, acciughe, olio d'oliva, pepe nero, aglio e zucchine.", price: "14,00 €" },
+      { num: 11, name: "Gorgonzola e noci", desc: "Ravioli al gorgonzola e noci con salsa ai 4 formaggi.", price: "12,90 €" },
+      { num: 12, name: "Alla genovese", desc: "Trofie al pesto verde: basilico, olio d'oliva, pinoli, pecorino e aglio.", price: "13,90 €" },
+      { num: 13, name: "Pasta corta", desc: "Pasta corta a tubetti con salsiccia, pomodoro e olio d'oliva.", price: "12,90 €" },
+      { num: 14, name: "Fagottini di pere e gorgonzola", desc: "Fagottini di pere e formaggio con salsa al gorgonzola.", price: "12,90 €" },
+      { num: 15, name: "Emilia", desc: "Tortelloni di carne con salsa alla bolognese.", price: "12,90 €" },
+    ]},
+    { category: "Primi piatti · Pasta secca", items: [
+      { num: 16, name: "Classica", desc: "Spaghetti con salsa alla bolognese.", price: "12,90 €" },
+      { num: 17, name: "Chitarra", desc: "Spaghetti alla chitarra con salsa di pomodoro, panna, pepe e mozzarella.", price: "12,90 €" },
+    ]},
+    { category: "Secondi piatti", items: [
+      { num: 18, name: "Porchetta", desc: "Arrosto di maiale arrotolato con rosmarino e pepe nero, servito con patatine fritte.", price: "19,90 €" },
+      { num: 19, name: "Petto di pollo", desc: "Petto di pollo alla griglia, semplice oppure con salsa di soia e funghi.", price: "9,50 €" },
+      { num: 20, name: "Salsiccia", desc: "Salsiccia con patatine fritte.", price: "9,50 €" },
+      { num: 21, name: "Coscia di pollo", desc: "Coscia di pollo arrosto con patatine fritte.", price: "10,00 €" },
+    ]},
+    { category: "Insalate", items: [
+      { num: 22, name: "Della casa", desc: "Lattuga, pomodoro, peperone rosso e uovo sodo.", price: "7,50 €" },
+      { num: 23, name: "Greca", desc: "Pomodoro, cetriolo, cipolla, feta e olive nere.", price: "9,00 €" },
+      { num: 24, name: "Mista", desc: "Insalata mista con tonno, pomodoro e peperone rosso.", price: "8,00 €" },
+    ]},
+    { category: "Piatti vegetariani", items: [
+      { num: 25, name: "Polpette di melanzane", desc: "Polpette di melanzane con salsa di pomodoro.", price: "11,90 €" },
+      { num: 26, name: "Grigliata di verdure", desc: "Peperone rosso, verde e giallo, melanzane, funghi e pomodoro alla griglia.", price: "13,90 €" },
+      { num: 27, name: "Pere cremose", desc: "Pere con formaggio e noci.", price: "6,00 €" },
+      { num: 28, name: "Canapé", desc: "Cucchiaio commestibile con hummus, peperone rosso arrostito, oliva verde e nera.", price: "13,90 €" },
+    ]},
+    { category: "Dolci", items: [
+      { name: "Torta di carote e noci", desc: "", price: "4,50 €" },
+      { name: "Profiteroles al cioccolato", desc: "", price: "4,50 €" },
+      { name: "Torta Santiago alle mandorle", desc: "", price: "4,20 €" },
+      { name: "Torta di mele", desc: "", price: "4,20 €" },
+      { name: "Cheesecake al pistacchio", desc: "", price: "4,50 €" },
+      { name: "Tiramisù", desc: "", price: "4,50 €" },
+      { name: "Cheesecake alla ricotta e pera", desc: "", price: "4,50 €" },
+    ]},
+  ],
+
+  fr: [
+    { category: "Entrées", items: [
+      { num: 1, name: "Poires crémeuses", desc: "Poires avec fromage et noix.", price: "6,00 €" },
+      { num: 2, name: "Bruschettas al verde", desc: "Bruschettas aux anchois, ail, persil haché et huile d'olive.", price: "8,00 €" },
+      { num: 3, name: "Volcan de fromage et champignons", desc: "Vol-au-vent avec sauce aux champignons et 4 fromages.", price: "9,00 €" },
+      { num: 4, name: "Bouchées variées en sauce tonnato", desc: "Coquilles comestibles avec thon, mayonnaise, câpres, poivron rouge rôti et olive verte.", price: "11,00 €" },
+    ]},
+    { category: "Premiers plats · Pâtes fraîches", items: [
+      { num: 5, name: "Arôme de forêt", desc: "Tagliatelles aux champignons, cèpes, crème et poivre noir.", price: "13,90 €" },
+      { num: 6, name: "Amatriciana", desc: "Tagliatelles all'Amatriciana avec joue de porc, huile d'olive, tomate, ail, piment et pecorino romano.", price: "13,00 €" },
+      { num: 7, name: "Al verde", desc: "Tagliatelles au pistache, bacon, crème, lait, poivre noir, poireau, huile d'olive et pecorino.", price: "13,90 €" },
+      { num: 8, name: "Délicat", desc: "Raviolis ricotta-épinards avec sauge, beurre et parmesan.", price: "12,90 €" },
+      { num: 9, name: "Ragù", desc: "Raviolis de viande avec sauce tomate, huile d'olive, bœuf haché, saucisse, oignon, carotte et vin rouge.", price: "13,90 €" },
+      { num: 10, name: "Saveurs de mer et de terre", desc: "Ravioloni aux langoustines et courgettes avec crème, anchois, huile d'olive, poivre noir, ail et courgettes.", price: "14,00 €" },
+      { num: 11, name: "Gorgonzola et noix", desc: "Raviolis au gorgonzola et noix avec sauce aux 4 fromages.", price: "12,90 €" },
+      { num: 12, name: "Façon génoise", desc: "Trofie au pesto vert : basilic, huile d'olive, pignons, pecorino et ail.", price: "13,90 €" },
+      { num: 13, name: "Pâtes courtes", desc: "Pâtes courtes en petits tubes avec saucisse, tomate et huile d'olive.", price: "12,90 €" },
+      { num: 14, name: "Fagottini poire et gorgonzola", desc: "Fagottini de poire et fromage avec sauce au gorgonzola.", price: "12,90 €" },
+      { num: 15, name: "Emilia", desc: "Tortelloni de viande avec sauce bolognaise.", price: "12,90 €" },
+    ]},
+    { category: "Premiers plats · Pâtes sèches", items: [
+      { num: 16, name: "Classique", desc: "Spaghetti avec sauce bolognaise.", price: "12,90 €" },
+      { num: 17, name: "Guitare", desc: "Spaghetti alla chitarra avec sauce tomate-crème, poivre et mozzarella.", price: "12,90 €" },
+    ]},
+    { category: "Plats principaux", items: [
+      { num: 18, name: "Porchetta", desc: "Rôti de porc roulé au romarin et poivre noir, servi avec frites.", price: "19,90 €" },
+      { num: 19, name: "Blanc de poulet", desc: "Blanc de poulet grillé, nature ou avec sauce soja et champignons.", price: "9,50 €" },
+      { num: 20, name: "Saucisse", desc: "Saucisse avec frites.", price: "9,50 €" },
+      { num: 21, name: "Cuisse de poulet", desc: "Cuisse de poulet rôtie avec frites.", price: "10,00 €" },
+    ]},
+    { category: "Salades", items: [
+      { num: 22, name: "Salade de la maison", desc: "Laitue, tomate, poivron rouge et œuf dur.", price: "7,50 €" },
+      { num: 23, name: "Salade grecque", desc: "Tomate, concombre, oignon, feta et olives noires.", price: "9,00 €" },
+      { num: 24, name: "Salade mixte", desc: "Laitue mélangée avec thon, tomate et poivron rouge.", price: "8,00 €" },
+    ]},
+    { category: "Plats végétariens", items: [
+      { num: 25, name: "Boulettes d'aubergine", desc: "Boulettes d'aubergine avec sauce tomate.", price: "11,90 €" },
+      { num: 26, name: "Grillade de légumes", desc: "Poivrons rouges, verts et jaunes, aubergine, champignons et tomate grillés.", price: "13,90 €" },
+      { num: 27, name: "Poires crémeuses", desc: "Poires avec fromage et noix.", price: "6,00 €" },
+      { num: 28, name: "Canapé", desc: "Cuillère comestible avec houmous, poivron rouge rôti, olive verte et noire.", price: "13,90 €" },
+    ]},
+    { category: "Desserts", items: [
+      { name: "Gâteau aux carottes et noix", desc: "", price: "4,50 €" },
+      { name: "Profiteroles au chocolat", desc: "", price: "4,50 €" },
+      { name: "Tarte de Santiago aux amandes", desc: "", price: "4,20 €" },
+      { name: "Tarte aux pommes", desc: "", price: "4,20 €" },
+      { name: "Cheesecake à la pistache", desc: "", price: "4,50 €" },
+      { name: "Tiramisù", desc: "", price: "4,50 €" },
+      { name: "Cheesecake ricotta-poire", desc: "", price: "4,50 €" },
     ]},
   ]
 };
@@ -481,6 +648,156 @@ const drinksData = {
         { name: "1906 Estrella Galicia", desc: "", price: "3,00 €" }
       ]
     }
+  ],
+
+  it: [
+    {
+      category: "Vini · Bottiglia (rossi)",
+      items: [
+        { name: "Conde de Leizao Crianza 2021", desc: "", price: "15,00 €" },
+        { name: "Mi Isla Tinto 2024", desc: "", price: "18,90 €" },
+        { name: "Listán Tinto", desc: "", price: "17,50 €" },
+        { name: "Flor de Chasna Tinto Barrica", desc: "", price: "22,00 €" },
+        { name: "Barbera d'Asti", desc: "", price: "20,00 €" },
+        { name: "Barbera d'Asti Superiore", desc: "", price: "22,50 €" },
+        { name: "Chianti", desc: "", price: "20,00 €" },
+        { name: "Chianti Riserva", desc: "", price: "22,50 €" }
+      ]
+    },
+    {
+      category: "Vini · Bottiglia (bianchi)",
+      items: [
+        { name: "Laundum Chardonnay Organic", desc: "", price: "19,90 €" },
+        { name: "Testamento Blanco medaglia d'oro", desc: "", price: "22,00 €" }
+      ]
+    },
+    {
+      category: "Vini · Bottiglia (bianchi fruttati)",
+      items: [
+        { name: "Mi Isla Blanco Afrutado 2024", desc: "", price: "19,90 €" }
+      ]
+    },
+    {
+      category: "Vino della casa",
+      items: [
+        { name: "Vino della casa (bicchiere)", desc: "", price: "2,50 €" },
+        { name: "Vino della casa (1/4 l)", desc: "", price: "3,20 €" },
+        { name: "Vino della casa (1/2 l)", desc: "", price: "6,00 €" },
+        { name: "Vino della casa (1 l)", desc: "", price: "11,50 €" }
+      ]
+    },
+    {
+      category: "Bibite",
+      items: [
+        { name: "Coca-Cola", desc: "", price: "2,50 €" },
+        { name: "Coca-Cola Zero", desc: "", price: "2,50 €" },
+        { name: "Fanta Arancia", desc: "", price: "2,50 €" },
+        { name: "Fanta Limone", desc: "", price: "2,50 €" },
+        { name: "Schweppes Tonica", desc: "", price: "2,50 €" },
+        { name: "7Up", desc: "", price: "2,50 €" },
+        { name: "Nestea Limone", desc: "", price: "2,80 €" },
+        { name: "Nestea Pesca", desc: "", price: "2,80 €" },
+        { name: "Nestea Mango-Ananas", desc: "", price: "2,80 €" },
+        { name: "Appletiser", desc: "", price: "2,80 €" },
+        { name: "Aquarius Arancia", desc: "", price: "2,80 €" },
+        { name: "Red Bull", desc: "", price: "3,00 €" },
+        { name: "Succo di pesca", desc: "Frullato di pesca.", price: "2,50 €" },
+        { name: "Succo pera-ananas", desc: "Frullato di pera e ananas.", price: "2,50 €" }
+      ]
+    },
+    {
+      category: "Acqua",
+      items: [
+        { name: "Acqua naturale (bottiglia 0,5 l)", desc: "Acqua senza gas in bottiglia.", price: "1,20 €" },
+        { name: "Acqua naturale (bottiglia 1,5 l)", desc: "Acqua senza gas in bottiglia di plastica.", price: "2,30 €" },
+        { name: "Acqua frizzante (bottiglia 0,5 l)", desc: "Acqua frizzante in bottiglia di vetro.", price: "1,30 €" }
+      ]
+    },
+    {
+      category: "Birra",
+      items: [
+        { name: "Dorada Pilsen", desc: "", price: "1,80 €" },
+        { name: "Dorada Especial", desc: "", price: "2,30 €" },
+        { name: "Dorada Analcolica", desc: "", price: "2,00 €" },
+        { name: "Dorada Analcolica al Limone", desc: "", price: "2,30 €" },
+        { name: "1906 Estrella Galicia", desc: "", price: "3,00 €" }
+      ]
+    }
+  ],
+
+  fr: [
+    {
+      category: "Vins · Bouteille (rouges)",
+      items: [
+        { name: "Conde de Leizao Crianza 2021", desc: "", price: "15,00 €" },
+        { name: "Mi Isla Tinto 2024", desc: "", price: "18,90 €" },
+        { name: "Listán Tinto", desc: "", price: "17,50 €" },
+        { name: "Flor de Chasna Tinto Barrica", desc: "", price: "22,00 €" },
+        { name: "Barbera d'Asti", desc: "", price: "20,00 €" },
+        { name: "Barbera d'Asti Superiore", desc: "", price: "22,50 €" },
+        { name: "Chianti", desc: "", price: "20,00 €" },
+        { name: "Chianti Riserva", desc: "", price: "22,50 €" }
+      ]
+    },
+    {
+      category: "Vins · Bouteille (blancs)",
+      items: [
+        { name: "Laundum Chardonnay Organic", desc: "", price: "19,90 €" },
+        { name: "Testamento Blanco médaille d'or", desc: "", price: "22,00 €" }
+      ]
+    },
+    {
+      category: "Vins · Bouteille (blancs fruités)",
+      items: [
+        { name: "Mi Isla Blanco Afrutado 2024", desc: "", price: "19,90 €" }
+      ]
+    },
+    {
+      category: "Vin de la maison",
+      items: [
+        { name: "Vin de la maison (verre)", desc: "", price: "2,50 €" },
+        { name: "Vin de la maison (1/4 l)", desc: "", price: "3,20 €" },
+        { name: "Vin de la maison (1/2 l)", desc: "", price: "6,00 €" },
+        { name: "Vin de la maison (1 l)", desc: "", price: "11,50 €" }
+      ]
+    },
+    {
+      category: "Boissons sans alcool",
+      items: [
+        { name: "Coca-Cola", desc: "", price: "2,50 €" },
+        { name: "Coca-Cola Zero", desc: "", price: "2,50 €" },
+        { name: "Fanta Orange", desc: "", price: "2,50 €" },
+        { name: "Fanta Citron", desc: "", price: "2,50 €" },
+        { name: "Schweppes Tonic", desc: "", price: "2,50 €" },
+        { name: "7Up", desc: "", price: "2,50 €" },
+        { name: "Nestea Citron", desc: "", price: "2,80 €" },
+        { name: "Nestea Pêche", desc: "", price: "2,80 €" },
+        { name: "Nestea Mangue-Ananas", desc: "", price: "2,80 €" },
+        { name: "Appletiser", desc: "", price: "2,80 €" },
+        { name: "Aquarius Orange", desc: "", price: "2,80 €" },
+        { name: "Red Bull", desc: "", price: "3,00 €" },
+        { name: "Jus de pêche", desc: "Smoothie à la pêche.", price: "2,50 €" },
+        { name: "Jus poire-ananas", desc: "Smoothie poire-ananas.", price: "2,50 €" }
+      ]
+    },
+    {
+      category: "Eau",
+      items: [
+        { name: "Eau plate (bouteille 0,5 l)", desc: "Eau sans gaz en bouteille.", price: "1,20 €" },
+        { name: "Eau plate (bouteille 1,5 l)", desc: "Eau sans gaz en bouteille plastique.", price: "2,30 €" },
+        { name: "Eau gazeuse (bouteille 0,5 l)", desc: "Eau gazeuse en bouteille en verre.", price: "1,30 €" }
+      ]
+    },
+    {
+      category: "Bière",
+      items: [
+        { name: "Dorada Pilsen", desc: "", price: "1,80 €" },
+        { name: "Dorada Especial", desc: "", price: "2,30 €" },
+        { name: "Dorada Sans Alcool", desc: "", price: "2,00 €" },
+        { name: "Dorada Sans Alcool au Citron", desc: "", price: "2,30 €" },
+        { name: "1906 Estrella Galicia", desc: "", price: "3,00 €" }
+      ]
+    }
   ]
 };
 
@@ -516,6 +833,22 @@ From farm to table, every ingredient tells a story. Every dish is an invitation 
 Jedes Rezept entspringt einer alten alpinen Tradition und wird mit der kanarischen Seele bereichert – unserer zweiten geliebten Heimat.
 
 Vom Feld auf den Tisch erzählt jede Zutat eine Geschichte. Jedes Gericht ist eine Einladung zu entdecken, zu genießen und sich überraschen zu lassen.`
+  },
+  it: {
+    title: "Benvenuti",
+    text: `Al El Secreto Prohibido vi invitiamo a scoprire un'esperienza gastronomica unica, dove tradizione e innovazione vanno di pari passo. La nostra cucina casalinga, preparata con prodotti freschi e genuini, viaggia dal Nord Italia alle Isole Canarie, fondendo due culture culinarie che risvegliano i sensi e aprono le porte a un universo magico di sapori.
+
+Ogni ricetta nasce da un'antica tradizione alpina e si arricchisce dell'anima canaria, la nostra seconda terra amata.
+
+Dalla terra alla tavola, ogni ingrediente racconta una storia. Ogni piatto è un invito a scoprire, godere e lasciarsi sorprendere.`
+  },
+  fr: {
+    title: "Bienvenue",
+    text: `Au El Secreto Prohibido, nous vous invitons à découvrir une expérience gastronomique unique, où tradition et innovation vont de pair. Notre cuisine maison, préparée avec des produits frais et sains, voyage du nord de l’Italie jusqu’aux îles Canaries, en fusionnant deux cultures culinaires qui éveillent les sens et ouvrent les portes à un univers magique de saveurs.
+
+Chaque recette est née d’une ancienne tradition alpine et s’enrichit de l’âme canarienne, notre deuxième terre adoptive.
+
+Du champ à la table, chaque ingrédient raconte une histoire. Chaque plat est une invitation à découvrir, à savourer et à se laisser surprendre.`
   }
 };
 
@@ -532,6 +865,14 @@ const allergensData = {
   de: {
     title: "Allergene",
     text: "Pflichtinformation: Wenn Sie Allergien oder Unverträglichkeiten haben, fragen Sie bitte unser Personal."
+  },
+   it: {
+    title: "Allergeni",
+    text: "Informazione obbligatoria: se hai allergie o intolleranze, chiedi al nostro personale."
+  },
+  fr: {
+    title: "Allergènes",
+    text: "Information obligatoire : si vous avez des allergies ou intolérances, veuillez consulter notre personnel."
   }
 };
 
@@ -548,14 +889,24 @@ const heroData = {
   de: {
     text: "Küche mit Seele. Aromen, die man nicht vergisst.",
     cta: "Menü ansehen"
-  }
+  },
+  it: {
+    text: "Cucina con anima. Sapori che non si dimenticano.",
+    cta: "Vedi il menù"
+  },
+  fr: {
+    text: "Cuisine avec âme. Des saveurs inoubliables.",
+    cta: "Voir le menu"
+  },
 };
 
 // ===== CONTACT / BIZUM TEXT =====
 const contactData = {
   es: { bizum: "(Reservar por Bizum, 20 euro por persona)" },
   en: { bizum: "(Reserve via Bizum, 20 € per person)" },
-  de: { bizum: "(Über Bizum reservieren, 20 € pro Person)" }
+  de: { bizum: "(Über Bizum reservieren, 20 € pro Person)" },
+  it: { bizum: "(Prenotazione tramite Bizum, 20€ a persona)"},
+  fr: { bizum: "(Réservation par Bizum, 20 € par personne)" }
 };
 
 // ===== SPECIAL MENU · NOCHEBUENA =====
@@ -927,6 +1278,9 @@ function renderNewDishes(lang = "es") {
     if (lang === "es")      badge.textContent = "Nuevo";
     else if (lang === "en") badge.textContent = "New";
     else if (lang === "de") badge.textContent = "Neu";
+    else if (lang === "it") badge.textContent = "Nuovo";
+    else if (lang === "fr") badge.textContent = "Nouveau";
+    else                    badge.textContent = "Nuevo";
   });
 }
 
@@ -1013,7 +1367,6 @@ renderNewDishes("es");
       renderNocheBuena(lang);
       renderNocheVieja(lang);
       renderNewDishes(lang);
-     renderNewDishes(lang);
 // renderReyes(lang);   // locandina Reyes disattivata
     });
   });
