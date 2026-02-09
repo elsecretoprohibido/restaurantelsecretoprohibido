@@ -910,3 +910,22 @@ body{
 .reyes-flyer.active{
   display: block;
 }
+
+/* MOBILE: stessa colonna scorrevole, solo più veloce e leggibile */
+@media (max-width: 768px){
+  .gallery-media{
+    /* teniamo il layout affiancato ma diamo un po' più altezza */
+    height: min(70vh, 520px);
+  }
+
+  .gallery-strip-vertical{
+    /* leggermente meno nero, così non sembra "oscurata" */
+    background: #111;
+  }
+
+  .gallery-strip-vertical-inner{
+    /* stessa animazione, durata ridotta (da 18s a 12s) */
+    animation: gallery-vertical-scroll 12s linear infinite;
+    will-change: transform;  /* aiuta la fluidità su iOS / mobile */
+  }
+}
