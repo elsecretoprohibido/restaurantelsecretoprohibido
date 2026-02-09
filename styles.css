@@ -18,6 +18,10 @@ body{
   background: var(--bg);
   color: var(--text);
   line-height:1.6;
+  overflow-x: hidden;   /* 👈 impedisce alla pagina di scorrere lateralmente */
+  html{
+  overflow-x: hidden;
+}
 }
 
 /* NAVBAR */
@@ -360,6 +364,19 @@ body{
   font-size: 1.1rem;
   margin-right: 6px;
   line-height: 1;
+}
+
+/* MOBILE: la riga diventa scrollabile in orizzontale */
+@media (max-width: 640px){
+  .lang-buttons{
+    overflow-x: auto;                 /* 👈 scroll orizzontale SOLO qui */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;              /* un filo di spazio per la barra */
+  }
+
+  .lang-btn{
+    flex: 0 0 auto;                   /* 👈 evita che i bottoni si comprimano */
+  }
 }
 
 .menu-container{
