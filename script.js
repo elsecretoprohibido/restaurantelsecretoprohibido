@@ -158,7 +158,7 @@ const menuData = {
     ]},
 
     { category: "Postres", items: [
-      { name: "Postres variados", desc: "", price: "" },
+      { name: "Postres variados", desc: "", price: "4,50€" },
     ]},
   ],
 
@@ -198,7 +198,7 @@ const menuData = {
     ]},
 
     { category: "Desserts", items: [
-      { name: "Assorted desserts", desc: "", price: "" },
+      { name: "Assorted desserts", desc: "", price: "4,50€" },
     ]},
   ],
 
@@ -238,7 +238,7 @@ const menuData = {
     ]},
 
     { category: "Desserts", items: [
-      { name: "Verschiedene Desserts", desc: "", price: "" },
+      { name: "Verschiedene Desserts", desc: "", price: "4,50€" },
     ]},
   ],
 
@@ -278,7 +278,7 @@ const menuData = {
     ]},
 
     { category: "Dolci", items: [
-      { name: "Dolci assortiti", desc: "", price: "" },
+      { name: "Dolci assortiti", desc: "", price: "4,50€" },
     ]},
   ],
 
@@ -318,7 +318,7 @@ const menuData = {
     ]},
 
     { category: "Desserts", items: [
-      { name: "Desserts variés", desc: "", price: "" },
+      { name: "Desserts variés", desc: "", price: "4,50€" },
     ]},
   ]
 };
