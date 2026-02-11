@@ -9,21 +9,13 @@ const newDishesData = {
         name: "Alitas en barbacoa de pollo con papas fritas 😋",
         desc: "Alitas de pollo marinadas en salsa barbacoa, acompañadas de papas fritas crujientes."
       },
-      {
-        img: "img/nuevo_plato_2.jpeg",
-        name: "Costilla de cerdo en barbacoa con papas bravas 😋",
-        desc: "Costillas de cerdo a baja cocción con salsa barbacoa y papas bravas."
-      },
+      
       {
         img: "img/nuevo_plato_3.jpeg",
         name: "Codillo de cerdo con papas fritas 😋",
         desc: "Codillo de cerdo asado, servido con papas fritas."
       },
-      {
-        img: "img/nuevo_plato_4.jpeg",
-        name: "Garbanzas con chorizo 😋",
-        desc: "Garbanzos guisados al estilo canario con chorizo."
-      },
+      
       {
         img: "img/nuevo_plato_5.jpeg",
         name: "Albóndigas en salsa de tomate con papas fritas 😋",
@@ -41,21 +33,13 @@ const newDishesData = {
         name: "BBQ chicken wings with french fries 😋",
         desc: "Marinated chicken wings in BBQ sauce, served with crispy french fries."
       },
-      {
-        img: "img/nuevo_plato_2.jpeg",
-        name: "BBQ pork ribs with patatas bravas 😋",
-        desc: "Slow-cooked pork ribs with BBQ sauce and spicy patatas bravas."
-      },
+      
       {
         img: "img/nuevo_plato_3.jpeg",
         name: "Pork knuckle with french fries 😋",
         desc: "Roasted pork knuckle served with french fries."
       },
-      {
-        img: "img/nuevo_plato_4.jpeg",
-        name: "Chickpeas with chorizo 😋",
-        desc: "Canarian-style stewed chickpeas with chorizo."
-      },
+      
       {
         img: "img/nuevo_plato_5.jpeg",
         name: "Meatballs in tomato sauce with french fries 😋",
@@ -73,21 +57,13 @@ const newDishesData = {
         name: "Hähnchenflügel in Barbecuesauce mit Pommes 😋",
         desc: "Marinierte Hähnchenflügel in Barbecuesauce mit knusprigen Pommes frites."
       },
-      {
-        img: "img/nuevo_plato_2.jpeg",
-        name: "BBQ-Schweinerippchen mit Patatas bravas 😋",
-        desc: "Schonend gegarte Schweinerippchen in Barbecuesauce mit würzigen Patatas bravas."
-      },
+      
       {
         img: "img/nuevo_plato_3.jpeg",
         name: "Schweinehaxe mit Pommes 😋",
         desc: "Ofengebackene Schweinehaxe, serviert mit Pommes frites."
       },
-      {
-        img: "img/nuevo_plato_4.jpeg",
-        name: "Kichererbsen mit Chorizo 😋",
-        desc: "Kanarischer Eintopf aus Kichererbsen mit Chorizo."
-      },
+      
       {
         img: "img/nuevo_plato_5.jpeg",
         name: "Fleischbällchen in Tomatensauce mit Pommes 😋",
@@ -105,21 +81,13 @@ const newDishesData = {
         name: "Alette di pollo alla barbecue con patatine fritte 😋",
         desc: "Alette di pollo marinate in salsa barbecue, servite con patatine croccanti."
       },
-      {
-        img: "img/nuevo_plato_2.jpeg",
-        name: "Costine di maiale alla barbecue con patatas bravas 😋",
-        desc: "Costine di maiale a cottura lenta con salsa barbecue e patatas bravas piccanti."
-      },
+     
       {
         img: "img/nuevo_plato_3.jpeg",
         name: "Stinco di maiale con patatine fritte 😋",
         desc: "Stinco di maiale arrosto, servito con patatine fritte."
       },
-      {
-        img: "img/nuevo_plato_4.jpeg",
-        name: "Ceci con chorizo 😋",
-        desc: "Ceci stufati in stile canario con chorizo."
-      },
+
       {
         img: "img/nuevo_plato_5.jpeg",
         name: "Polpette in salsa di pomodoro con patatine 😋",
@@ -136,21 +104,13 @@ const newDishesData = {
         name: "Ailes de poulet barbecue avec frites 😋",
         desc: "Ailes de poulet marinées dans une sauce barbecue, servies avec des frites croustillantes."
       },
-      {
-        img: "img/nuevo_plato_2.jpeg",
-        name: "Côtes de porc barbecue avec patatas bravas 😋",
-        desc: "Côtes de porc longuement mijotées avec sauce barbecue et patatas bravas épicées."
-      },
+      
       {
         img: "img/nuevo_plato_3.jpeg",
         name: "Jarret de porc avec frites 😋",
         desc: "Jarret de porc rôti, servi avec des frites."
       },
-      {
-        img: "img/nuevo_plato_4.jpeg",
-        name: "Pois chiches au chorizo 😋",
-        desc: "Pois chiches mijotés à la canarienne avec du chorizo."
-      },
+      
       {
         img: "img/nuevo_plato_5.jpeg",
         name: "Boulettes de viande en sauce tomate avec frites 😋",
@@ -165,260 +125,200 @@ const menuData = {
   es: [
     { category: "Entrantes", items: [
       { num: 1, name: "Peras cremosas", desc: "Peras con queso y nueces.", price: "6,00 €" },
-      { num: 2, name: "Bruchettas al verde", desc: "Bruschettas de anchoa, ajo, perejil triturado y aceite de oliva.", price: "8,00 €" },
+      { num: 2, name: "Bruschetta al verde", desc: "Bruschetta de anchoa, ajo, perejil triturado y aceite de oliva.", price: "8,00 €" },
       { num: 3, name: "Volcán de queso y setas", desc: "Vol-au-vent con salsa de setas y 4 quesos.", price: "9,00 €" },
-      { num: 4, name: "Bocados diferentes en salsa tonnata", desc: "Conchas comestibles con atún, mayonesa, alcaparra, pimiento rojo asado y aceituna verde.", price: "11,00 €" },
     ]},
-    { category: "Primeros platos · Pasta fresca", items: [
-      { num: 5, name: "Aroma de bosque", desc: "Tallarines en salsa de setas, boletus, nata y pimienta negra.", price: "13,90 €" },
-      { num: 6, name: "Amatriciana", desc: "Tallarines a la Amatriciana con guanciale de cerdo, aceite de oliva, tomate, ajo, guindilla y queso pecorino romano.", price: "13,00 €" },
-      { num: 7, name: "Al verde", desc: "Tallarines con pistacho, bacón, nata, leche, pimienta negra, puerro, aceite de oliva y queso pecorino.", price: "13,90 €" },
-      { num: 8, name: "Delicado", desc: "Raviolis de ricotta y espinacas con salvia, mantequilla y queso parmesano.", price: "12,90 €" },
-      { num: 9, name: "Ragú", desc: "Raviolis de carne con salsa de tomate, aceite de oliva, carne de vacuno molida, salchicha, cebolla, zanahoria y vino tinto.", price: "13,90 €" },
-      { num: 10, name: "Sabor de mar y de tierra", desc: "Raviolones de langostinos y calabacín con nata, anchoas, aceite de oliva, pimienta negra, ajo y zucchini.", price: "14,00 €" },
-      { num: 11, name: "Gorgonzola y nueces", desc: "Raviolis de gorgonzola y nueces con salsa 4 quesos.", price: "12,90 €" },
-      { num: 12, name: "A la Genovesa", desc: "Trofie al pesto verde: albahaca, aceite de oliva, piñones, queso pecorino y ajo.", price: "13,90 €" },
-      { num: 13, name: "Pasta Corta", desc: "Tubitos con salchicha, tomate y aceite de oliva.", price: "12,90 €" },
-      { num: 14, name: "Saquitos de peras y gorgonzola", desc: "Fagottini de peras y queso con salsa de gorgonzola.", price: "12,90 €" },
-      { num: 15, name: "Emilia", desc: "Tortelloni de carne con salsa boloñesa.", price: "12,90 €" },
+
+    { category: "Primer plato · Pasta fresca", items: [
+      { num: 4, name: "Aroma de bosque", desc: "Tallarines en salsa de setas, boletus, nata y pimienta negra.", price: "13,90 €" },
+      { num: 5, name: "Al verde", desc: "Tallarines con pistacho, bacón, nata, leche, pimienta negra, puerro, aceite de oliva y queso pecorino.", price: "13,90 €" },
+      { num: 6, name: "Delicado", desc: "Raviolis de ricotta y espinacas con salvia, mantequilla y queso parmesano.", price: "12,90 €" },
+      { num: 7, name: "Ragú", desc: "Raviolis de carne con salsa de tomate, aceite de oliva, carne de vacuno molida, cebolla, zanahoria y vino tinto.", price: "12,90 €" },
+      { num: 8, name: "Sabor de mar y de tierra", desc: "Raviolones de langostinos y calabacín con nata, anchoas, aceite de oliva, ajo y zucchini.", price: "14,00 €" },
+      { num: 9, name: "Gorgonzola y nueces", desc: "Raviolis de gorgonzola y nueces con salsa 4 quesos.", price: "12,90 €" },
+      { num: 10, name: "A la Genovesa", desc: "Trofie al pesto verde: albahaca, aceite de oliva, piñones, queso pecorino y ajo.", price: "13,90 €" },
+      { num: 11, name: "Saquitos", desc: "Fagottini de pera y queso con salsa de gorgonzola.", price: "12,90 €" },
+      { num: 12, name: "Emilia", desc: "Tortelloni de carne con salsa boloñesa.", price: "12,90 €" },
     ]},
-    { category: "Primeros platos · Pasta seca", items: [
-      { num: 16, name: "Clásico", desc: "Spaghetti con salsa boloñesa.", price: "12,90 €" },
-      { num: 17, name: "Guitarra", desc: "Spaghetti a la guitarra con salsa de tomate, nata, pimienta y queso mozzarella.", price: "12,90 €" },
+
+    { category: "Segundo plato", items: [
+      { num: 13, name: "Porqueta", desc: "Porchetta, carne de cerdo enrollada con romero y pimienta negra con papas fritas.", price: "19,90 €" },
+      { num: 14, name: "Pollo", desc: "Pechuga de pollo a la plancha o con salsa de soja y champiñones.", price: "9,50 €" },
+      { num: 15, name: "Muslo", desc: "Muslo de pollo asado con papas fritas.", price: "10,00 €" },
     ]},
-    { category: "Segundos platos", items: [
-      { num: 18, name: "Porqueta", desc: "Porchetta carne de cerdo enrollada con romero y pimienta negra con papas fritas.", price: "19,90 €" },
-      { num: 19, name: "Pollo", desc: "Pechuga de pollo a la plancha o con salsa de soja y champiñones.", price: "9,50 €" },
-      { num: 20, name: "Salchicha", desc: "Salchicha con papas fritas.", price: "9,50 €" },
-      { num: 21, name: "Muslo", desc: "Muslo de pollo asado con papas fritas.", price: "10,00 €" },
-    ]},
+
     { category: "Ensaladas", items: [
-      { num: 22, name: "De la casa", desc: "Lechuga, tomate, pimiento rojo y huevo duro.", price: "7,50 €" },
-      { num: 23, name: "Griega", desc: "Tomate, pepino, cebolla, queso feta y aceitunas negras.", price: "9,00 €" },
-      { num: 24, name: "Mixta", desc: "Lechuga mixta con atún, tomate y pimiento rojo.", price: "8,00 €" },
+      { num: 16, name: "De la casa", desc: "Lechuga, tomate, pimiento rojo y atún.", price: "8,00 €" },
+      { num: 17, name: "Griega", desc: "Tomate, pepino, cebolla, queso feta y aceitunas negras.", price: "9,00 €" },
     ]},
+
     { category: "Platos vegetarianos", items: [
-      { num: 25, name: "Albóndigas", desc: "Albóndigas de berenjena con salsa de tomate.", price: "11,90 €" },
-      { num: 26, name: "Parrillada vegetal", desc: "Asado de pimiento rojo, verde, amarillo, berenjena, champiñones y tomate.", price: "13,90 €" },
-      { num: 27, name: "Peras cremosas", desc: "Peras con queso y nueces.", price: "6,00 €" },
-      { num: 28, name: "Canapé", desc: "Cuchara comestible con hummus, pimiento rojo asado, aceituna verde y negra.", price: "13,90 €" },
+      { num: 18, name: "Albóndigas", desc: "Albóndigas de berenjena con salsa de tomate.", price: "11,90 €" },
+      { num: 19, name: "Parrillada vegetal", desc: "Asado de pimiento rojo, verde, amarillo, berenjena, champiñones y tomate.", price: "13,90 €" },
     ]},
+
     { category: "Postres", items: [
-      { name: "Tarta de zanahoria con nueces", desc: "", price: "4,50 €" },
-      { name: "Profiteroles de chocolate", desc: "", price: "4,50 €" },
-      { name: "Tarta Santiago con almendras", desc: "", price: "4,20 €" },
-      { name: "Tarta de manzana", desc: "", price: "4,20 €" },
-      { name: "Tarta de queso y pistacho", desc: "", price: "4,50 €" },
-      { name: "Tiramisú", desc: "", price: "4,50 €" },
-      { name: "Tarta de queso ricotta y pera", desc: "", price: "4,50 €" },
+      { name: "Postres variados", desc: "", price: "" },
     ]},
   ],
 
   en: [
     { category: "Appetizers", items: [
       { num: 1, name: "Creamy pears", desc: "Pears with cheese and walnuts.", price: "6.00 €" },
-      { num: 2, name: "Bruchettas al verde", desc: "Bruschettas of anchovies, garlic, crushed parsley, and olive oil.", price: "8.00 €" },
+      { num: 2, name: "Bruschetta al verde", desc: "Bruschetta of anchovies, garlic, crushed parsley, and olive oil.", price: "8.00 €" },
       { num: 3, name: "Cheese & mushroom volcano", desc: "Vol-au-vent with mushrooms and 4 cheeses.", price: "9.00 €" },
-      { num: 4, name: "Mixed bites in tonnato sauce", desc: "Edible shells with tuna, mayonnaise, caper, roasted red pepper, and green olive.", price: "11.00 €" },
     ]},
+
     { category: "First Course · Fresh pasta", items: [
-      { num: 5, name: "Forest aroma", desc: "Tagliatelle with mushrooms, boletus, cream, and black pepper.", price: "13.90 €" },
-      { num: 6, name: "Amatriciana", desc: "Amatriciana tagliatelle with pork cheek, olive oil, tomato, garlic, chili, and pecorino romano.", price: "13.00 €" },
-      { num: 7, name: "Al verde", desc: "Tagliatelle with pistachio, bacon, cream, milk, black pepper, leek, olive oil, and pecorino cheese.", price: "13.90 €" },
-      { num: 8, name: "Delicate", desc: "Ricotta and spinach ravioli with sage, butter, and parmesan cheese.", price: "12.90 €" },
-      { num: 9, name: "Ragù", desc: "Meat ravioli with tomato sauce, olive oil, ground beef, sausage, onion, carrots, and red wine.", price: "13.90 €" },
-      { num: 10, name: "Sea & land flavor", desc: "Langoustine and zucchini ravioloni with cream, anchovies, olive oil, black pepper, garlic, and zucchini.", price: "14.00 €" },
-      { num: 11, name: "Gorgonzola & walnuts", desc: "Gorgonzola and walnut ravioli with 4 cheese sauce.", price: "12.90 €" },
-      { num: 12, name: "Genovese style", desc: "Trofie with green pesto: basil, olive oil, pine nuts, pecorino, and garlic.", price: "13.90 €" },
-      { num: 13, name: "Short pasta", desc: "Short pasta tubes with sausage, tomato, and olive oil.", price: "12.90 €" },
-      { num: 14, name: "Saquitos pears & gorgonzola", desc: "Pears and cheese fagottini with gorgonzola sauce.", price: "12.90 €" },
-      { num: 15, name: "Emilia", desc: "Meat tortelloni with Bolognese sauce.", price: "12.90 €" },
+      { num: 4, name: "Forest aroma", desc: "Tagliatelle with mushrooms, boletus, cream, and black pepper.", price: "13.90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelle with pistachio, bacon, cream, milk, black pepper, leek, olive oil, and pecorino cheese.", price: "13.90 €" },
+      { num: 6, name: "Delicate", desc: "Ricotta and spinach ravioli with sage, butter, and parmesan cheese.", price: "12.90 €" },
+      { num: 7, name: "Ragù", desc: "Meat ravioli with tomato sauce, olive oil, ground meat, onion, carrots, and red wine.", price: "12.90 €" },
+      { num: 8, name: "Sea & land flavor", desc: "Langoustine and zucchini ravioloni with cream, anchovies, olive oil, garlic, and zucchini.", price: "14.00 €" },
+      { num: 9, name: "Gorgonzola & walnuts", desc: "Gorgonzola and walnut ravioli with 4 cheese sauce.", price: "12.90 €" },
+      { num: 10, name: "Genovese style", desc: "Trofie with green pesto: basil, olive oil, pine nuts, pecorino cheese, and garlic.", price: "13.90 €" },
+      { num: 11, name: "Saquitos", desc: "Pear and cheese fagottini with gorgonzola sauce.", price: "12.90 €" },
+      { num: 12, name: "Emilia", desc: "Tortelloni with meat in Bolognese sauce.", price: "12.90 €" },
     ]},
-    { category: "First Course · Dried pasta", items: [
-      { num: 16, name: "Classic", desc: "Spaghetti with Bolognese sauce.", price: "12.90 €" },
-      { num: 17, name: "Guitarra", desc: "Spaghetti alla chitarra with tomato, cream, pepper, and mozzarella cheese sauce.", price: "12.90 €" },
-    ]},
+
     { category: "Second Course", items: [
-      { num: 18, name: "Porchetta", desc: "Rolled pork with rosemary and black pepper, served with french fries.", price: "19.90 €" },
-      { num: 19, name: "Chicken breast", desc: "Grilled chicken breast, plain or with soy sauce and mushrooms.", price: "9.50 €" },
-      { num: 20, name: "Sausage", desc: "Sausage with french fries.", price: "9.50 €" },
-      { num: 21, name: "Chicken thigh", desc: "Roasted chicken thigh with french fries.", price: "10.00 €" },
+      { num: 13, name: "Porchetta", desc: "Porchetta pork with rosemary and black pepper, served with french fries.", price: "19.90 €" },
+      { num: 14, name: "Chicken breast", desc: "Grilled chicken breast with soy sauce and mushrooms.", price: "9.50 €" },
+      { num: 15, name: "Chicken thigh", desc: "Roasted chicken thigh with french fries.", price: "10.00 €" },
     ]},
+
     { category: "Salads", items: [
-      { num: 22, name: "House salad", desc: "Lettuce, tomato, red pepper, and hard-boiled egg.", price: "7.50 €" },
-      { num: 23, name: "Greek salad", desc: "Tomato, cucumber, onion, feta cheese, and black olives.", price: "9.00 €" },
-      { num: 24, name: "Mixed salad", desc: "Mixed lettuce with tuna, tomato, and red pepper.", price: "8.00 €" },
+      { num: 16, name: "House salad", desc: "Lettuce, tomato, red pepper, and tuna.", price: "8.00 €" },
+      { num: 17, name: "Greek salad", desc: "Tomato, cucumber, onion, feta cheese, and black olives.", price: "9.00 €" },
     ]},
+
     { category: "Vegetarian dishes", items: [
-      { num: 25, name: "Eggplant meatballs", desc: "Eggplant meatballs with tomato sauce.", price: "11.90 €" },
-      { num: 26, name: "Vegetable grill", desc: "Grilled red, green and yellow peppers, eggplant, mushrooms, and tomato.", price: "13.90 €" },
-      { num: 27, name: "Creamy pears", desc: "Pears with cheese and walnuts.", price: "6.00 €" },
-      { num: 28, name: "Canapé", desc: "Edible spoon with hummus, roasted red pepper, green and black olives.", price: "13.90 €" },
+      { num: 18, name: "Eggplant meatballs", desc: "Eggplant meatballs with tomato sauce.", price: "11.90 €" },
+      { num: 19, name: "Vegetable grill", desc: "Grilled red, green and yellow peppers, eggplant, mushrooms, and tomato.", price: "13.90 €" },
     ]},
+
     { category: "Desserts", items: [
-      { name: "Carrot and walnut cake", desc: "", price: "4.50 €" },
-      { name: "Chocolate profiteroles", desc: "", price: "4.50 €" },
-      { name: "Tarta de Santiago with almonds", desc: "", price: "4.20 €" },
-      { name: "Apple pie", desc: "", price: "4.20 €" },
-      { name: "Pistachio cheesecake", desc: "", price: "4.50 €" },
-      { name: "Tiramisu", desc: "", price: "4.50 €" },
-      { name: "Ricotta and pear cheesecake", desc: "", price: "4.50 €" },
+      { name: "Assorted desserts", desc: "", price: "" },
     ]},
   ],
 
   de: [
     { category: "Vorspeisen", items: [
       { num: 1, name: "Cremige Birnen", desc: "Birnen mit Käse und Walnüssen.", price: "6,00 €" },
-      { num: 2, name: "Bruschettas al verde", desc: "Bruschettas mit Sardellen, Knoblauch, zerstoßener Petersilie und Olivenöl.", price: "8,00 €" },
+      { num: 2, name: "Bruschetta al verde", desc: "Bruschetta mit Sardellen, Knoblauch, zerstoßener Petersilie und Olivenöl.", price: "8,00 €" },
       { num: 3, name: "Käse-Pilz-Vulkan", desc: "Vol-au-vent mit Pilzsauce und 4 Käsesorten.", price: "9,00 €" },
-      { num: 4, name: "Verschiedene Häppchen in Tonnato-Sauce", desc: "Essbare Muschelschalen mit Thunfisch, Mayonnaise, Kapern, gerösteter roter Paprika und grüner Olive.", price: "11,00 €" },
     ]},
+
     { category: "Erster Gang · Frische Pasta", items: [
-      { num: 5, name: "Waldaroma", desc: "Tagliatelle mit Pilzen, Steinpilzen, Sahne und schwarzem Pfeffer.", price: "13,90 €" },
-      { num: 6, name: "Amatriciana", desc: "Tagliatelle Amatriciana mit Guanciale, Olivenöl, Tomate, Knoblauch, Chili und Pecorino Romano.", price: "13,00 €" },
-      { num: 7, name: "Al verde", desc: "Tagliatelle mit Pistazie, Speck, Sahne, Milch, schwarzem Pfeffer, Lauch, Olivenöl und Pecorino.", price: "13,90 €" },
-      { num: 8, name: "Zart", desc: "Ricotta-Spinat-Ravioli mit Salbei, Butter und Parmesan.", price: "12,90 €" },
-      { num: 9, name: "Ragù", desc: "Fleischravioli in Tomatensauce mit Rinderhack, Wurst, Zwiebel, Karotte und Rotwein.", price: "13,90 €" },
-      { num: 10, name: "Geschmack von Meer und Land", desc: "Ravioloni mit Langostinos und Zucchini in Sahnesauce, Sardellen, Olivenöl, schwarzer Pfeffer, Knoblauch und Zucchini.", price: "14,00 €" },
-      { num: 11, name: "Gorgonzola & Walnüsse", desc: "Gorgonzola-Walnuss-Ravioli mit 4-Käse-Sauce.", price: "12,90 €" },
-      { num: 12, name: "Genueser Art", desc: "Trofie mit grünem Pesto: Basilikum, Olivenöl, Pinienkerne, Pecorino und Knoblauch.", price: "13,90 €" },
-      { num: 13, name: "Kurze Pasta", desc: "Röhrchenpasta mit Wurst, Tomate und Olivenöl.", price: "12,90 €" },
-      { num: 14, name: "Saquitos", desc: "Birnen-Käse-Fagottini mit Gorgonzola-Sauce.", price: "12,90 €" },
-      { num: 15, name: "Emilia", desc: "Fleisch-Tortelloni mit Bolognese-Sauce.", price: "12,90 €" },
+      { num: 4, name: "Waldaroma", desc: "Tagliatelle mit Pilzen, Steinpilzen, Sahne und schwarzem Pfeffer.", price: "13,90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelle mit Pistazie, Speck, Sahne, Milch, schwarzem Pfeffer, Lauch, Olivenöl und Pecorino.", price: "13,90 €" },
+      { num: 6, name: "Zart", desc: "Ricotta-Spinat-Ravioli mit Salbei, Butter und Parmesan.", price: "12,90 €" },
+      { num: 7, name: "Ragù", desc: "Fleischravioli in Tomatensauce mit Rinderhack, Zwiebel, Karotte und Rotwein.", price: "12,90 €" },
+      { num: 8, name: "Geschmack von Meer und Land", desc: "Ravioloni mit Langostinos und Zucchini in Sahnesauce, Sardellen, Olivenöl, Knoblauch und Zucchini.", price: "14,00 €" },
+      { num: 9, name: "Gorgonzola & Walnüsse", desc: "Gorgonzola-Walnuss-Ravioli mit 4-Käse-Sauce.", price: "12,90 €" },
+      { num: 10, name: "Genueser Art", desc: "Trofie mit grünem Pesto: Basilikum, Olivenöl, Pinienkerne, Pecorino und Knoblauch.", price: "13,90 €" },
+      { num: 11, name: "Saquitos", desc: "Birnen-Käse-Fagottini mit Gorgonzola-Sauce.", price: "12,90 €" },
+      { num: 12, name: "Emilia", desc: "Fleisch-Tortelloni mit Bolognese-Sauce.", price: "12,90 €" },
     ]},
-    { category: "Erster Gang · Getrocknete Pasta", items: [
-      { num: 16, name: "Klassisch", desc: "Spaghetti mit Bolognese-Sauce.", price: "12,90 €" },
-      { num: 17, name: "Guitarra", desc: "Spaghetti alla chitarra mit Tomaten-Sahne-Sauce, Pfeffer und Mozzarella.", price: "12,90 €" },
-    ]},
+
     { category: "Hauptgerichte", items: [
-      { num: 18, name: "Porchetta", desc: "Gerollter Schweinebraten mit Rosmarin und schwarzem Pfeffer, dazu Pommes frites.", price: "19,90 €" },
-      { num: 19, name: "Hähnchenbrust", desc: "Gegrillte Hähnchenbrust, natur oder mit Sojasauce und Champignons.", price: "9,50 €" },
-      { num: 20, name: "Wurst", desc: "Wurst mit Pommes frites.", price: "9,50 €" },
-      { num: 21, name: "Hähnchenschenkel", desc: "Gebratener Hähnchenschenkel mit Pommes frites.", price: "10,00 €" },
+      { num: 13, name: "Porchetta", desc: "Gerollter Schweinebraten mit Rosmarin und schwarzem Pfeffer, dazu Pommes frites.", price: "19,90 €" },
+      { num: 14, name: "Hähnchenbrust", desc: "Gegrillte Hähnchenbrust mit Sojasauce und Champignons.", price: "9,50 €" },
+      { num: 15, name: "Hähnchenschenkel", desc: "Gebratener Hähnchenschenkel mit Pommes frites.", price: "10,00 €" },
     ]},
+
     { category: "Salate", items: [
-      { num: 22, name: "Haussalat", desc: "Salat, Tomate, rote Paprika und hartgekochtes Ei.", price: "7,50 €" },
-      { num: 23, name: "Griechischer Salat", desc: "Tomate, Gurke, Zwiebel, Feta und schwarze Oliven.", price: "9,00 €" },
-      { num: 24, name: "Gemischter Salat", desc: "Gemischter Salat mit Thunfisch, Tomate und roter Paprika.", price: "8,00 €" },
+      { num: 16, name: "Haussalat", desc: "Salat, Tomate, rote Paprika und Thunfisch.", price: "8,00 €" },
+      { num: 17, name: "Griechischer Salat", desc: "Tomate, Gurke, Zwiebel, Feta und schwarze Oliven.", price: "9,00 €" },
     ]},
+
     { category: "Vegetarische Gerichte", items: [
-      { num: 25, name: "Auberginenbällchen", desc: "Auberginenbällchen mit Tomatensauce.", price: "11,90 €" },
-      { num: 26, name: "Gemüse vom Grill", desc: "Gegrillte rote, grüne und gelbe Paprika, Aubergine, Champignons und Tomate.", price: "13,90 €" },
-      { num: 27, name: "Cremige Birnen", desc: "Birnen mit Käse und Walnüssen.", price: "6,00 €" },
-      { num: 28, name: "Canapé", desc: "Essbarer Löffel mit Hummus, gerösteter roter Paprika sowie grünen und schwarzen Oliven.", price: "13,90 €" },
+      { num: 18, name: "Auberginenbällchen", desc: "Auberginenbällchen mit Tomatensauce.", price: "11,90 €" },
+      { num: 19, name: "Gemüse vom Grill", desc: "Gegrillte rote, grüne und gelbe Paprika, Aubergine, Champignons und Tomate.", price: "13,90 €" },
     ]},
+
     { category: "Desserts", items: [
-      { name: "Karotten-Walnuss-Kuchen", desc: "", price: "4,50 €" },
-      { name: "Schokoladen-Profiteroles", desc: "", price: "4,50 €" },
-      { name: "Tarta de Santiago mit Mandeln", desc: "", price: "4,20 €" },
-      { name: "Apfelkuchen", desc: "", price: "4,20 €" },
-      { name: "Pistazien-Käsekuchen", desc: "", price: "4,50 €" },
-      { name: "Tiramisù", desc: "", price: "4,50 €" },
-      { name: "Ricotta-Birnen-Käsekuchen", desc: "", price: "4,50 €" },
+      { name: "Verschiedene Desserts", desc: "", price: "" },
     ]},
   ],
 
   it: [
     { category: "Antipasti", items: [
       { num: 1, name: "Pere cremose", desc: "Pere con formaggio e noci.", price: "6,00 €" },
-      { num: 2, name: "Bruschette al verde", desc: "Bruschette con acciughe, aglio, prezzemolo tritato e olio d'oliva.", price: "8,00 €" },
+      { num: 2, name: "Bruschetta al verde", desc: "Bruschetta con acciughe, aglio, prezzemolo tritato e olio d'oliva.", price: "8,00 €" },
       { num: 3, name: "Vulcano di formaggio e funghi", desc: "Vol-au-vent con salsa di funghi e 4 formaggi.", price: "9,00 €" },
-      { num: 4, name: "Bocconcini misti in salsa tonnata", desc: "Conchiglie commestibili con tonno, maionese, capperi, peperone rosso arrostito e oliva verde.", price: "11,00 €" },
     ]},
-    { category: "Primi piatti · Pasta fresca", items: [
-      { num: 5, name: "Profumo di bosco", desc: "Tagliatelle con funghi, porcini, panna e pepe nero.", price: "13,90 €" },
-      { num: 6, name: "Amatriciana", desc: "Tagliatelle all'Amatriciana con guanciale di maiale, olio d'oliva, pomodoro, aglio, peperoncino e pecorino romano.", price: "13,00 €" },
-      { num: 7, name: "Al verde", desc: "Tagliatelle con pistacchio, pancetta, panna, latte, pepe nero, porro, olio d'oliva e pecorino.", price: "13,90 €" },
-      { num: 8, name: "Delicato", desc: "Ravioli di ricotta e spinaci con salvia, burro e parmigiano.", price: "12,90 €" },
-      { num: 9, name: "Ragù", desc: "Ravioli di carne con salsa di pomodoro, olio d'oliva, carne di manzo macinata, salsiccia, cipolla, carota e vino rosso.", price: "13,90 €" },
-      { num: 10, name: "Sapori di mare e di terra", desc: "Ravioloni di mazzancolle e zucchine con panna, acciughe, olio d'oliva, pepe nero, aglio e zucchine.", price: "14,00 €" },
-      { num: 11, name: "Gorgonzola e noci", desc: "Ravioli al gorgonzola e noci con salsa ai 4 formaggi.", price: "12,90 €" },
-      { num: 12, name: "Alla genovese", desc: "Trofie al pesto verde: basilico, olio d'oliva, pinoli, pecorino e aglio.", price: "13,90 €" },
-      { num: 13, name: "Pasta corta", desc: "Pasta corta a tubetti con salsiccia, pomodoro e olio d'oliva.", price: "12,90 €" },
-      { num: 14, name: "Fagottini di pere e gorgonzola", desc: "Fagottini di pere e formaggio con salsa al gorgonzola.", price: "12,90 €" },
-      { num: 15, name: "Emilia", desc: "Tortelloni di carne con salsa alla bolognese.", price: "12,90 €" },
+
+    { category: "Primo piatto · Pasta fresca", items: [
+      { num: 4, name: "Profumo di bosco", desc: "Tagliatelle con funghi, porcini, panna e pepe nero.", price: "13,90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelle con pistacchio, pancetta, panna, latte, pepe nero, porro, olio d'oliva e pecorino.", price: "13,90 €" },
+      { num: 6, name: "Delicato", desc: "Ravioli di ricotta e spinaci con salvia, burro e parmigiano.", price: "12,90 €" },
+      { num: 7, name: "Ragù", desc: "Ravioli di carne con salsa di pomodoro, olio d'oliva, carne di manzo macinata, cipolla, carota e vino rosso.", price: "12,90 €" },
+      { num: 8, name: "Sapori di mare e di terra", desc: "Ravioloni di mazzancolle e zucchine con panna, acciughe, olio d'oliva, aglio e zucchine.", price: "14,00 €" },
+      { num: 9, name: "Gorgonzola e noci", desc: "Ravioli al gorgonzola e noci con salsa ai 4 formaggi.", price: "12,90 €" },
+      { num: 10, name: "Alla genovese", desc: "Trofie al pesto verde: basilico, olio d'oliva, pinoli, pecorino e aglio.", price: "13,90 €" },
+      { num: 11, name: "Fagottini di pere e gorgonzola", desc: "Fagottini di pere e formaggio con salsa al gorgonzola.", price: "12,90 €" },
+      { num: 12, name: "Emilia", desc: "Tortelloni di carne con salsa alla bolognese.", price: "12,90 €" },
     ]},
-    { category: "Primi piatti · Pasta secca", items: [
-      { num: 16, name: "Classica", desc: "Spaghetti con salsa alla bolognese.", price: "12,90 €" },
-      { num: 17, name: "Chitarra", desc: "Spaghetti alla chitarra con salsa di pomodoro, panna, pepe e mozzarella.", price: "12,90 €" },
+
+    { category: "Secondo piatto", items: [
+      { num: 13, name: "Porchetta", desc: "Arrosto di maiale arrotolato con rosmarino e pepe nero, servito con patatine fritte.", price: "19,90 €" },
+      { num: 14, name: "Petto di pollo", desc: "Petto di pollo alla griglia con salsa di soia e funghi.", price: "9,50 €" },
+      { num: 15, name: "Coscia di pollo", desc: "Coscia di pollo arrosto con patatine fritte.", price: "10,00 €" },
     ]},
-    { category: "Secondi piatti", items: [
-      { num: 18, name: "Porchetta", desc: "Arrosto di maiale arrotolato con rosmarino e pepe nero, servito con patatine fritte.", price: "19,90 €" },
-      { num: 19, name: "Petto di pollo", desc: "Petto di pollo alla griglia, semplice oppure con salsa di soia e funghi.", price: "9,50 €" },
-      { num: 20, name: "Salsiccia", desc: "Salsiccia con patatine fritte.", price: "9,50 €" },
-      { num: 21, name: "Coscia di pollo", desc: "Coscia di pollo arrosto con patatine fritte.", price: "10,00 €" },
-    ]},
+
     { category: "Insalate", items: [
-      { num: 22, name: "Della casa", desc: "Lattuga, pomodoro, peperone rosso e uovo sodo.", price: "7,50 €" },
-      { num: 23, name: "Greca", desc: "Pomodoro, cetriolo, cipolla, feta e olive nere.", price: "9,00 €" },
-      { num: 24, name: "Mista", desc: "Insalata mista con tonno, pomodoro e peperone rosso.", price: "8,00 €" },
+      { num: 16, name: "Della casa", desc: "Lattuga, pomodoro, peperone rosso e tonno.", price: "8,00 €" },
+      { num: 17, name: "Greca", desc: "Pomodoro, cetriolo, cipolla, feta e olive nere.", price: "9,00 €" },
     ]},
+
     { category: "Piatti vegetariani", items: [
-      { num: 25, name: "Polpette di melanzane", desc: "Polpette di melanzane con salsa di pomodoro.", price: "11,90 €" },
-      { num: 26, name: "Grigliata di verdure", desc: "Peperone rosso, verde e giallo, melanzane, funghi e pomodoro alla griglia.", price: "13,90 €" },
-      { num: 27, name: "Pere cremose", desc: "Pere con formaggio e noci.", price: "6,00 €" },
-      { num: 28, name: "Canapé", desc: "Cucchiaio commestibile con hummus, peperone rosso arrostito, oliva verde e nera.", price: "13,90 €" },
+      { num: 18, name: "Polpette di melanzane", desc: "Polpette di melanzane con salsa di pomodoro.", price: "11,90 €" },
+      { num: 19, name: "Grigliata di verdure", desc: "Peperone rosso, verde e giallo, melanzane, funghi e pomodoro alla griglia.", price: "13,90 €" },
     ]},
+
     { category: "Dolci", items: [
-      { name: "Torta di carote e noci", desc: "", price: "4,50 €" },
-      { name: "Profiteroles al cioccolato", desc: "", price: "4,50 €" },
-      { name: "Torta Santiago alle mandorle", desc: "", price: "4,20 €" },
-      { name: "Torta di mele", desc: "", price: "4,20 €" },
-      { name: "Cheesecake al pistacchio", desc: "", price: "4,50 €" },
-      { name: "Tiramisù", desc: "", price: "4,50 €" },
-      { name: "Cheesecake alla ricotta e pera", desc: "", price: "4,50 €" },
+      { name: "Dolci assortiti", desc: "", price: "" },
     ]},
   ],
 
   fr: [
     { category: "Entrées", items: [
       { num: 1, name: "Poires crémeuses", desc: "Poires avec fromage et noix.", price: "6,00 €" },
-      { num: 2, name: "Bruschettas al verde", desc: "Bruschettas aux anchois, ail, persil haché et huile d'olive.", price: "8,00 €" },
+      { num: 2, name: "Bruschetta al verde", desc: "Bruschetta aux anchois, ail, persil haché et huile d'olive.", price: "8,00 €" },
       { num: 3, name: "Volcan de fromage et champignons", desc: "Vol-au-vent avec sauce aux champignons et 4 fromages.", price: "9,00 €" },
-      { num: 4, name: "Bouchées variées en sauce tonnato", desc: "Coquilles comestibles avec thon, mayonnaise, câpres, poivron rouge rôti et olive verte.", price: "11,00 €" },
     ]},
-    { category: "Premiers plats · Pâtes fraîches", items: [
-      { num: 5, name: "Arôme de forêt", desc: "Tagliatelles aux champignons, cèpes, crème et poivre noir.", price: "13,90 €" },
-      { num: 6, name: "Amatriciana", desc: "Tagliatelles all'Amatriciana avec joue de porc, huile d'olive, tomate, ail, piment et pecorino romano.", price: "13,00 €" },
-      { num: 7, name: "Al verde", desc: "Tagliatelles au pistache, bacon, crème, lait, poivre noir, poireau, huile d'olive et pecorino.", price: "13,90 €" },
-      { num: 8, name: "Délicat", desc: "Raviolis ricotta-épinards avec sauge, beurre et parmesan.", price: "12,90 €" },
-      { num: 9, name: "Ragù", desc: "Raviolis de viande avec sauce tomate, huile d'olive, bœuf haché, saucisse, oignon, carotte et vin rouge.", price: "13,90 €" },
-      { num: 10, name: "Saveurs de mer et de terre", desc: "Ravioloni aux langoustines et courgettes avec crème, anchois, huile d'olive, poivre noir, ail et courgettes.", price: "14,00 €" },
-      { num: 11, name: "Gorgonzola et noix", desc: "Raviolis au gorgonzola et noix avec sauce aux 4 fromages.", price: "12,90 €" },
-      { num: 12, name: "Façon génoise", desc: "Trofie au pesto vert : basilic, huile d'olive, pignons, pecorino et ail.", price: "13,90 €" },
-      { num: 13, name: "Pâtes courtes", desc: "Pâtes courtes en petits tubes avec saucisse, tomate et huile d'olive.", price: "12,90 €" },
-      { num: 14, name: "Fagottini poire et gorgonzola", desc: "Fagottini de poire et fromage avec sauce au gorgonzola.", price: "12,90 €" },
-      { num: 15, name: "Emilia", desc: "Tortelloni de viande avec sauce bolognaise.", price: "12,90 €" },
+
+    { category: "Premier plat · Pâtes fraîches", items: [
+      { num: 4, name: "Arôme de forêt", desc: "Tagliatelles aux champignons, cèpes, crème et poivre noir.", price: "13,90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelles au pistache, bacon, crème, lait, poivre noir, poireau, huile d'olive et pecorino.", price: "13,90 €" },
+      { num: 6, name: "Délicat", desc: "Raviolis ricotta-épinards avec sauge, beurre et parmesan.", price: "12,90 €" },
+      { num: 7, name: "Ragù", desc: "Raviolis de viande avec sauce tomate, huile d'olive, viande hachée, oignon, carotte et vin rouge.", price: "12,90 €" },
+      { num: 8, name: "Saveurs de mer et de terre", desc: "Ravioloni aux langoustines et courgettes avec crème, anchois, huile d'olive, ail et courgettes.", price: "14,00 €" },
+      { num: 9, name: "Gorgonzola et noix", desc: "Raviolis au gorgonzola et noix avec sauce aux 4 fromages.", price: "12,90 €" },
+      { num: 10, name: "Façon génoise", desc: "Trofie au pesto vert : basilic, huile d'olive, pignons, pecorino et ail.", price: "13,90 €" },
+      { num: 11, name: "Fagottini poire et gorgonzola", desc: "Fagottini de poire et fromage avec sauce au gorgonzola.", price: "12,90 €" },
+      { num: 12, name: "Emilia", desc: "Tortelloni de viande avec sauce bolognaise.", price: "12,90 €" },
     ]},
-    { category: "Premiers plats · Pâtes sèches", items: [
-      { num: 16, name: "Classique", desc: "Spaghetti avec sauce bolognaise.", price: "12,90 €" },
-      { num: 17, name: "Guitare", desc: "Spaghetti alla chitarra avec sauce tomate-crème, poivre et mozzarella.", price: "12,90 €" },
-    ]},
+
     { category: "Plats principaux", items: [
-      { num: 18, name: "Porchetta", desc: "Rôti de porc roulé au romarin et poivre noir, servi avec frites.", price: "19,90 €" },
-      { num: 19, name: "Blanc de poulet", desc: "Blanc de poulet grillé, nature ou avec sauce soja et champignons.", price: "9,50 €" },
-      { num: 20, name: "Saucisse", desc: "Saucisse avec frites.", price: "9,50 €" },
-      { num: 21, name: "Cuisse de poulet", desc: "Cuisse de poulet rôtie avec frites.", price: "10,00 €" },
+      { num: 13, name: "Porchetta", desc: "Rôti de porc roulé au romarin et poivre noir, servi avec frites.", price: "19,90 €" },
+      { num: 14, name: "Blanc de poulet", desc: "Blanc de poulet grillé avec sauce soja et champignons.", price: "9,50 €" },
+      { num: 15, name: "Cuisse de poulet", desc: "Cuisse de poulet rôtie avec frites.", price: "10,00 €" },
     ]},
+
     { category: "Salades", items: [
-      { num: 22, name: "Salade de la maison", desc: "Laitue, tomate, poivron rouge et œuf dur.", price: "7,50 €" },
-      { num: 23, name: "Salade grecque", desc: "Tomate, concombre, oignon, feta et olives noires.", price: "9,00 €" },
-      { num: 24, name: "Salade mixte", desc: "Laitue mélangée avec thon, tomate et poivron rouge.", price: "8,00 €" },
+      { num: 16, name: "Salade de la maison", desc: "Laitue, tomate, poivron rouge et thon.", price: "8,00 €" },
+      { num: 17, name: "Salade grecque", desc: "Tomate, concombre, oignon, feta et olives noires.", price: "9,00 €" },
     ]},
+
     { category: "Plats végétariens", items: [
-      { num: 25, name: "Boulettes d'aubergine", desc: "Boulettes d'aubergine avec sauce tomate.", price: "11,90 €" },
-      { num: 26, name: "Grillade de légumes", desc: "Poivrons rouges, verts et jaunes, aubergine, champignons et tomate grillés.", price: "13,90 €" },
-      { num: 27, name: "Poires crémeuses", desc: "Poires avec fromage et noix.", price: "6,00 €" },
-      { num: 28, name: "Canapé", desc: "Cuillère comestible avec houmous, poivron rouge rôti, olive verte et noire.", price: "13,90 €" },
+      { num: 18, name: "Boulettes d'aubergine", desc: "Boulettes d'aubergine avec sauce tomate.", price: "11,90 €" },
+      { num: 19, name: "Grillade de légumes", desc: "Poivrons rouges, verts et jaunes, aubergine, champignons et tomate grillés.", price: "13,90 €" },
     ]},
+
     { category: "Desserts", items: [
-      { name: "Gâteau aux carottes et noix", desc: "", price: "4,50 €" },
-      { name: "Profiteroles au chocolat", desc: "", price: "4,50 €" },
-      { name: "Tarte de Santiago aux amandes", desc: "", price: "4,20 €" },
-      { name: "Tarte aux pommes", desc: "", price: "4,20 €" },
-      { name: "Cheesecake à la pistache", desc: "", price: "4,50 €" },
-      { name: "Tiramisù", desc: "", price: "4,50 €" },
-      { name: "Cheesecake ricotta-poire", desc: "", price: "4,50 €" },
+      { name: "Desserts variés", desc: "", price: "" },
     ]},
   ]
 };
@@ -902,11 +802,11 @@ const heroData = {
 
 // ===== CONTACT / BIZUM TEXT =====
 const contactData = {
-  es: { bizum: "(Reservar por Bizum, 20 euro por persona)" },
-  en: { bizum: "(Reserve via Bizum, 20 € per person)" },
-  de: { bizum: "(Über Bizum reservieren, 20 € pro Person)" },
-  it: { bizum: "(Prenotazione tramite Bizum, 20€ a persona)"},
-  fr: { bizum: "(Réservation par Bizum, 20 € par personne)" }
+  es: { bizum: "(Reservar llamando o por WhatsApp al número indicado)" },
+  en: { bizum: "(Book by calling or via WhatsApp at the number below)" },
+  de: { bizum: "(Reservierung telefonisch oder per WhatsApp unter der untenstehenden Nummer)" },
+  it: { bizum: "(Prenotare chiamando o via WhatsApp al numero indicato)" },
+  fr: { bizum: "(Réserver en appelant ou par WhatsApp au numéro indiqué)" }
 };
 
 // ===== SPECIAL MENU · NOCHEBUENA =====
