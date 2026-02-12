@@ -131,7 +131,7 @@ const menuData = {
 
     { category: "Primer plato · Pasta fresca", items: [
       { num: 4, name: "Aroma de bosque", desc: "Tallarines en salsa de setas, boletus, nata y pimienta negra.", price: "13,90 €" },
-      { num: 5, name: "Al verde", desc: "Tallarines con pistacho, bacón, nata, leche, pimienta negra, puerro, aceite de oliva y queso pecorino.", price: "13,90 €" },
+      { num: 5, name: "Al verde", desc: "Tallarines con pistacho, bacón, nata, leche, pimienta negra, aceite de oliva y queso pecorino.", price: "13,90 €" },
       { num: 6, name: "Delicado", desc: "Raviolis de ricotta y espinacas con salvia, mantequilla y queso parmesano.", price: "12,90 €" },
       { num: 7, name: "Ragú", desc: "Raviolis de carne con salsa de tomate, aceite de oliva, carne de vacuno molida, cebolla, zanahoria y vino tinto.", price: "12,90 €" },
       { num: 8, name: "Sabor de mar y de tierra", desc: "Raviolones de langostinos y calabacín con nata, anchoas, aceite de oliva, ajo y zucchini.", price: "14,00 €" },
@@ -171,7 +171,7 @@ const menuData = {
 
     { category: "First Course · Fresh pasta", items: [
       { num: 4, name: "Forest aroma", desc: "Tagliatelle with mushrooms, boletus, cream, and black pepper.", price: "13.90 €" },
-      { num: 5, name: "Al verde", desc: "Tagliatelle with pistachio, bacon, cream, milk, black pepper, leek, olive oil, and pecorino cheese.", price: "13.90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelle with pistachio, bacon, cream, milk, black pepper, olive oil, and pecorino cheese.", price: "13.90 €" },
       { num: 6, name: "Delicate", desc: "Ricotta and spinach ravioli with sage, butter, and parmesan cheese.", price: "12.90 €" },
       { num: 7, name: "Ragù", desc: "Meat ravioli with tomato sauce, olive oil, ground meat, onion, carrots, and red wine.", price: "12.90 €" },
       { num: 8, name: "Sea & land flavor", desc: "Langoustine and zucchini ravioloni with cream, anchovies, olive oil, garlic, and zucchini.", price: "14.00 €" },
@@ -211,7 +211,7 @@ const menuData = {
 
     { category: "Erster Gang · Frische Pasta", items: [
       { num: 4, name: "Waldaroma", desc: "Tagliatelle mit Pilzen, Steinpilzen, Sahne und schwarzem Pfeffer.", price: "13,90 €" },
-      { num: 5, name: "Al verde", desc: "Tagliatelle mit Pistazie, Speck, Sahne, Milch, schwarzem Pfeffer, Lauch, Olivenöl und Pecorino.", price: "13,90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelle mit Pistazie, Speck, Sahne, Milch, schwarzem Pfeffer, Olivenöl und Pecorino.", price: "13,90 €" },
       { num: 6, name: "Zart", desc: "Ricotta-Spinat-Ravioli mit Salbei, Butter und Parmesan.", price: "12,90 €" },
       { num: 7, name: "Ragù", desc: "Fleischravioli in Tomatensauce mit Rinderhack, Zwiebel, Karotte und Rotwein.", price: "12,90 €" },
       { num: 8, name: "Geschmack von Meer und Land", desc: "Ravioloni mit Langostinos und Zucchini in Sahnesauce, Sardellen, Olivenöl, Knoblauch und Zucchini.", price: "14,00 €" },
@@ -251,7 +251,7 @@ const menuData = {
 
     { category: "Primo piatto · Pasta fresca", items: [
       { num: 4, name: "Profumo di bosco", desc: "Tagliatelle con funghi, porcini, panna e pepe nero.", price: "13,90 €" },
-      { num: 5, name: "Al verde", desc: "Tagliatelle con pistacchio, pancetta, panna, latte, pepe nero, porro, olio d'oliva e pecorino.", price: "13,90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelle con pistacchio, pancetta, panna, latte, pepe nero, olio d'oliva e pecorino.", price: "13,90 €" },
       { num: 6, name: "Delicato", desc: "Ravioli di ricotta e spinaci con salvia, burro e parmigiano.", price: "12,90 €" },
       { num: 7, name: "Ragù", desc: "Ravioli di carne con salsa di pomodoro, olio d'oliva, carne di manzo macinata, cipolla, carota e vino rosso.", price: "12,90 €" },
       { num: 8, name: "Sapori di mare e di terra", desc: "Ravioloni di mazzancolle e zucchine con panna, acciughe, olio d'oliva, aglio e zucchine.", price: "14,00 €" },
@@ -291,7 +291,7 @@ const menuData = {
 
     { category: "Premier plat · Pâtes fraîches", items: [
       { num: 4, name: "Arôme de forêt", desc: "Tagliatelles aux champignons, cèpes, crème et poivre noir.", price: "13,90 €" },
-      { num: 5, name: "Al verde", desc: "Tagliatelles au pistache, bacon, crème, lait, poivre noir, poireau, huile d'olive et pecorino.", price: "13,90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelles au pistache, bacon, crème, lait, poivre noir, huile d'olive et pecorino.", price: "13,90 €" },
       { num: 6, name: "Délicat", desc: "Raviolis ricotta-épinards avec sauge, beurre et parmesan.", price: "12,90 €" },
       { num: 7, name: "Ragù", desc: "Raviolis de viande avec sauce tomate, huile d'olive, viande hachée, oignon, carotte et vin rouge.", price: "12,90 €" },
       { num: 8, name: "Saveurs de mer et de terre", desc: "Ravioloni aux langoustines et courgettes avec crème, anchois, huile d'olive, ail et courgettes.", price: "14,00 €" },
@@ -802,11 +802,26 @@ const heroData = {
 
 // ===== CONTACT / BIZUM TEXT =====
 const contactData = {
-  es: { bizum: "(Reservar llamando o por WhatsApp al número indicado)" },
-  en: { bizum: "(Book by calling or via WhatsApp at the number below)" },
-  de: { bizum: "(Reservierung telefonisch oder per WhatsApp unter der untenstehenden Nummer)" },
-  it: { bizum: "(Prenotare chiamando o via WhatsApp al numero indicato)" },
-  fr: { bizum: "(Réserver en appelant ou par WhatsApp au numéro indiqué)" }
+  es: {
+    bizum: "(Reservar llamando o por WhatsApp al número indicado)",
+    wednesday: "Miércoles: cerrado"
+  },
+  en: {
+    bizum: "(Book by calling or via WhatsApp at the number below)",
+    wednesday: "Wednesday: closed"
+  },
+  de: {
+    bizum: "(Reservierung telefonisch oder per WhatsApp unter der untenstehenden Nummer)",
+    wednesday: "Mittwoch: geschlossen"
+  },
+  it: {
+    bizum: "(Prenotare chiamando o via WhatsApp al numero indicato)",
+    wednesday: "Mercoledì: chiuso"
+  },
+  fr: {
+    bizum: "(Réserver en appelant ou par WhatsApp au numéro indiqué)",
+    wednesday: "Mercredi : fermé"
+  }
 };
 
 // ===== SPECIAL MENU · NOCHEBUENA =====
@@ -1109,9 +1124,28 @@ function renderHero(lang = "es") {
 }
 
 function renderContact(lang = "es") {
-  const bizumText = document.getElementById("bizum-text");
-  if (!bizumText) return;
-  bizumText.textContent = contactData[lang].bizum;
+  const bizumText    = document.getElementById("bizum-text");
+  const scheduleText = document.getElementById("schedule-text");
+  const data         = contactData[lang] || contactData.es;
+
+  // Testo Bizum / prenotazioni
+  if (bizumText) {
+    bizumText.textContent = data.bizum || "";
+  }
+
+  // Lasciamo vuota questa riga (non la usiamo)
+  if (scheduleText) {
+    scheduleText.textContent = "";
+  }
+
+  // 🔁 Traduzione di "Miércoles: cerrado" mantenendo l'HTML identico
+  const horarioCard = document.querySelector('#contact .contact-grid .contact-card:nth-of-type(2)');
+  if (horarioCard) {
+    const wednesdayStrong = horarioCard.querySelector('p:last-of-type strong');
+    if (wednesdayStrong) {
+      wednesdayStrong.textContent = data.wednesday || contactData.es.wednesday;
+    }
+  }
 }
 
 function renderNocheBuena(lang = "es") {
