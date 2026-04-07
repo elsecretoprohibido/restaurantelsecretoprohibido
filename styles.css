@@ -821,6 +821,21 @@ body{
   font-size: 0.95rem;
 }
 
+.new-dishes-promo{
+  margin-bottom: 22px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #242428;
+  box-shadow: 0 0 20px rgba(0,0,0,0.22);
+}
+
+.new-dishes-promo img{
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+
 /* griglia delle card */
 .new-dishes-grid{
   display: grid;
