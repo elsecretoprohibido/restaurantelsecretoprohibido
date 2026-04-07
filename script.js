@@ -147,7 +147,7 @@ const menuData = {
       { num: 15, name: "Muslo", desc: "Muslo de pollo asado con papas fritas.", price: "10,00 €" },
     ]},
 
-    { category: "Pizzas y focaccias", items: [
+    { category: "Pizzas, Pinsa y focaccias", items: [
     { name: "Mini pizza con mozzarella, tomate y jamón cocido", desc: "", price: "4,90 €" },
     { name: "Mini pizza con tomate, mozzarella y salami", desc: "", price: "4,90 €" },
     { name: "Focaccina simple", desc: "", price: "3,90 €" },
@@ -200,7 +200,7 @@ const menuData = {
       { num: 15, name: "Chicken thigh", desc: "Roasted chicken thigh with french fries.", price: "10.00 €" },
     ]},
 
-    { category: "Pizzas and focaccias", items: [
+    { category: "Pizzas, Pinsa and focaccias", items: [
     { name: "Mini pizza with mozzarella, tomato and cooked ham", desc: "", price: "4.90 €" },
     { name: "Mini pizza with tomato, mozzarella and salami", desc: "", price: "4.90 €" },
     { name: "Plain focaccina", desc: "", price: "3.90 €" },
@@ -253,7 +253,7 @@ const menuData = {
       { num: 15, name: "Hähnchenschenkel", desc: "Gebratener Hähnchenschenkel mit Pommes frites.", price: "10,00 €" },
     ]},
 
-     { category: "Pizzen und Focaccias", items: [
+     { category: "Pizzen, Pinsa und Focaccias", items: [
     { name: "Mini-Pizza mit Mozzarella, Tomate und Kochschinken", desc: "", price: "4,90 €" },
     { name: "Mini-Pizza mit Tomate, Mozzarella und Salami", desc: "", price: "4,90 €" },
     { name: "Leere Focaccina", desc: "", price: "3,90 €" },
@@ -306,7 +306,7 @@ const menuData = {
       { num: 15, name: "Coscia di pollo", desc: "Coscia di pollo arrosto con patatine fritte.", price: "10,00 €" },
     ]},
 
-     { category: "Pizze e focaccine", items: [
+     { category: "Pizze, Pinse e focaccine", items: [
     { name: "Mini pizza con mozzarella, pomodoro e prosciutto cotto", desc: "", price: "4,90 €" },
     { name: "Mini pizza con pomodoro, mozzarella e salame", desc: "", price: "4,90 €" },
     { name: "Focaccina vuota", desc: "", price: "3,90 €" },
@@ -359,7 +359,7 @@ const menuData = {
       { num: 15, name: "Cuisse de poulet", desc: "Cuisse de poulet rôtie avec frites.", price: "10,00 €" },
     ]},
 
- { category: "Pizzas et focaccias", items: [
+ { category: "Pizzas, Pinsa et focaccias", items: [
     { name: "Mini pizza avec mozzarella, tomate et jambon cuit", desc: "", price: "4,90 €" },
     { name: "Mini pizza avec tomate, mozzarella et salami", desc: "", price: "4,90 €" },
     { name: "Focaccina nature", desc: "", price: "3,90 €" },
