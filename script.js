@@ -147,6 +147,19 @@ const menuData = {
       { num: 15, name: "Muslo", desc: "Muslo de pollo asado con papas fritas.", price: "10,00 €" },
     ]},
 
+    { category: "Pizzas y focaccias", items: [
+    { name: "Mini pizza con mozzarella, tomate y jamón cocido", desc: "", price: "4,90 €" },
+    { name: "Mini pizza con tomate, mozzarella y salami", desc: "", price: "4,90 €" },
+    { name: "Focaccina simple", desc: "", price: "3,90 €" },
+    { name: "Focaccina rellena de pollo desmenuzado con mayonesa y lechuga", desc: "", price: "4,90 €" },
+    { name: "Focaccina vegetal", desc: "Queso blanco, tomate y lechuga.", price: "4,90 €" },
+    { name: "Focaccina de bacón con mayonesa, lechuga y tomate", desc: "", price: "4,90 €" },
+    { name: "Focaccina de jamón serrano con tomate y aceite de oliva", desc: "", price: "4,90 €" },
+    { name: "Focaccina de mortadella con pesto verde", desc: "", price: "4,90 €" },
+    { name: "Focaccina de porqueta con alioli", desc: "", price: "5,90 €" },
+    { name: "Acompañamiento", desc: "Si la quiere con papas fritas o ensalada: +2,90 €", price: "" },
+  ]},
+
     { category: "Ensaladas", items: [
       { num: 16, name: "De la casa", desc: "Lechuga, tomate, pimiento rojo y atún.", price: "8,00 €" },
       { num: 17, name: "Griega", desc: "Tomate, pepino, cebolla, queso feta y aceitunas negras.", price: "9,00 €" },
@@ -186,6 +199,19 @@ const menuData = {
       { num: 14, name: "Chicken breast", desc: "Grilled chicken breast with soy sauce and mushrooms.", price: "9.50 €" },
       { num: 15, name: "Chicken thigh", desc: "Roasted chicken thigh with french fries.", price: "10.00 €" },
     ]},
+
+    { category: "Pizzas and focaccias", items: [
+    { name: "Mini pizza with mozzarella, tomato and cooked ham", desc: "", price: "4.90 €" },
+    { name: "Mini pizza with tomato, mozzarella and salami", desc: "", price: "4.90 €" },
+    { name: "Plain focaccina", desc: "", price: "3.90 €" },
+    { name: "Focaccina filled with shredded chicken, mayonnaise and lettuce", desc: "", price: "4.90 €" },
+    { name: "Vegetarian focaccina", desc: "White cheese, tomato and lettuce.", price: "4.90 €" },
+    { name: "Bacon focaccina with mayonnaise, lettuce and tomato", desc: "", price: "4.90 €" },
+    { name: "Serrano ham focaccina with tomato and olive oil", desc: "", price: "4.90 €" },
+    { name: "Mortadella focaccina with green pesto", desc: "", price: "4.90 €" },
+    { name: "Porchetta focaccina with aioli", desc: "", price: "5.90 €" },
+    { name: "Side option", desc: "With french fries or salad: +2.90 €", price: "" },
+  ]},
 
     { category: "Salads", items: [
       { num: 16, name: "House salad", desc: "Lettuce, tomato, red pepper, and tuna.", price: "8.00 €" },
@@ -227,6 +253,19 @@ const menuData = {
       { num: 15, name: "Hähnchenschenkel", desc: "Gebratener Hähnchenschenkel mit Pommes frites.", price: "10,00 €" },
     ]},
 
+     { category: "Pizzen und Focaccias", items: [
+    { name: "Mini-Pizza mit Mozzarella, Tomate und Kochschinken", desc: "", price: "4,90 €" },
+    { name: "Mini-Pizza mit Tomate, Mozzarella und Salami", desc: "", price: "4,90 €" },
+    { name: "Leere Focaccina", desc: "", price: "3,90 €" },
+    { name: "Focaccina mit zerkleinertem Hähnchen, Mayonnaise und Salat", desc: "", price: "4,90 €" },
+    { name: "Vegetarische Focaccina", desc: "Weißkäse, Tomate und Salat.", price: "4,90 €" },
+    { name: "Focaccina mit Bacon, Mayonnaise, Salat und Tomate", desc: "", price: "4,90 €" },
+    { name: "Focaccina mit Serrano-Schinken, Tomate und Olivenöl", desc: "", price: "4,90 €" },
+    { name: "Focaccina mit Mortadella und grünem Pesto", desc: "", price: "4,90 €" },
+    { name: "Focaccina mit Porchetta und Aioli", desc: "", price: "5,90 €" },
+    { name: "Beilage", desc: "Mit Pommes frites oder Salat: +2,90 €", price: "" },
+  ]},
+
     { category: "Salate", items: [
       { num: 16, name: "Haussalat", desc: "Salat, Tomate, rote Paprika und Thunfisch.", price: "8,00 €" },
       { num: 17, name: "Griechischer Salat", desc: "Tomate, Gurke, Zwiebel, Feta und schwarze Oliven.", price: "9,00 €" },
@@ -267,6 +306,19 @@ const menuData = {
       { num: 15, name: "Coscia di pollo", desc: "Coscia di pollo arrosto con patatine fritte.", price: "10,00 €" },
     ]},
 
+     { category: "Pizze e focaccine", items: [
+    { name: "Mini pizza con mozzarella, pomodoro e prosciutto cotto", desc: "", price: "4,90 €" },
+    { name: "Mini pizza con pomodoro, mozzarella e salame", desc: "", price: "4,90 €" },
+    { name: "Focaccina vuota", desc: "", price: "3,90 €" },
+    { name: "Focaccina ripiena di pollo sfilacciato con maionese e lattuga", desc: "", price: "4,90 €" },
+    { name: "Focaccina vegetariana", desc: "Formaggio bianco, pomodoro e lattuga.", price: "4,90 €" },
+    { name: "Focaccina con bacon, maionese, lattuga e pomodoro", desc: "", price: "4,90 €" },
+    { name: "Focaccina con prosciutto serrano, pomodoro e olio d'oliva", desc: "", price: "4,90 €" },
+    { name: "Focaccina con mortadella e pesto verde", desc: "", price: "4,90 €" },
+    { name: "Focaccina con porchetta e aioli", desc: "", price: "5,90 €" },
+    { name: "Aggiunta", desc: "Con patatine fritte o insalata: +2,90 €", price: "" },
+  ]},
+
     { category: "Insalate", items: [
       { num: 16, name: "Della casa", desc: "Lattuga, pomodoro, peperone rosso e tonno.", price: "8,00 €" },
       { num: 17, name: "Greca", desc: "Pomodoro, cetriolo, cipolla, feta e olive nere.", price: "9,00 €" },
@@ -306,6 +358,19 @@ const menuData = {
       { num: 14, name: "Blanc de poulet", desc: "Blanc de poulet grillé avec sauce soja et champignons.", price: "9,50 €" },
       { num: 15, name: "Cuisse de poulet", desc: "Cuisse de poulet rôtie avec frites.", price: "10,00 €" },
     ]},
+
+ { category: "Pizzas et focaccias", items: [
+    { name: "Mini pizza avec mozzarella, tomate et jambon cuit", desc: "", price: "4,90 €" },
+    { name: "Mini pizza avec tomate, mozzarella et salami", desc: "", price: "4,90 €" },
+    { name: "Focaccina nature", desc: "", price: "3,90 €" },
+    { name: "Focaccina garnie de poulet effiloché, mayonnaise et laitue", desc: "", price: "4,90 €" },
+    { name: "Focaccina végétarienne", desc: "Fromage blanc, tomate et laitue.", price: "4,90 €" },
+    { name: "Focaccina au bacon, mayonnaise, laitue et tomate", desc: "", price: "4,90 €" },
+    { name: "Focaccina au jambon serrano, tomate et huile d'olive", desc: "", price: "4,90 €" },
+    { name: "Focaccina à la mortadelle et pesto vert", desc: "", price: "4,90 €" },
+    { name: "Focaccina à la porchetta et aïoli", desc: "", price: "5,90 €" },
+    { name: "Supplément", desc: "Avec frites ou salade : +2,90 €", price: "" },
+  ]},
 
     { category: "Salades", items: [
       { num: 16, name: "Salade de la maison", desc: "Laitue, tomate, poivron rouge et thon.", price: "8,00 €" },
