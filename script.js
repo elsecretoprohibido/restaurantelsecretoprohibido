@@ -1325,11 +1325,11 @@ const categoryNavLabel = {
 // La traduzione degli ingredienti viene mostrata come elenco testuale sotto le foto
 // tramite pizzaMenuListData + renderPizzaMenuList.
 const pizzaMenuImages = {
-  es: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
-  en: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
-  de: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
-  it: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
-  fr: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" }
+  es: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" },
+  en: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" },
+  de: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" },
+  it: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" },
+  fr: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" }
 };
 
 const pizzaMenuTitles = {
