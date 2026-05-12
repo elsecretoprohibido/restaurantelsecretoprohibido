@@ -1328,3 +1328,60 @@ body{
   }
 }
 /* ===== FINE MENU PIZZE ===== */
+
+/* ===================================================================
+   STICKY/FIXED SU MOBILE: bandiere lingua + nav categorie menù
+   restano SEMPRE visibili in alto mentre si scorre la pagina.
+   Solo su schermi ≤ 768px (smartphone e tablet piccoli).
+   =================================================================== */
+@media (max-width: 768px){
+
+  /* --- BANDIERE LINGUA: barra fissa sotto la navbar --- */
+  .lang-buttons{
+    position: fixed;
+    top: 52px;                                /* subito sotto la .navbar */
+    left: 0;
+    right: 0;
+    z-index: 49;                              /* sotto la navbar (50), sopra al resto */
+    margin: 0;
+    padding: 8px 14px;
+    background: rgba(15,15,16,0.92);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #222;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .lang-btn{
+    flex: 0 0 auto;
+  }
+
+  /* --- NAV CATEGORIE MENÙ: barra fissa sotto le bandiere --- */
+  .menu-nav{
+    position: fixed;
+    top: 104px;                               /* subito sotto le .lang-buttons */
+    left: 0;
+    right: 0;
+    z-index: 48;
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: rgba(22,22,24,0.92);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  }
+
+  /* --- Quando si fa scroll smooth a un'ancora, lascia spazio
+     sopra il target così non finisce sotto le 3 barre --- */
+  section[id],
+  .menu-card,
+  #pizza-menu,
+  #pinsa-pizza-info{
+    scroll-margin-top: 160px;
+  }
+}
