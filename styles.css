@@ -962,3 +962,78 @@ body{
     will-change: transform;  /* aiuta la fluidità su iOS / mobile */
   }
 }
+
+/* ===== MENU PIZZE (foto) ===== */
+.pizza-menu-section{
+  margin: 8px auto 40px;
+  padding: 0 6px;
+}
+
+#pizza-menu-title{
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin: 0 0 22px;
+}
+
+.pizza-menu-gallery{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+}
+
+/* COVER (logo "El Secreto Prohibido") */
+.pizza-menu-cover{
+  width: 100%;
+  max-width: 320px;        /* più piccola: serve da intro */
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid #242428;
+  box-shadow: 0 0 20px rgba(0,0,0,0.35);
+  display: block;
+  background: #111;
+}
+
+/* CARTE PINSA + PIZZA: una accanto all'altra su desktop */
+.pizza-menu-pages{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.pizza-menu-page{
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid #242428;
+  box-shadow: 0 0 24px rgba(0,0,0,0.35);
+  display: block;
+  background: #111;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+.pizza-menu-page:hover{
+  transform: scale(1.015);
+}
+
+/* MOBILE: una sotto l'altra, leggibili */
+@media (max-width: 768px){
+  #pizza-menu-title{
+    font-size: 1.5rem;
+  }
+  .pizza-menu-cover{
+    max-width: 220px;
+  }
+  .pizza-menu-pages{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+/* ===== FINE MENU PIZZE ===== */
