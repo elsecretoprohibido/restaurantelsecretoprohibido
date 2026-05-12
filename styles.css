@@ -1332,6 +1332,8 @@ body{
 /* ===================================================================
    STICKY/FIXED SU MOBILE: bandiere lingua + nav categorie menù
    restano SEMPRE visibili in alto mentre si scorre la pagina.
+   Niente scorrimento orizzontale: tutti i pulsanti sempre visibili
+   contemporaneamente, vanno a capo se necessario.
    Solo su schermi ≤ 768px (smartphone e tablet piccoli).
    =================================================================== */
 @media (max-width: 768px){
@@ -1339,49 +1341,72 @@ body{
   /* --- BANDIERE LINGUA: barra fissa sotto la navbar --- */
   .lang-buttons{
     position: fixed;
-    top: 52px;                                /* subito sotto la .navbar */
+    top: 52px;
     left: 0;
     right: 0;
-    z-index: 49;                              /* sotto la navbar (50), sopra al resto */
+    z-index: 49;
     margin: 0;
-    padding: 8px 14px;
-    background: rgba(15,15,16,0.92);
+    padding: 8px 10px;
+    background: rgba(15,15,16,0.95);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #222;
     box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    /* niente scroll orizzontale: i 5 bottoni stanno tutti in fila */
+    overflow-x: visible;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6px;
   }
   .lang-btn{
     flex: 0 0 auto;
+    padding: 6px 9px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .flag{
+    font-size: 1rem;
+    margin-right: 4px;
   }
 
   /* --- NAV CATEGORIE MENÙ: barra fissa sotto le bandiere --- */
   .menu-nav{
     position: fixed;
-    top: 104px;                               /* subito sotto le .lang-buttons */
+    top: 104px;
     left: 0;
     right: 0;
     z-index: 48;
     margin: 0;
-    padding: 8px 12px;
+    padding: 5px 6px;
     border-radius: 0;
     border-left: none;
     border-right: none;
     border-top: none;
-    background: rgba(22,22,24,0.92);
+    background: rgba(22,22,24,0.95);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    /* niente scroll: i bottoni vanno a capo se necessario */
+    overflow-x: visible;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+  }
+  .menu-nav-btn{
+    flex: 0 0 auto;
+    font-size: 0.68rem;
+    padding: 4px 7px;
+    line-height: 1.15;
+    letter-spacing: 0.1px;
   }
 
-  /* --- Quando si fa scroll smooth a un'ancora, lascia spazio
-     sopra il target così non finisce sotto le 3 barre --- */
+  /* scroll-margin generoso per gli anchor (nav multi-riga può
+     arrivare a ~230px in alto nel caso peggiore) */
   section[id],
   .menu-card,
   #pizza-menu,
   #pinsa-pizza-info{
-    scroll-margin-top: 160px;
+    scroll-margin-top: 230px;
   }
 }

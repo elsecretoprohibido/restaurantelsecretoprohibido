@@ -381,14 +381,6 @@ const drinksData = {
       ]
     },
     {
-      category: "Agua",
-      items: [
-        { name: "Agua natural en botella (0,50 l)", desc: "Agua sin gas en botella.", price: "1,20 €" },
-        { name: "Agua natural en botella (1,50 l)", desc: "Agua sin gas en botella de plástico.", price: "2,30 €" },
-        { name: "Agua con gas en botella (0,50 l)", desc: "Agua con gas en botella de cristal.", price: "1,30 €" }
-      ]
-    },
-    {
       category: "Cerveza",
       items: [
         { name: "Dorada Pilsen", desc: "", price: "1,80 €" },
@@ -453,14 +445,6 @@ const drinksData = {
         { name: "Red Bull", desc: "", price: "3.00 €" },
         { name: "Peach juice", desc: "Peach smoothie.", price: "2.50 €" },
         { name: "Pear & pineapple juice", desc: "Pear and pineapple smoothie.", price: "2.50 €" }
-      ]
-    },
-    {
-      category: "Water",
-      items: [
-        { name: "Still water (0.5 l bottle)", desc: "Still water in a bottle.", price: "1.20 €" },
-        { name: "Still water (1.5 l bottle)", desc: "Still water in a plastic bottle.", price: "2.30 €" },
-        { name: "Sparkling water (0.5 l bottle)", desc: "Sparkling water in a glass bottle.", price: "1.30 €" }
       ]
     },
     {
@@ -531,14 +515,6 @@ const drinksData = {
       ]
     },
     {
-      category: "Wasser",
-      items: [
-        { name: "Stilles Wasser (0,5 l Flasche)", desc: "Stilles Wasser in einer Flasche.", price: "1,20 €" },
-        { name: "Stilles Wasser (1,5 l Flasche)", desc: "Stilles Wasser in einer Plastikflasche.", price: "2,30 €" },
-        { name: "Mineralwasser mit Kohlensäure (0,5 l Flasche)", desc: "Sprudelwasser in einer Glasflasche.", price: "1,30 €" }
-      ]
-    },
-    {
       category: "Bier",
       items: [
         { name: "Dorada Pilsen", desc: "", price: "1,80 €" },
@@ -606,14 +582,6 @@ const drinksData = {
       ]
     },
     {
-      category: "Acqua",
-      items: [
-        { name: "Acqua naturale (bottiglia 0,5 l)", desc: "Acqua senza gas in bottiglia.", price: "1,20 €" },
-        { name: "Acqua naturale (bottiglia 1,5 l)", desc: "Acqua senza gas in bottiglia di plastica.", price: "2,30 €" },
-        { name: "Acqua frizzante (bottiglia 0,5 l)", desc: "Acqua frizzante in bottiglia di vetro.", price: "1,30 €" }
-      ]
-    },
-    {
       category: "Birra",
       items: [
         { name: "Dorada Pilsen", desc: "", price: "1,80 €" },
@@ -678,14 +646,6 @@ const drinksData = {
         { name: "Red Bull", desc: "", price: "3,00 €" },
         { name: "Jus de pêche", desc: "Smoothie à la pêche.", price: "2,50 €" },
         { name: "Jus poire-ananas", desc: "Smoothie poire-ananas.", price: "2,50 €" }
-      ]
-    },
-    {
-      category: "Eau",
-      items: [
-        { name: "Eau plate (bouteille 0,5 l)", desc: "Eau sans gaz en bouteille.", price: "1,20 €" },
-        { name: "Eau plate (bouteille 1,5 l)", desc: "Eau sans gaz en bouteille plastique.", price: "2,30 €" },
-        { name: "Eau gazeuse (bouteille 0,5 l)", desc: "Eau gazeuse en bouteille en verre.", price: "1,30 €" }
       ]
     },
     {
@@ -1091,7 +1051,9 @@ function renderMenu(lang = "es") {
     btn.className = "menu-nav-btn";
     btn.type = "button";
     btn.dataset.target = "menu-cat-" + idx;
-    btn.textContent = section.category;
+    // Su mobile (e dovunque) il testo del bottone è la versione breve se mappata,
+    // altrimenti il nome completo della categoria.
+    btn.textContent = categoryNavLabel[section.category] || section.category;
     nav.appendChild(btn);
 
     // Subito dopo "Segundo plato" (indice 2) inserisco il pulsante Pizza & Pinsa
@@ -1316,16 +1278,58 @@ const pizzaNavLabel = {
   fr: "Pizza & Pinsa"
 };
 
+// Mapping: categorie con nome lungo → etichetta breve per i pulsanti
+// della nav (solo nei pulsanti, NON nei titoli delle sezioni dentro il menù).
+// Se la categoria non è in questo mapping, viene usato il nome originale.
+const categoryNavLabel = {
+  // ES
+  "Primer plato · Pasta fresca":         "Primer plato",
+  "Platos vegetarianos":                 "Vegetariano",
+  "Vinos · Botella (tinto)":             "Vino tinto",
+  "Vinos · Botella (blanco)":            "Vino blanco",
+  "Vinos · Botella (blanco afrutado)":   "Vino afrutado",
+  "Vino de la casa":                     "Vino casa",
+  // EN
+  "First Course · Fresh pasta":          "First course",
+  "Vegetarian dishes":                   "Vegetarian",
+  "Red wine · Bottle":                   "Red wine",
+  "White wine · Bottle":                 "White wine",
+  "Fruity white wine · Bottle":          "Fruity wine",
+  "Soft drinks":                         "Soft drinks",
+  // DE
+  "Erster Gang · Frische Pasta":         "Erster Gang",
+  "Vegetarische Gerichte":               "Vegetarisch",
+  "Rotwein · Flasche":                   "Rotwein",
+  "Weißwein · Flasche":                  "Weißwein",
+  "Fruchtiger Weißwein · Flasche":       "Fruchtwein",
+  "Erfrischungsgetränke":                "Erfrischung",
+  // IT
+  "Primo piatto · Pasta fresca":         "Primo piatto",
+  "Piatti vegetariani":                  "Vegetariano",
+  "Vini · Bottiglia (rossi)":            "Vino rosso",
+  "Vini · Bottiglia (bianchi)":          "Vino bianco",
+  "Vini · Bottiglia (bianchi fruttati)": "Vino fruttato",
+  "Vino della casa":                     "Vino casa",
+  // FR
+  "Premier plat · Pâtes fraîches":       "Premier plat",
+  "Plats végétariens":                   "Végétarien",
+  "Vins · Bouteille (rouges)":           "Vin rouge",
+  "Vins · Bouteille (blancs)":           "Vin blanc",
+  "Vins · Bouteille (blancs fruités)":   "Vin fruité",
+  "Vin de la maison":                    "Vin maison",
+  "Boissons sans alcool":                "Boissons"
+};
+
 // ===== MENU PIZZE (via foto) =====
 // Le locandine fotografiche sono solo in spagnolo (sono la "vetrina grafica" della carta).
 // La traduzione degli ingredienti viene mostrata come elenco testuale sotto le foto
 // tramite pizzaMenuListData + renderPizzaMenuList.
 const pizzaMenuImages = {
-  es: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" },
-  en: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" },
-  de: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" },
-  it: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" },
-  fr: { cover: "img/pizza_1.jpg", pinsa: "img/pizza_2.jpg", pizza: "img/pizza_3.jpg" }
+  es: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
+  en: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
+  de: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
+  it: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
+  fr: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" }
 };
 
 const pizzaMenuTitles = {
