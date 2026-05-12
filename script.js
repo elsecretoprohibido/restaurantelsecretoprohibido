@@ -131,13 +131,13 @@ const menuData = {
 
     { category: "Primer plato · Pasta fresca", items: [
       { num: 4, name: "Aroma de bosque", desc: "Tallarines en salsa de setas, boletus, nata y pimienta negra.", price: "13,90 €" },
-      { num: 5, name: "Al verde", desc: "Tallarines con pistacho, bacón, nata, leche, pimienta negra, aceite de oliva y queso pecorino.", price: "13,90 €" },
-      { num: 6, name: "Delicado", desc: "Raviolis de ricotta y espinacas con salvia, mantequilla y queso parmesano.", price: "12,90 €" },
-      { num: 7, name: "Ragú", desc: "Raviolis de carne con salsa de tomate, aceite de oliva, carne de vacuno molida, cebolla, zanahoria y vino tinto.", price: "12,90 €" },
+      { num: 5, name: "Al verde", desc: "Tallarines con pistacho, bacón, nata, leche, pimienta negra, aceite de oliva y queso pecorino.", price: "13,90 €", img: "img/piatto_7.jpeg" },
+      { num: 6, name: "Delicado", desc: "Raviolis de ricotta y espinacas con salvia, mantequilla y queso parmesano.", price: "12,90 €", img: "img/pasta_5.jpeg" },
+      { num: 7, name: "Ragú", desc: "Raviolis de carne con salsa de tomate, aceite de oliva, carne de vacuno molida, cebolla, zanahoria y vino tinto.", price: "12,90 €", img: "img/pasta_3.jpeg" },
       { num: 8, name: "Sabor de mar y de tierra", desc: "Raviolones de langostinos y calabacín con nata, anchoas, aceite de oliva, ajo y zucchini.", price: "14,00 €" },
-      { num: 9, name: "Gorgonzola y nueces", desc: "Raviolis de gorgonzola y nueces con salsa 4 quesos.", price: "12,90 €" },
-      { num: 10, name: "A la Genovesa", desc: "Trofie al pesto verde: albahaca, aceite de oliva, piñones, queso pecorino y ajo.", price: "13,90 €" },
-      { num: 11, name: "Saquitos", desc: "Fagottini de pera y queso con salsa de gorgonzola.", price: "12,90 €" },
+      { num: 9, name: "Gorgonzola y nueces", desc: "Raviolis de gorgonzola y nueces con salsa 4 quesos.", price: "12,90 €", img: "img/pasta_1.jpeg" },
+      { num: 10, name: "A la Genovesa", desc: "Trofie al pesto verde: albahaca, aceite de oliva, piñones, queso pecorino y ajo.", price: "13,90 €", img: "img/pasta_4.jpeg" },
+      { num: 11, name: "Saquitos", desc: "Fagottini de pera y queso con salsa de gorgonzola.", price: "12,90 €", img: "img/pasta_2.jpeg" },
       { num: 12, name: "Emilia", desc: "Tortelloni de carne con salsa boloñesa.", price: "12,90 €" },
     ]},
 
@@ -147,18 +147,18 @@ const menuData = {
       { num: 15, name: "Muslo", desc: "Muslo de pollo asado con papas fritas.", price: "10,00 €" },
     ]},
 
-    { category: "Ensaladas", items: [
-      { num: 16, name: "De la casa", desc: "Lechuga, tomate, pimiento rojo y atún.", price: "8,00 €" },
-      { num: 17, name: "Griega", desc: "Tomate, pepino, cebolla, queso feta y aceitunas negras.", price: "9,00 €" },
-    ]},
-
     { category: "Platos vegetarianos", items: [
       { num: 18, name: "Albóndigas", desc: "Albóndigas de berenjena con salsa de tomate.", price: "11,90 €" },
       { num: 19, name: "Parrillada vegetal", desc: "Asado de pimiento rojo, verde, amarillo, berenjena, champiñones y tomate.", price: "13,90 €" },
     ]},
 
+    { category: "Ensaladas", items: [
+      { num: 16, name: "De la casa", desc: "Lechuga, tomate, pimiento rojo y atún.", price: "8,00 €" },
+      { num: 17, name: "Griega", desc: "Tomate, pepino, cebolla, queso feta y aceitunas negras.", price: "9,00 €" },
+    ]},
+
     { category: "Postres", items: [
-      { name: "Postres variados", desc: "", price: "4,50€" },
+      { name: "Postres variados", desc: "", price: "4,50€", img: "img/gelato_2.jpeg" },
     ]},
   ],
 
@@ -171,13 +171,13 @@ const menuData = {
 
     { category: "First Course · Fresh pasta", items: [
       { num: 4, name: "Forest aroma", desc: "Tagliatelle with mushrooms, boletus, cream, and black pepper.", price: "13.90 €" },
-      { num: 5, name: "Al verde", desc: "Tagliatelle with pistachio, bacon, cream, milk, black pepper, olive oil, and pecorino cheese.", price: "13.90 €" },
-      { num: 6, name: "Delicate", desc: "Ricotta and spinach ravioli with sage, butter, and parmesan cheese.", price: "12.90 €" },
-      { num: 7, name: "Ragù", desc: "Meat ravioli with tomato sauce, olive oil, ground meat, onion, carrots, and red wine.", price: "12.90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelle with pistachio, bacon, cream, milk, black pepper, olive oil, and pecorino cheese.", price: "13.90 €", img: "img/piatto_7.jpeg" },
+      { num: 6, name: "Delicate", desc: "Ricotta and spinach ravioli with sage, butter, and parmesan cheese.", price: "12.90 €", img: "img/pasta_5.jpeg" },
+      { num: 7, name: "Ragù", desc: "Meat ravioli with tomato sauce, olive oil, ground meat, onion, carrots, and red wine.", price: "12.90 €", img: "img/pasta_3.jpeg" },
       { num: 8, name: "Sea & land flavor", desc: "Langoustine and zucchini ravioloni with cream, anchovies, olive oil, garlic, and zucchini.", price: "14.00 €" },
-      { num: 9, name: "Gorgonzola & walnuts", desc: "Gorgonzola and walnut ravioli with 4 cheese sauce.", price: "12.90 €" },
-      { num: 10, name: "Genovese style", desc: "Trofie with green pesto: basil, olive oil, pine nuts, pecorino cheese, and garlic.", price: "13.90 €" },
-      { num: 11, name: "Saquitos", desc: "Pear and cheese fagottini with gorgonzola sauce.", price: "12.90 €" },
+      { num: 9, name: "Gorgonzola & walnuts", desc: "Gorgonzola and walnut ravioli with 4 cheese sauce.", price: "12.90 €", img: "img/pasta_1.jpeg" },
+      { num: 10, name: "Genovese style", desc: "Trofie with green pesto: basil, olive oil, pine nuts, pecorino cheese, and garlic.", price: "13.90 €", img: "img/pasta_4.jpeg" },
+      { num: 11, name: "Saquitos", desc: "Pear and cheese fagottini with gorgonzola sauce.", price: "12.90 €", img: "img/pasta_2.jpeg" },
       { num: 12, name: "Emilia", desc: "Tortelloni with meat in Bolognese sauce.", price: "12.90 €" },
     ]},
 
@@ -187,18 +187,18 @@ const menuData = {
       { num: 15, name: "Chicken thigh", desc: "Roasted chicken thigh with french fries.", price: "10.00 €" },
     ]},
 
-    { category: "Salads", items: [
-      { num: 16, name: "House salad", desc: "Lettuce, tomato, red pepper, and tuna.", price: "8.00 €" },
-      { num: 17, name: "Greek salad", desc: "Tomato, cucumber, onion, feta cheese, and black olives.", price: "9.00 €" },
-    ]},
-
     { category: "Vegetarian dishes", items: [
       { num: 18, name: "Eggplant meatballs", desc: "Eggplant meatballs with tomato sauce.", price: "11.90 €" },
       { num: 19, name: "Vegetable grill", desc: "Grilled red, green and yellow peppers, eggplant, mushrooms, and tomato.", price: "13.90 €" },
     ]},
 
+    { category: "Salads", items: [
+      { num: 16, name: "House salad", desc: "Lettuce, tomato, red pepper, and tuna.", price: "8.00 €" },
+      { num: 17, name: "Greek salad", desc: "Tomato, cucumber, onion, feta cheese, and black olives.", price: "9.00 €" },
+    ]},
+
     { category: "Desserts", items: [
-      { name: "Assorted desserts", desc: "", price: "4,50€" },
+      { name: "Assorted desserts", desc: "", price: "4,50€", img: "img/gelato_2.jpeg" },
     ]},
   ],
 
@@ -211,13 +211,13 @@ const menuData = {
 
     { category: "Erster Gang · Frische Pasta", items: [
       { num: 4, name: "Waldaroma", desc: "Tagliatelle mit Pilzen, Steinpilzen, Sahne und schwarzem Pfeffer.", price: "13,90 €" },
-      { num: 5, name: "Al verde", desc: "Tagliatelle mit Pistazie, Speck, Sahne, Milch, schwarzem Pfeffer, Olivenöl und Pecorino.", price: "13,90 €" },
-      { num: 6, name: "Zart", desc: "Ricotta-Spinat-Ravioli mit Salbei, Butter und Parmesan.", price: "12,90 €" },
-      { num: 7, name: "Ragù", desc: "Fleischravioli in Tomatensauce mit Rinderhack, Zwiebel, Karotte und Rotwein.", price: "12,90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelle mit Pistazie, Speck, Sahne, Milch, schwarzem Pfeffer, Olivenöl und Pecorino.", price: "13,90 €", img: "img/piatto_7.jpeg" },
+      { num: 6, name: "Zart", desc: "Ricotta-Spinat-Ravioli mit Salbei, Butter und Parmesan.", price: "12,90 €", img: "img/pasta_5.jpeg" },
+      { num: 7, name: "Ragù", desc: "Fleischravioli in Tomatensauce mit Rinderhack, Zwiebel, Karotte und Rotwein.", price: "12,90 €", img: "img/pasta_3.jpeg" },
       { num: 8, name: "Geschmack von Meer und Land", desc: "Ravioloni mit Langostinos und Zucchini in Sahnesauce, Sardellen, Olivenöl, Knoblauch und Zucchini.", price: "14,00 €" },
-      { num: 9, name: "Gorgonzola & Walnüsse", desc: "Gorgonzola-Walnuss-Ravioli mit 4-Käse-Sauce.", price: "12,90 €" },
-      { num: 10, name: "Genueser Art", desc: "Trofie mit grünem Pesto: Basilikum, Olivenöl, Pinienkerne, Pecorino und Knoblauch.", price: "13,90 €" },
-      { num: 11, name: "Saquitos", desc: "Birnen-Käse-Fagottini mit Gorgonzola-Sauce.", price: "12,90 €" },
+      { num: 9, name: "Gorgonzola & Walnüsse", desc: "Gorgonzola-Walnuss-Ravioli mit 4-Käse-Sauce.", price: "12,90 €", img: "img/pasta_1.jpeg" },
+      { num: 10, name: "Genueser Art", desc: "Trofie mit grünem Pesto: Basilikum, Olivenöl, Pinienkerne, Pecorino und Knoblauch.", price: "13,90 €", img: "img/pasta_4.jpeg" },
+      { num: 11, name: "Saquitos", desc: "Birnen-Käse-Fagottini mit Gorgonzola-Sauce.", price: "12,90 €", img: "img/pasta_2.jpeg" },
       { num: 12, name: "Emilia", desc: "Fleisch-Tortelloni mit Bolognese-Sauce.", price: "12,90 €" },
     ]},
 
@@ -227,18 +227,18 @@ const menuData = {
       { num: 15, name: "Hähnchenschenkel", desc: "Gebratener Hähnchenschenkel mit Pommes frites.", price: "10,00 €" },
     ]},
 
-    { category: "Salate", items: [
-      { num: 16, name: "Haussalat", desc: "Salat, Tomate, rote Paprika und Thunfisch.", price: "8,00 €" },
-      { num: 17, name: "Griechischer Salat", desc: "Tomate, Gurke, Zwiebel, Feta und schwarze Oliven.", price: "9,00 €" },
-    ]},
-
     { category: "Vegetarische Gerichte", items: [
       { num: 18, name: "Auberginenbällchen", desc: "Auberginenbällchen mit Tomatensauce.", price: "11,90 €" },
       { num: 19, name: "Gemüse vom Grill", desc: "Gegrillte rote, grüne und gelbe Paprika, Aubergine, Champignons und Tomate.", price: "13,90 €" },
     ]},
 
+    { category: "Salate", items: [
+      { num: 16, name: "Haussalat", desc: "Salat, Tomate, rote Paprika und Thunfisch.", price: "8,00 €" },
+      { num: 17, name: "Griechischer Salat", desc: "Tomate, Gurke, Zwiebel, Feta und schwarze Oliven.", price: "9,00 €" },
+    ]},
+
     { category: "Desserts", items: [
-      { name: "Verschiedene Desserts", desc: "", price: "4,50€" },
+      { name: "Verschiedene Desserts", desc: "", price: "4,50€", img: "img/gelato_2.jpeg" },
     ]},
   ],
 
@@ -251,13 +251,13 @@ const menuData = {
 
     { category: "Primo piatto · Pasta fresca", items: [
       { num: 4, name: "Profumo di bosco", desc: "Tagliatelle con funghi, porcini, panna e pepe nero.", price: "13,90 €" },
-      { num: 5, name: "Al verde", desc: "Tagliatelle con pistacchio, pancetta, panna, latte, pepe nero, olio d'oliva e pecorino.", price: "13,90 €" },
-      { num: 6, name: "Delicato", desc: "Ravioli di ricotta e spinaci con salvia, burro e parmigiano.", price: "12,90 €" },
-      { num: 7, name: "Ragù", desc: "Ravioli di carne con salsa di pomodoro, olio d'oliva, carne di manzo macinata, cipolla, carota e vino rosso.", price: "12,90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelle con pistacchio, pancetta, panna, latte, pepe nero, olio d'oliva e pecorino.", price: "13,90 €", img: "img/piatto_7.jpeg" },
+      { num: 6, name: "Delicato", desc: "Ravioli di ricotta e spinaci con salvia, burro e parmigiano.", price: "12,90 €", img: "img/pasta_5.jpeg" },
+      { num: 7, name: "Ragù", desc: "Ravioli di carne con salsa di pomodoro, olio d'oliva, carne di manzo macinata, cipolla, carota e vino rosso.", price: "12,90 €", img: "img/pasta_3.jpeg" },
       { num: 8, name: "Sapori di mare e di terra", desc: "Ravioloni di mazzancolle e zucchine con panna, acciughe, olio d'oliva, aglio e zucchine.", price: "14,00 €" },
-      { num: 9, name: "Gorgonzola e noci", desc: "Ravioli al gorgonzola e noci con salsa ai 4 formaggi.", price: "12,90 €" },
-      { num: 10, name: "Alla genovese", desc: "Trofie al pesto verde: basilico, olio d'oliva, pinoli, pecorino e aglio.", price: "13,90 €" },
-      { num: 11, name: "Fagottini di pere e gorgonzola", desc: "Fagottini di pere e formaggio con salsa al gorgonzola.", price: "12,90 €" },
+      { num: 9, name: "Gorgonzola e noci", desc: "Ravioli al gorgonzola e noci con salsa ai 4 formaggi.", price: "12,90 €", img: "img/pasta_1.jpeg" },
+      { num: 10, name: "Alla genovese", desc: "Trofie al pesto verde: basilico, olio d'oliva, pinoli, pecorino e aglio.", price: "13,90 €", img: "img/pasta_4.jpeg" },
+      { num: 11, name: "Fagottini di pere e gorgonzola", desc: "Fagottini di pere e formaggio con salsa al gorgonzola.", price: "12,90 €", img: "img/pasta_2.jpeg" },
       { num: 12, name: "Emilia", desc: "Tortelloni di carne con salsa alla bolognese.", price: "12,90 €" },
     ]},
 
@@ -267,18 +267,18 @@ const menuData = {
       { num: 15, name: "Coscia di pollo", desc: "Coscia di pollo arrosto con patatine fritte.", price: "10,00 €" },
     ]},
 
-    { category: "Insalate", items: [
-      { num: 16, name: "Della casa", desc: "Lattuga, pomodoro, peperone rosso e tonno.", price: "8,00 €" },
-      { num: 17, name: "Greca", desc: "Pomodoro, cetriolo, cipolla, feta e olive nere.", price: "9,00 €" },
-    ]},
-
     { category: "Piatti vegetariani", items: [
       { num: 18, name: "Polpette di melanzane", desc: "Polpette di melanzane con salsa di pomodoro.", price: "11,90 €" },
       { num: 19, name: "Grigliata di verdure", desc: "Peperone rosso, verde e giallo, melanzane, funghi e pomodoro alla griglia.", price: "13,90 €" },
     ]},
 
+    { category: "Insalate", items: [
+      { num: 16, name: "Della casa", desc: "Lattuga, pomodoro, peperone rosso e tonno.", price: "8,00 €" },
+      { num: 17, name: "Greca", desc: "Pomodoro, cetriolo, cipolla, feta e olive nere.", price: "9,00 €" },
+    ]},
+
     { category: "Dolci", items: [
-      { name: "Dolci assortiti", desc: "", price: "4,50€" },
+      { name: "Dolci assortiti", desc: "", price: "4,50€", img: "img/gelato_2.jpeg" },
     ]},
   ],
 
@@ -291,13 +291,13 @@ const menuData = {
 
     { category: "Premier plat · Pâtes fraîches", items: [
       { num: 4, name: "Arôme de forêt", desc: "Tagliatelles aux champignons, cèpes, crème et poivre noir.", price: "13,90 €" },
-      { num: 5, name: "Al verde", desc: "Tagliatelles au pistache, bacon, crème, lait, poivre noir, huile d'olive et pecorino.", price: "13,90 €" },
-      { num: 6, name: "Délicat", desc: "Raviolis ricotta-épinards avec sauge, beurre et parmesan.", price: "12,90 €" },
-      { num: 7, name: "Ragù", desc: "Raviolis de viande avec sauce tomate, huile d'olive, viande hachée, oignon, carotte et vin rouge.", price: "12,90 €" },
+      { num: 5, name: "Al verde", desc: "Tagliatelles au pistache, bacon, crème, lait, poivre noir, huile d'olive et pecorino.", price: "13,90 €", img: "img/piatto_7.jpeg" },
+      { num: 6, name: "Délicat", desc: "Raviolis ricotta-épinards avec sauge, beurre et parmesan.", price: "12,90 €", img: "img/pasta_5.jpeg" },
+      { num: 7, name: "Ragù", desc: "Raviolis de viande avec sauce tomate, huile d'olive, viande hachée, oignon, carotte et vin rouge.", price: "12,90 €", img: "img/pasta_3.jpeg" },
       { num: 8, name: "Saveurs de mer et de terre", desc: "Ravioloni aux langoustines et courgettes avec crème, anchois, huile d'olive, ail et courgettes.", price: "14,00 €" },
-      { num: 9, name: "Gorgonzola et noix", desc: "Raviolis au gorgonzola et noix avec sauce aux 4 fromages.", price: "12,90 €" },
-      { num: 10, name: "Façon génoise", desc: "Trofie au pesto vert : basilic, huile d'olive, pignons, pecorino et ail.", price: "13,90 €" },
-      { num: 11, name: "Fagottini poire et gorgonzola", desc: "Fagottini de poire et fromage avec sauce au gorgonzola.", price: "12,90 €" },
+      { num: 9, name: "Gorgonzola et noix", desc: "Raviolis au gorgonzola et noix avec sauce aux 4 fromages.", price: "12,90 €", img: "img/pasta_1.jpeg" },
+      { num: 10, name: "Façon génoise", desc: "Trofie au pesto vert : basilic, huile d'olive, pignons, pecorino et ail.", price: "13,90 €", img: "img/pasta_4.jpeg" },
+      { num: 11, name: "Fagottini poire et gorgonzola", desc: "Fagottini de poire et fromage avec sauce au gorgonzola.", price: "12,90 €", img: "img/pasta_2.jpeg" },
       { num: 12, name: "Emilia", desc: "Tortelloni de viande avec sauce bolognaise.", price: "12,90 €" },
     ]},
 
@@ -307,18 +307,18 @@ const menuData = {
       { num: 15, name: "Cuisse de poulet", desc: "Cuisse de poulet rôtie avec frites.", price: "10,00 €" },
     ]},
 
-    { category: "Salades", items: [
-      { num: 16, name: "Salade de la maison", desc: "Laitue, tomate, poivron rouge et thon.", price: "8,00 €" },
-      { num: 17, name: "Salade grecque", desc: "Tomate, concombre, oignon, feta et olives noires.", price: "9,00 €" },
-    ]},
-
     { category: "Plats végétariens", items: [
       { num: 18, name: "Boulettes d'aubergine", desc: "Boulettes d'aubergine avec sauce tomate.", price: "11,90 €" },
       { num: 19, name: "Grillade de légumes", desc: "Poivrons rouges, verts et jaunes, aubergine, champignons et tomate grillés.", price: "13,90 €" },
     ]},
 
+    { category: "Salades", items: [
+      { num: 16, name: "Salade de la maison", desc: "Laitue, tomate, poivron rouge et thon.", price: "8,00 €" },
+      { num: 17, name: "Salade grecque", desc: "Tomate, concombre, oignon, feta et olives noires.", price: "9,00 €" },
+    ]},
+
     { category: "Desserts", items: [
-      { name: "Desserts variés", desc: "", price: "4,50€" },
+      { name: "Desserts variés", desc: "", price: "4,50€", img: "img/gelato_2.jpeg" },
     ]},
   ]
 };
@@ -1072,28 +1072,84 @@ function renderMenu(lang = "es") {
   const menuContainer = document.getElementById("menu-container");
   if (!menuContainer) return;
 
+  // Detach dei due blocchi pizze (info + galleria) prima dello svuotamento,
+  // così sopravvivono al re-render e li possiamo riposizionare in mezzo al menù
+  const pinsaInfo    = document.getElementById("pinsa-pizza-info");
+  const pizzaGallery = document.getElementById("pizza-menu");
+  if (pinsaInfo    && pinsaInfo.parentNode)    pinsaInfo.parentNode.removeChild(pinsaInfo);
+  if (pizzaGallery && pizzaGallery.parentNode) pizzaGallery.parentNode.removeChild(pizzaGallery);
+
   menuContainer.innerHTML = "";
 
-  menuData[lang].forEach(section => {
+  // ---- NAV CATEGORIE ----
+  const nav = document.createElement("nav");
+  nav.className = "menu-nav";
+  nav.setAttribute("aria-label", "Categorías del menú");
+
+  menuData[lang].forEach((section, idx) => {
+    const btn = document.createElement("button");
+    btn.className = "menu-nav-btn";
+    btn.type = "button";
+    btn.dataset.target = "menu-cat-" + idx;
+    btn.textContent = section.category;
+    nav.appendChild(btn);
+
+    // Subito dopo "Segundo plato" (indice 2) inserisco il pulsante Pizza & Pinsa
+    if (idx === 2) {
+      const pizzaBtn = document.createElement("button");
+      pizzaBtn.className = "menu-nav-btn menu-nav-btn--special";
+      pizzaBtn.type = "button";
+      pizzaBtn.dataset.target = "pizza-menu";
+      pizzaBtn.textContent = pizzaNavLabel[lang] || pizzaNavLabel.es;
+      nav.appendChild(pizzaBtn);
+    }
+  });
+
+  menuContainer.appendChild(nav);
+
+  // ---- CATEGORIE ----
+  menuData[lang].forEach((section, idx) => {
     const categoryCard = document.createElement("div");
     categoryCard.className = "menu-card";
-    categoryCard.innerHTML = `<h3>${section.category}</h3>`;
+    categoryCard.id = "menu-cat-" + idx;
+    categoryCard.innerHTML = `<h3 class="menu-card-title">${section.category}</h3>`;
 
     section.items.forEach(item => {
       const itemRow = document.createElement("div");
-      itemRow.className = "menu-item";
+      itemRow.className = "menu-item" + (item.img ? " menu-item--with-img" : "");
+
+      const imgHTML = item.img
+        ? `<img src="${item.img}" alt="${item.name}" class="menu-item-img" loading="lazy">`
+        : "";
+
       itemRow.innerHTML = `
-        <h3>
-          <span>${item.num ? item.num + ". " : ""}${item.name}</span>
-          <span>${item.price}</span>
-        </h3>
-        <p>${item.desc || ""}</p>
+        ${imgHTML}
+        <div class="menu-item-body">
+          <h3>
+            <span class="menu-item-name">${item.num ? item.num + ". " : ""}${item.name}</span>
+            <span class="menu-item-price">${item.price}</span>
+          </h3>
+          <p>${item.desc || ""}</p>
+        </div>
       `;
       categoryCard.appendChild(itemRow);
     });
 
     menuContainer.appendChild(categoryCard);
   });
+
+  // ---- INSERIMENTO BLOCCHI PIZZE TRA SECONDI E INSALATE ----
+  // L'indice 2 corrisponde sempre alla categoria "Secondi/Segundo/Hauptgerichte/Secondo/Plats principaux"
+  const PIZZA_BLOCK_AFTER = 2;
+  const anchorCategory = document.getElementById("menu-cat-" + PIZZA_BLOCK_AFTER);
+  if (anchorCategory && pinsaInfo && pizzaGallery) {
+    anchorCategory.insertAdjacentElement("afterend", pinsaInfo);
+    pinsaInfo.insertAdjacentElement("afterend", pizzaGallery);
+  } else {
+    // fallback: in coda al container (se per qualche motivo non trovo l'ancora)
+    if (pinsaInfo)    menuContainer.appendChild(pinsaInfo);
+    if (pizzaGallery) menuContainer.appendChild(pizzaGallery);
+  }
 }
 
 function renderAllergens(lang = "es") {
@@ -1218,9 +1274,52 @@ function renderNewDishes(lang = "es") {
   });
 }
 
+// ===== INFO "¿PINSA O PIZZA?" =====
+const pinsaPizzaInfoData = {
+  es: {
+    title: "¿Pinsa o Pizza?",
+    body: "La pinsa romana es una receta mucho más antigua que la pizza napolitana: ya la preparaban los antiguos romanos con ingredientes muy sencillos, y se menciona incluso en la Eneida de Virgilio. La principal diferencia está en la masa: para la pinsa usamos una mezcla de harinas y una hidratación más alta, lo que da una base crujiente por fuera y suave por dentro."
+  },
+  en: {
+    title: "Pinsa or Pizza?",
+    body: "Roman pinsa is a much older recipe than Neapolitan pizza: the ancient Romans were already making it with very simple ingredients, and it is even mentioned in Virgil's Aeneid. The main difference lies in the dough: for pinsa we use a blend of flours and a higher hydration, which gives a base that is crispy outside and soft inside."
+  },
+  de: {
+    title: "Pinsa oder Pizza?",
+    body: "Die römische Pinsa ist ein viel älteres Rezept als die neapolitanische Pizza: schon die alten Römer bereiteten sie mit sehr einfachen Zutaten zu, und sie wird sogar in Vergils Aeneis erwähnt. Der Hauptunterschied liegt im Teig: für die Pinsa verwenden wir eine Mehlmischung und eine höhere Hydratation, was einen außen knusprigen und innen weichen Boden ergibt."
+  },
+  it: {
+    title: "Pinsa o Pizza?",
+    body: "La pinsa romana è una ricetta molto più antica della pizza napoletana: la preparavano già gli antichi Romani con ingredienti molto semplici, e ne parla persino l'Eneide di Virgilio. La differenza principale sta nell'impasto: per la pinsa usiamo una miscela di farine e un'idratazione più alta, così la base risulta croccante fuori e morbida dentro."
+  },
+  fr: {
+    title: "Pinsa ou Pizza ?",
+    body: "La pinsa romaine est une recette bien plus ancienne que la pizza napolitaine : les Romains la préparaient déjà avec des ingrédients très simples, et elle est même évoquée dans l'Énéide de Virgile. La principale différence se trouve dans la pâte : pour la pinsa nous utilisons un mélange de farines et une hydratation plus élevée, ce qui donne une base croustillante à l'extérieur et moelleuse à l'intérieur."
+  }
+};
+
+function renderPinsaPizzaInfo(lang = "es") {
+  const titleEl = document.getElementById("pinsa-pizza-info-title");
+  const bodyEl  = document.getElementById("pinsa-pizza-info-body");
+  if (!titleEl || !bodyEl) return;
+  const data = pinsaPizzaInfoData[lang] || pinsaPizzaInfoData.es;
+  titleEl.textContent = data.title;
+  bodyEl.textContent  = data.body;
+}
+
+// Etichetta del pulsante "Pizza & Pinsa" nella nav del menù
+const pizzaNavLabel = {
+  es: "Pizza & Pinsa",
+  en: "Pizza & Pinsa",
+  de: "Pizza & Pinsa",
+  it: "Pizza & Pinsa",
+  fr: "Pizza & Pinsa"
+};
+
 // ===== MENU PIZZE (via foto) =====
-// Quando avrai le locandine tradotte (es. img/A_pizza_en.jpg, img/A_pizza_de.jpg, ...)
-// basta aggiungere le voci qui sotto e il sistema fa lo switch automatico in base alla lingua.
+// Le locandine fotografiche sono solo in spagnolo (sono la "vetrina grafica" della carta).
+// La traduzione degli ingredienti viene mostrata come elenco testuale sotto le foto
+// tramite pizzaMenuListData + renderPizzaMenuList.
 const pizzaMenuImages = {
   es: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
   en: { cover: "img/1_pizza.jpg", pinsa: "img/A_pizza.jpg", pizza: "img/B_pizza.jpg" },
@@ -1236,6 +1335,147 @@ const pizzaMenuTitles = {
   it: "Pizza & Pinsa",
   fr: "Pizza & Pinsa"
 };
+
+// ===== ELENCO TESTUALE TRADOTTO sotto le foto (legenda multilingua) =====
+const pizzaMenuListData = {
+  es: {
+    pinsaTitle: "Pinsa",
+    pizzaTitle: "Pizza",
+    extra: "Suplemento ingrediente extra: +1,50 €",
+    pinsa: [
+      { code: "A", name: "Atún",                       desc: "Tomate, mozzarella, atún y alcachofa.",                                                       price: "10,90 €" },
+      { code: "B", name: "Vegetariana",                desc: "Tomate, mozzarella, pimiento rojo asado, calabacín y champiñones.",                          price: "10,90 €" },
+      { code: "C", name: "La Porchetta ✨ Novedad",    desc: "Tomate, mozzarella y porchetta de cerdo especiada con romero y pimienta negra.",             price: "11,90 €" },
+      { code: "D", name: "Sobrasada ✨ Novedad",       desc: "Tomate, mozzarella y sobrasada (chorizo untable).",                                           price: "9,00 €"  },
+      { code: "E", name: "Serrano",                    desc: "Tomate, mozzarella, jamón serrano curado y escamas de parmesano.",                           price: "11,90 €" },
+      { code: "F", name: "Hawaiana",                   desc: "Tomate, mozzarella, piña, maíz, pistacho y cebolla caramelizada.",                           price: "10,90 €" }
+    ],
+    pizza: [
+      { code: "G", name: "Margarita",                  desc: "Tomate y mozzarella.",                                                                       price: "6,90 €"  },
+      { code: "H", name: "Silvestre York",             desc: "Tomate, mozzarella, jamón cocido y champiñones.",                                             price: "9,00 €"  },
+      { code: "L", name: "Diablo",                     desc: "Tomate, mozzarella y chorizo picante.",                                                       price: "9,00 €"  },
+      { code: "M", name: "Vivaldi",                    desc: "Tomate, mozzarella, jamón cocido, champiñones, alcachofa y aceituna negra.",                 price: "9,95 €"  },
+      { code: "N", name: "BBQ",                        desc: "Tomate, mozzarella, pechuga de pollo, salsa barbacoa y cebolla roja.",                       price: "9,50 €"  },
+      { code: "P", name: "Cuatro Quesos",              desc: "Tomate, mozzarella, emmental, provolone y queso azul.",                                      price: "9,00 €"  },
+      { code: "R", name: "El Secreto",                 desc: "Tomate, mozzarella, queso de cabra, manzana y cebolla caramelizada.",                        price: "9,00 €"  }
+    ]
+  },
+  en: {
+    pinsaTitle: "Pinsa",
+    pizzaTitle: "Pizza",
+    extra: "Extra topping: +1.50 €",
+    pinsa: [
+      { code: "A", name: "Tuna",                       desc: "Tomato, mozzarella, tuna and artichoke.",                                                    price: "10.90 €" },
+      { code: "B", name: "Vegetarian",                 desc: "Tomato, mozzarella, roasted red pepper, courgette and mushrooms.",                           price: "10.90 €" },
+      { code: "C", name: "La Porchetta ✨ New",        desc: "Tomato, mozzarella and spiced pork porchetta with rosemary and black pepper.",               price: "11.90 €" },
+      { code: "D", name: "Sobrasada ✨ New",           desc: "Tomato, mozzarella and sobrasada (spreadable chorizo).",                                     price: "9.00 €"  },
+      { code: "E", name: "Serrano",                    desc: "Tomato, mozzarella, cured Serrano ham and Parmesan flakes.",                                 price: "11.90 €" },
+      { code: "F", name: "Hawaiian",                   desc: "Tomato, mozzarella, pineapple, sweetcorn, pistachio and caramelised onion.",                 price: "10.90 €" }
+    ],
+    pizza: [
+      { code: "G", name: "Margherita",                 desc: "Tomato and mozzarella.",                                                                     price: "6.90 €"  },
+      { code: "H", name: "Silvestre York",             desc: "Tomato, mozzarella, cooked ham and mushrooms.",                                              price: "9.00 €"  },
+      { code: "L", name: "Diablo",                     desc: "Tomato, mozzarella and spicy chorizo.",                                                      price: "9.00 €"  },
+      { code: "M", name: "Vivaldi",                    desc: "Tomato, mozzarella, cooked ham, mushrooms, artichoke and black olives.",                     price: "9.95 €"  },
+      { code: "N", name: "BBQ",                        desc: "Tomato, mozzarella, chicken breast, barbecue sauce and red onion.",                          price: "9.50 €"  },
+      { code: "P", name: "Four Cheeses",               desc: "Tomato, mozzarella, emmental, provolone and blue cheese.",                                   price: "9.00 €"  },
+      { code: "R", name: "El Secreto",                 desc: "Tomato, mozzarella, goat cheese, apple and caramelised onion.",                              price: "9.00 €"  }
+    ]
+  },
+  de: {
+    pinsaTitle: "Pinsa",
+    pizzaTitle: "Pizza",
+    extra: "Extra-Zutat: +1,50 €",
+    pinsa: [
+      { code: "A", name: "Thunfisch",                  desc: "Tomate, Mozzarella, Thunfisch und Artischocke.",                                              price: "10,90 €" },
+      { code: "B", name: "Vegetarisch",                desc: "Tomate, Mozzarella, gerösteter roter Paprika, Zucchini und Champignons.",                    price: "10,90 €" },
+      { code: "C", name: "La Porchetta ✨ Neu",        desc: "Tomate, Mozzarella und gewürzter Schweine-Porchetta mit Rosmarin und schwarzem Pfeffer.",     price: "11,90 €" },
+      { code: "D", name: "Sobrasada ✨ Neu",           desc: "Tomate, Mozzarella und Sobrasada (streichfähige Chorizo).",                                   price: "9,00 €"  },
+      { code: "E", name: "Serrano",                    desc: "Tomate, Mozzarella, luftgetrockneter Serrano-Schinken und Parmesanflocken.",                  price: "11,90 €" },
+      { code: "F", name: "Hawaii",                     desc: "Tomate, Mozzarella, Ananas, Mais, Pistazie und karamellisierte Zwiebel.",                     price: "10,90 €" }
+    ],
+    pizza: [
+      { code: "G", name: "Margherita",                 desc: "Tomate und Mozzarella.",                                                                     price: "6,90 €"  },
+      { code: "H", name: "Silvestre York",             desc: "Tomate, Mozzarella, Kochschinken und Champignons.",                                          price: "9,00 €"  },
+      { code: "L", name: "Diablo",                     desc: "Tomate, Mozzarella und scharfer Chorizo.",                                                   price: "9,00 €"  },
+      { code: "M", name: "Vivaldi",                    desc: "Tomate, Mozzarella, Kochschinken, Champignons, Artischocke und schwarze Oliven.",            price: "9,95 €"  },
+      { code: "N", name: "BBQ",                        desc: "Tomate, Mozzarella, Hähnchenbrust, Barbecuesauce und rote Zwiebel.",                         price: "9,50 €"  },
+      { code: "P", name: "Vier Käse",                  desc: "Tomate, Mozzarella, Emmentaler, Provolone und Blauschimmelkäse.",                            price: "9,00 €"  },
+      { code: "R", name: "El Secreto",                 desc: "Tomate, Mozzarella, Ziegenkäse, Apfel und karamellisierte Zwiebel.",                         price: "9,00 €"  }
+    ]
+  },
+  it: {
+    pinsaTitle: "Pinsa",
+    pizzaTitle: "Pizza",
+    extra: "Ingrediente extra: +1,50 €",
+    pinsa: [
+      { code: "A", name: "Tonno",                      desc: "Pomodoro, mozzarella, tonno e carciofi.",                                                    price: "10,90 €" },
+      { code: "B", name: "Vegetariana",                desc: "Pomodoro, mozzarella, peperone rosso arrostito, zucchine e funghi champignon.",              price: "10,90 €" },
+      { code: "C", name: "La Porchetta ✨ Novità",     desc: "Pomodoro, mozzarella e porchetta di maiale speziata con rosmarino e pepe nero.",             price: "11,90 €" },
+      { code: "D", name: "Sobrasada ✨ Novità",        desc: "Pomodoro, mozzarella e sobrasada (chorizo spalmabile).",                                     price: "9,00 €"  },
+      { code: "E", name: "Serrano",                    desc: "Pomodoro, mozzarella, prosciutto serrano stagionato e scaglie di parmigiano.",               price: "11,90 €" },
+      { code: "F", name: "Hawaiana",                   desc: "Pomodoro, mozzarella, ananas, mais, pistacchio e cipolla caramellata.",                      price: "10,90 €" }
+    ],
+    pizza: [
+      { code: "G", name: "Margherita",                 desc: "Pomodoro e mozzarella.",                                                                     price: "6,90 €"  },
+      { code: "H", name: "Silvestre York",             desc: "Pomodoro, mozzarella, prosciutto cotto e funghi.",                                            price: "9,00 €"  },
+      { code: "L", name: "Diablo",                     desc: "Pomodoro, mozzarella e chorizo piccante.",                                                    price: "9,00 €"  },
+      { code: "M", name: "Vivaldi",                    desc: "Pomodoro, mozzarella, prosciutto cotto, funghi, carciofi e olive nere.",                     price: "9,95 €"  },
+      { code: "N", name: "BBQ",                        desc: "Pomodoro, mozzarella, petto di pollo, salsa barbecue e cipolla rossa.",                      price: "9,50 €"  },
+      { code: "P", name: "Quattro Formaggi",           desc: "Pomodoro, mozzarella, emmental, provolone e formaggio erborinato.",                          price: "9,00 €"  },
+      { code: "R", name: "El Secreto",                 desc: "Pomodoro, mozzarella, formaggio di capra, mela e cipolla caramellata.",                      price: "9,00 €"  }
+    ]
+  },
+  fr: {
+    pinsaTitle: "Pinsa",
+    pizzaTitle: "Pizza",
+    extra: "Supplément ingrédient extra : +1,50 €",
+    pinsa: [
+      { code: "A", name: "Thon",                       desc: "Tomate, mozzarella, thon et artichaut.",                                                     price: "10,90 €" },
+      { code: "B", name: "Végétarienne",               desc: "Tomate, mozzarella, poivron rouge rôti, courgette et champignons.",                          price: "10,90 €" },
+      { code: "C", name: "La Porchetta ✨ Nouveau",    desc: "Tomate, mozzarella et porchetta de porc épicée au romarin et poivre noir.",                  price: "11,90 €" },
+      { code: "D", name: "Sobrasada ✨ Nouveau",       desc: "Tomate, mozzarella et sobrasada (chorizo à tartiner).",                                       price: "9,00 €"  },
+      { code: "E", name: "Serrano",                    desc: "Tomate, mozzarella, jambon serrano affiné et copeaux de parmesan.",                          price: "11,90 €" },
+      { code: "F", name: "Hawaïenne",                  desc: "Tomate, mozzarella, ananas, maïs, pistache et oignon caramélisé.",                           price: "10,90 €" }
+    ],
+    pizza: [
+      { code: "G", name: "Margherita",                 desc: "Tomate et mozzarella.",                                                                      price: "6,90 €"  },
+      { code: "H", name: "Silvestre York",             desc: "Tomate, mozzarella, jambon cuit et champignons.",                                             price: "9,00 €"  },
+      { code: "L", name: "Diablo",                     desc: "Tomate, mozzarella et chorizo piquant.",                                                      price: "9,00 €"  },
+      { code: "M", name: "Vivaldi",                    desc: "Tomate, mozzarella, jambon cuit, champignons, artichaut et olives noires.",                  price: "9,95 €"  },
+      { code: "N", name: "BBQ",                        desc: "Tomate, mozzarella, blanc de poulet, sauce barbecue et oignon rouge.",                       price: "9,50 €"  },
+      { code: "P", name: "Quatre Fromages",            desc: "Tomate, mozzarella, emmental, provolone et fromage bleu.",                                   price: "9,00 €"  },
+      { code: "R", name: "El Secreto",                 desc: "Tomate, mozzarella, fromage de chèvre, pomme et oignon caramélisé.",                         price: "9,00 €"  }
+    ]
+  }
+};
+
+function renderPizzaMenuList(lang = "es") {
+  const data = pizzaMenuListData[lang] || pizzaMenuListData.es;
+  const pinsaTitleEl = document.getElementById("pizza-list-pinsa-title");
+  const pizzaTitleEl = document.getElementById("pizza-list-pizza-title");
+  const pinsaEl      = document.getElementById("pizza-list-pinsa");
+  const pizzaEl      = document.getElementById("pizza-list-pizza");
+  const extraEl      = document.getElementById("pizza-list-extra");
+  if (!pinsaEl || !pizzaEl) return;
+
+  if (pinsaTitleEl) pinsaTitleEl.textContent = data.pinsaTitle;
+  if (pizzaTitleEl) pizzaTitleEl.textContent = data.pizzaTitle;
+  if (extraEl)      extraEl.textContent      = data.extra;
+
+  const renderItems = (items) => items.map(item => `
+    <div class="pizza-menu-list-item">
+      <h5>
+        <span><strong class="pizza-menu-list-code">${item.code}</strong> · ${item.name}</span>
+        <span class="pizza-menu-list-price">${item.price}</span>
+      </h5>
+      <p>${item.desc}</p>
+    </div>
+  `).join("");
+
+  pinsaEl.innerHTML = renderItems(data.pinsa);
+  pizzaEl.innerHTML = renderItems(data.pizza);
+}
 
 function renderPizzaMenu(lang = "es") {
   const titleEl = document.getElementById("pizza-menu-title");
@@ -1317,6 +1557,8 @@ function initPage(){
   renderNocheVieja("es");
 renderNewDishes("es");
 renderPizzaMenu("es");
+renderPizzaMenuList("es");
+renderPinsaPizzaInfo("es");
 // renderReyes("es");   // locandina Reyes disattivata
 
   // Cambio lingua (pulsanti sotto "Galería del local")
@@ -1336,9 +1578,25 @@ renderPizzaMenu("es");
       renderNocheVieja(lang);
       renderNewDishes(lang);
       renderPizzaMenu(lang);
+      renderPizzaMenuList(lang);
+      renderPinsaPizzaInfo(lang);
 // renderReyes(lang);   // locandina Reyes disattivata
     });
   });
+
+  // Delegato: click sui pulsanti nav del menù → scroll smooth alla categoria
+  const menuContainer = document.getElementById("menu-container");
+  if (menuContainer) {
+    menuContainer.addEventListener("click", (e) => {
+      const btn = e.target.closest(".menu-nav-btn");
+      if (!btn) return;
+      const targetId = btn.dataset.target;
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  }
 
   // Mobile nav (se un giorno vorrai riattivare il burger)
   const burger   = document.querySelector(".burger");

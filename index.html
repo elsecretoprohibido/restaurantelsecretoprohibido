@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css"/>
 
   <!-- JS (con versione per evitare cache) -->
-  <script defer src="script.js?v=14"></script>
+  <script defer src="script.js?v=19"></script>
 </head>
 <body>
 
@@ -179,39 +179,37 @@
 </section>
 -->
 
-    <!-- Versione spagnola -->
-    <img
-      src="img/locandina_reyes_es.jpg"
-      alt="Menú del día de los Reyes"
-      class="reyes-flyer"
-      data-lang="es"
-    >
-
-    <!-- Versione inglese -->
-    <img
-      src="img/ING_locandina_reyes_en.jpg"
-      alt="Three Kings' Day Menu"
-      class="reyes-flyer"
-      data-lang="en"
-    >
-
-    <!-- Versione tedesca -->
-    <img
-      src="img/DE_locandina_reyes_de.jpg"
-      alt="Menü zum Dreikönigstag"
-      class="reyes-flyer"
-      data-lang="de"
-    >
-  </div>
-</section>
-
  <!-- MENU -->
   <section id="menu" class="menu-section">
-    <div class="menu-header">
-      <h2>Menú</h2>
+
+    <!-- BANNER COLLAGE -->
+    <div class="menu-banner">
+      <img src="img/collage_.jpeg"
+           alt="Selección de platos · El Secreto Prohibido"
+           class="menu-banner-img"
+           loading="lazy">
+      <div class="menu-banner-overlay">
+        <h2 class="menu-banner-title">Menú</h2>
+      </div>
     </div>
 
-    <!-- ===== MENU PIZZE (foto) ===== -->
+    <!-- MENU CONTAINER (nav + categorie generate dal JS) -->
+    <div id="menu-container"></div>
+
+    <!-- ===== ¿PINSA O PIZZA? (info multilingua) ===== -->
+    <div id="pinsa-pizza-info" class="pinsa-pizza-info">
+      <div class="pinsa-pizza-info-img">
+        <img src="img/pinsa_.jpeg"
+             alt="Pinsa romana"
+             loading="lazy">
+      </div>
+      <div class="pinsa-pizza-info-text">
+        <h3 id="pinsa-pizza-info-title">¿Pinsa o Pizza?</h3>
+        <p id="pinsa-pizza-info-body"></p>
+      </div>
+    </div>
+
+    <!-- ===== MENU PIZZE (foto carte stampate) ===== -->
     <div id="pizza-menu" class="pizza-menu-section">
       <h3 id="pizza-menu-title">Pizza &amp; Pinsa</h3>
       <div class="pizza-menu-gallery">
@@ -233,11 +231,22 @@
                loading="lazy">
         </div>
       </div>
+
+      <!-- LEGENDA TRADOTTA (popolata dal JS in base alla lingua) -->
+      <div class="pizza-menu-list">
+        <div class="pizza-menu-list-col">
+          <h4 id="pizza-list-pinsa-title">Pinsa</h4>
+          <div id="pizza-list-pinsa" class="pizza-menu-list-items"></div>
+        </div>
+        <div class="pizza-menu-list-col">
+          <h4 id="pizza-list-pizza-title">Pizza</h4>
+          <div id="pizza-list-pizza" class="pizza-menu-list-items"></div>
+        </div>
+      </div>
+      <p id="pizza-list-extra" class="pizza-menu-list-extra"></p>
     </div>
     <!-- ===== FINE MENU PIZZE ===== -->
 
-    <!-- QUI il JS inserirà tutte le categorie e i piatti -->
-    <div id="menu-container"></div>
   </section>
 
   <!-- CONTACT -->
