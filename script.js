@@ -1,125 +1,3 @@
-// ===== NUEVOS PLATOS / NEW DISHES =====
-const newDishesData = {
-  es: {
-    title: "Nuevos platos 😋",
-    subtitle: "Descubre nuestras últimas creaciones, elaboradas con ingredientes frescos y mucho cariño.",
-    dishes: [
-      {
-        img: "img/nuevo_plato_1.jpeg",
-        name: "Alitas en barbacoa de pollo con papas fritas 😋",
-        desc: "Alitas de pollo marinadas en salsa barbacoa, acompañadas de papas fritas crujientes."
-      },
-      
-      {
-        img: "img/nuevo_plato_3.jpeg",
-        name: "Codillo de cerdo con papas fritas 😋",
-        desc: "Codillo de cerdo asado, servido con papas fritas."
-      },
-      
-      {
-        img: "img/nuevo_plato_5.jpeg",
-        name: "Albóndigas en salsa de tomate con papas fritas 😋",
-        desc: "Albóndigas caseras en salsa de tomate acompañadas de papas fritas."
-      }
-    ]
-  },
-
-  en: {
-    title: "New dishes 😋",
-    subtitle: "Discover our latest creations, prepared with fresh ingredients and lots of care.",
-    dishes: [
-      {
-        img: "img/nuevo_plato_1.jpeg",
-        name: "BBQ chicken wings with french fries 😋",
-        desc: "Marinated chicken wings in BBQ sauce, served with crispy french fries."
-      },
-      
-      {
-        img: "img/nuevo_plato_3.jpeg",
-        name: "Pork knuckle with french fries 😋",
-        desc: "Roasted pork knuckle served with french fries."
-      },
-      
-      {
-        img: "img/nuevo_plato_5.jpeg",
-        name: "Meatballs in tomato sauce with french fries 😋",
-        desc: "Homemade meatballs in tomato sauce with french fries."
-      }
-    ]
-  },
-
-  de: {
-    title: "Neue Gerichte 😋",
-    subtitle: "Entdeckt unsere neuesten Kreationen, täglich frisch und mit viel Liebe zubereitet.",
-    dishes: [
-      {
-        img: "img/nuevo_plato_1.jpeg",
-        name: "Hähnchenflügel in Barbecuesauce mit Pommes 😋",
-        desc: "Marinierte Hähnchenflügel in Barbecuesauce mit knusprigen Pommes frites."
-      },
-      
-      {
-        img: "img/nuevo_plato_3.jpeg",
-        name: "Schweinehaxe mit Pommes 😋",
-        desc: "Ofengebackene Schweinehaxe, serviert mit Pommes frites."
-      },
-      
-      {
-        img: "img/nuevo_plato_5.jpeg",
-        name: "Fleischbällchen in Tomatensauce mit Pommes 😋",
-        desc: "Hausgemachte Fleischbällchen in Tomatensauce mit Pommes frites."
-      }
-    ]
-  }
-    ,
-  it: {
-    title: "Nuovi piatti 😋",
-    subtitle: "Scopri le nostre ultime creazioni, preparate con ingredienti freschi e tanto amore.",
-    dishes: [
-      {
-        img: "img/nuevo_plato_1.jpeg",
-        name: "Alette di pollo alla barbecue con patatine fritte 😋",
-        desc: "Alette di pollo marinate in salsa barbecue, servite con patatine croccanti."
-      },
-     
-      {
-        img: "img/nuevo_plato_3.jpeg",
-        name: "Stinco di maiale con patatine fritte 😋",
-        desc: "Stinco di maiale arrosto, servito con patatine fritte."
-      },
-
-      {
-        img: "img/nuevo_plato_5.jpeg",
-        name: "Polpette in salsa di pomodoro con patatine 😋",
-        desc: "Polpette fatte in casa in salsa di pomodoro, accompagnate da patatine fritte."
-      }
-    ]
-  },
-  fr: {
-    title: "Nouveaux plats 😋",
-    subtitle: "Découvrez nos dernières créations, préparées avec des ingrédients frais et beaucoup de soin.",
-    dishes: [
-      {
-        img: "img/nuevo_plato_1.jpeg",
-        name: "Ailes de poulet barbecue avec frites 😋",
-        desc: "Ailes de poulet marinées dans une sauce barbecue, servies avec des frites croustillantes."
-      },
-      
-      {
-        img: "img/nuevo_plato_3.jpeg",
-        name: "Jarret de porc avec frites 😋",
-        desc: "Jarret de porc rôti, servi avec des frites."
-      },
-      
-      {
-        img: "img/nuevo_plato_5.jpeg",
-        name: "Boulettes de viande en sauce tomate avec frites 😋",
-        desc: "Boulettes de viande maison en sauce tomate, accompagnées de frites."
-      }
-    ]
-  }
-};
-
 // ===== MENU DATA (con numeri) =====
 const menuData = {
   es: [
@@ -1196,46 +1074,6 @@ function renderNocheVieja(lang = "es") {
   priceEl.textContent = data.price;
 }
 
-function renderNewDishes(lang = "es") {
-  const data = newDishesData[lang] || newDishesData.es;
-  const section = document.querySelector(".new-dishes");
-  if (!section || !data) return;
-
-  const titleEl    = section.querySelector(".new-dishes-header h2");
-  const subtitleEl = section.querySelector(".new-dishes-header p");
-  const cards      = section.querySelectorAll(".new-dish-card");
-  const badges     = section.querySelectorAll(".new-dish-badge");
-
-  if (titleEl)    titleEl.textContent    = data.title;
-  if (subtitleEl) subtitleEl.textContent = data.subtitle;
-
-  cards.forEach((card, index) => {
-    const dish = data.dishes[index];
-    if (!dish) return;
-
-    const img = card.querySelector("img");
-    const h3  = card.querySelector("h3");
-    const p   = card.querySelector("p");
-
-    if (img && dish.img) {
-      img.src = dish.img;
-      img.alt = dish.name;
-    }
-    if (h3) h3.textContent = dish.name;
-    if (p)  p.textContent  = dish.desc || "";
-  });
-
-  // badge "Nuevo" / "New" / "Neu"
-  badges.forEach(badge => {
-    if (lang === "es")      badge.textContent = "Nuevo";
-    else if (lang === "en") badge.textContent = "New";
-    else if (lang === "de") badge.textContent = "Neu";
-    else if (lang === "it") badge.textContent = "Nuovo";
-    else if (lang === "fr") badge.textContent = "Nouveau";
-    else                    badge.textContent = "Nuevo";
-  });
-}
-
 // ===== INFO "¿PINSA O PIZZA?" =====
 const pinsaPizzaInfoData = {
   es: {
@@ -1559,7 +1397,6 @@ function initPage(){
   renderContact("es");
   renderNocheBuena("es");
   renderNocheVieja("es");
-renderNewDishes("es");
 renderPizzaMenu("es");
 renderPizzaMenuList("es");
 renderPinsaPizzaInfo("es");
@@ -1580,7 +1417,6 @@ renderPinsaPizzaInfo("es");
       renderContact(lang);
       renderNocheBuena(lang);
       renderNocheVieja(lang);
-      renderNewDishes(lang);
       renderPizzaMenu(lang);
       renderPizzaMenuList(lang);
       renderPinsaPizzaInfo(lang);
